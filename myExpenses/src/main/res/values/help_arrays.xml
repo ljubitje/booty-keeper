@@ -412,9 +412,6 @@
         <item>account_types</item>
     </string-array>
 
-    <string-array name="CsvImportActivity_formfields">
-        <item>autofill</item>
-    </string-array>
 
     <string-array name="help_MyExpenses_info">
         <item>help_MyExpenses_info</item>

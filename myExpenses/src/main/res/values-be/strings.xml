@@ -502,7 +502,6 @@
     <string name="contrib_feature_plans_unlimited_label">Неабмежаваная колькасць тарыфных планаў</string>
     <string name="contrib_feature_print_label">Экспарт спісу транзакцый у фармат PDF</string>
     <string name="contrib_feature_history_label">Гістарычная дыяграма</string>
-    <string name="contrib_feature_csv_import_label">Імпарт CSV-файла</string>
     <string name="contrib_feature_split_template_label">Неабмежаваная колькасць падзеленых шаблонаў</string>
     <string name="dialog_password_new_password">Новы пароль</string>
     <string name="search_category">Пошук па катэгорыі</string>

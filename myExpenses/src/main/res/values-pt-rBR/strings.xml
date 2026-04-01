@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">Gráfico de pizza (distribuição por categoria)</string>
     <string name="contrib_feature_plans_unlimited_label">Número ilimitado de planos</string>
     <string name="contrib_feature_print_label">Exportar lista de transações para PDF</string>
-    <string name="contrib_feature_csv_import_label">Importação CSV</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Número ilimitado de modelos de divisão de transações</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Diagrama histórico</string>
     <string name="licence_status_free">Gratuita</string>

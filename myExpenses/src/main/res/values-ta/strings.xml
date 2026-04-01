@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">பை விளக்கப்படம் (வகை ஒன்றுக்கு பங்கீடு)</string>
     <string name="contrib_feature_plans_unlimited_label">திட்டங்களுக்கு வரம்பில்லை</string>
     <string name="contrib_feature_print_label">பரிவர்த்தனை பட்டியலை PDF ஆக ஏற்றுமதி</string>
-    <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">CSV இறக்குமதி</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">வரம்பற்ற பிரிவு வார்ப்புருக்கள்</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">வரலாற்று விளக்கப்படம்</string>
     <string name="licence_status_free">இலவசம்</string>

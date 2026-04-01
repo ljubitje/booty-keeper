@@ -31,7 +31,6 @@
     <string name="contrib_feature_attach_picture_label">Anexar imagem à transação</string>
     <string name="contrib_feature_plans_unlimited_label">Número ilimitado de planos</string>
     <string name="contrib_feature_print_label">Exportar lista de transações para PDF</string>
-    <string name="contrib_feature_csv_import_label">Importação CSV</string>
     <string name="licence_status_free">Gratuita</string>
     <string name="contrib_key">Chave de contribuição</string>
     <string name="extended_key">Chave estendida</string>

@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">مخطط دائري (التوزيع حسب الفئة)</string>
     <string name="contrib_feature_plans_unlimited_label">عدد غير محدود من الخطط</string>
     <string name="contrib_feature_print_label">تصدير قائمة العمليات إلى PDF</string>
-    <string name="contrib_feature_csv_import_label">إستيراد ملف CSV</string>
     <string name="contrib_feature_split_template_label">عدد غير محدود من القوالب المنقسمة</string>
     <string name="contrib_feature_history_label">مخطط زمني</string>
     <string name="licence_status_free">خالي</string>

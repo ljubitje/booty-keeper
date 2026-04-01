@@ -29,7 +29,6 @@
     <string name="contrib_feature_accounts_unlimited_label" tools:ignore="UnusedResources">Neribotas sąskaitų kiekis</string>
     <string name="contrib_feature_plans_unlimited_label" tools:ignore="UnusedResources">Neribotas planų kiekis</string>
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">Eksportuoti operacijų sąrašą į PDF dokumentą</string>
-    <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">Importavimas iš CSV (tekstinių) failų</string>
     <!-- Placeholder: 1 will be replace with either My Expenses Contrib Key or My Expenses Extended Key -->
     <string name="contrib_key_requires">Reikalauja %1$s.</string>
     <string name="currency">Valiuta</string>

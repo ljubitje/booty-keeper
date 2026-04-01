@@ -29,7 +29,6 @@
     <string name="contrib_feature_attach_picture_label">Vedhæft billede til transaktion</string>
     <string name="contrib_feature_plans_unlimited_label">Ubegrænset antal planer</string>
     <string name="contrib_feature_print_label">Eksportér transaktionsliste til PDF</string>
-    <string name="contrib_feature_csv_import_label">CSV-import</string>
     <string name="contrib_key">Bidragsnøgle</string>
     <string name="extended_key">Udvidet Nøgle</string>
     <!-- Placeholder: 1 will be replace with either My Expenses Contrib Key or My Expenses Extended Key -->

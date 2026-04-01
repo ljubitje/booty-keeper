@@ -8,7 +8,6 @@ import org.robolectric.ParameterizedRobolectricTestRunner
 import org.totschnig.myexpenses.activity.AccountEdit
 import org.totschnig.myexpenses.activity.BudgetActivity
 import org.totschnig.myexpenses.activity.BudgetEdit
-import org.totschnig.myexpenses.activity.CsvImportActivity
 import org.totschnig.myexpenses.activity.DebtEdit
 import org.totschnig.myexpenses.activity.DistributionActivity
 import org.totschnig.myexpenses.activity.ExpenseEdit
@@ -52,7 +51,6 @@ class HelpDialogHelperTest(private val activity: Class<out ProtectedFragmentActi
             arrayOf(AccountEdit::class.java),
             arrayOf(BudgetActivity::class.java),
             arrayOf(BudgetEdit::class.java),
-            arrayOf(CsvImportActivity::class.java),
             arrayOf(DebtEdit::class.java),
             arrayOf(DistributionActivity::class.java),
             arrayOf(ExpenseEdit::class.java),

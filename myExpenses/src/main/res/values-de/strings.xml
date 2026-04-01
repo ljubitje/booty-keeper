@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">Kreisdiagramm (Verteilung pro Kategorie)</string>
     <string name="contrib_feature_plans_unlimited_label">Unbegrenzte Anzahl von Plänen</string>
     <string name="contrib_feature_print_label">Buchungsliste als PDF-Datei drucken</string>
-    <string name="contrib_feature_csv_import_label">CSV Import</string>
     <string name="contrib_feature_split_template_label">Unbegrenzte Anzahl an Vorlagen für mehrteilige Buchungen</string>
     <string name="contrib_feature_history_label">Verlaufsdiagramm</string>
     <string name="licence_status_free">Gratis</string>

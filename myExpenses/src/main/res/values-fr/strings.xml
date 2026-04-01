@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">Diagramme circulaire (Répartition par catégorie)</string>
     <string name="contrib_feature_plans_unlimited_label">Nombre d\'échéances illimité</string>
     <string name="contrib_feature_print_label">Export de la liste des opérations au format PDF</string>
-    <string name="contrib_feature_csv_import_label">Import CSV</string>
     <string name="contrib_feature_split_template_label">Nombre illimité de modèles ventilés</string>
     <string name="contrib_feature_history_label">Graphique historique</string>
     <string name="licence_status_free">Gratuit</string>

@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">圓餅統計圖 (會根據每個類別作出統計圖表)</string>
     <string name="contrib_feature_plans_unlimited_label">無限數量的收支計畫</string>
     <string name="contrib_feature_print_label">可將交易清單以 PDF 的檔案型式輸出</string>
-    <string name="contrib_feature_csv_import_label">以 CSV 的檔案型式輸入</string>
     <string name="contrib_feature_split_template_label">無限數量的分割款項範本</string>
     <string name="contrib_feature_history_label">收支歷史圖表</string>
     <string name="licence_status_free">免費版</string>

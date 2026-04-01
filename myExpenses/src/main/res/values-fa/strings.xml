@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">نمودار پایه (توزیع در هر رده)</string>
     <string name="contrib_feature_plans_unlimited_label">تعداد نامحدودی از برنامه ها</string>
     <string name="contrib_feature_print_label">صادرات لیست معامله به PDF</string>
-    <string name="contrib_feature_csv_import_label">واردات CSV</string>
     <string name="contrib_feature_split_template_label">تعداد نامحدودی از قالب های تقسیم شده</string>
     <string name="contrib_feature_history_label">نمودار جریان</string>
     <string name="licence_status_free">آزاد</string>

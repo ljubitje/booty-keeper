@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label" tools:ignore="UnusedResources">Dilim grafik (kategori başına dağılım)</string>
     <string name="contrib_feature_plans_unlimited_label" tools:ignore="UnusedResources">Sınırsız plan sayısı</string>
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">Muamele listesini PDF dosyasına aktar</string>
-    <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">CSV içe aktar</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Sınırsız sayıda bölünmüş şablonlar</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Tarihçe grafiği</string>
     <string name="licence_status_free">Ücretsiz</string>

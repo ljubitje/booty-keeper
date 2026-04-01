@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">תרשים עוגה (הפצה לקטגוריה)</string>
     <string name="contrib_feature_plans_unlimited_label">מספר תוכניות בלתי מוגבל</string>
     <string name="contrib_feature_print_label">ייצא רשימת עסקאות ל- PDF</string>
-    <string name="contrib_feature_csv_import_label">ייבוא CSV</string>
     <string name="contrib_feature_split_template_label">מספר בלתי מוגבל של תבניות מפוצלות</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">תרשים היסטוריה</string>
     <string name="licence_status_free">חופשי / חינמי</string>

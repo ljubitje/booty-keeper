@@ -30,7 +30,6 @@
     <string name="contrib_feature_attach_picture_label">लेन-देन से छवि जोड़ें</string>
     <string name="contrib_feature_plans_unlimited_label">असीमित योजनाओं की संख्या</string>
     <string name="contrib_feature_print_label">लेनदेन सूची पीडीएफ में निर्यात करें</string>
-    <string name="contrib_feature_csv_import_label">सीएसवी आयात</string>
     <string name="licence_status_free">मुफ़्त</string>
     <string name="contrib_key">योगदान कुंजी</string>
     <string name="extended_key">विस्तारित कुंजी</string>

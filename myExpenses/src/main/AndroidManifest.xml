@@ -221,7 +221,6 @@
             android:name=".activity.QifImport"
             android:exported="false"
             android:theme="@style/Translucent" />
-        <activity android:name=".activity.CsvImportActivity" />
         <activity
             android:name=".activity.PreferenceActivity"
             android:exported="false">

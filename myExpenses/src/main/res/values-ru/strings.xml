@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">Круговая диаграмма (по категориям)</string>
     <string name="contrib_feature_plans_unlimited_label">Неограниченное количество планов</string>
     <string name="contrib_feature_print_label">Экспорт списка операций в PDF</string>
-    <string name="contrib_feature_csv_import_label">Импорт данных в формате CSV</string>
     <string name="contrib_feature_split_template_label">Неограниченное число шаблонов разделенных операций</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">История</string>
     <string name="licence_status_free">Бесплатный</string>

@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">Koláčový graf (Distribuce na kategorii)</string>
     <string name="contrib_feature_plans_unlimited_label">Neomezený počet plánů</string>
     <string name="contrib_feature_print_label">Export seznamu transakcí do PDF</string>
-    <string name="contrib_feature_csv_import_label">Import CSV souboru</string>
     <string name="contrib_feature_split_template_label">Neomezený počet rozdělených šablon</string>
     <string name="contrib_feature_history_label">Graf historie</string>
     <string name="licence_status_free">Zdarma</string>

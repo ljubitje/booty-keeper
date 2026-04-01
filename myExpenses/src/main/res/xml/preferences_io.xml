@@ -16,7 +16,6 @@
 <!--suppress AndroidElementNotAllowed -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <org.totschnig.myexpenses.preference.HeaderPreference />
-    <Preference android:key="@string/pref_import_csv_key" />
     <Preference android:key="@string/pref_import_qif_key">
         <intent
             android:targetClass="org.totschnig.myexpenses.activity.QifImport"

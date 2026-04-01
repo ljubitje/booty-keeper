@@ -132,7 +132,7 @@ sealed class AddOnPackage(
             get() = listOf(
                 SplitTemplate, History, Budget, Ocr, WebUi, CategoryTree,
                 AccountsUnlimited, PlansUnlimited, SplitTransaction, Distribution, Print,
-                CsvImport, Synchronization, Banking, AutomaticFxDownload
+                Synchronization, Banking, AutomaticFxDownload
             )
     }
 
@@ -195,7 +195,6 @@ sealed class AddOnPackage(
 
     @Parcelize
     @Keep
-    data object CsvImport : AddOnPackage(ContribFeature.CSV_IMPORT)
 
     @Parcelize
     @Keep

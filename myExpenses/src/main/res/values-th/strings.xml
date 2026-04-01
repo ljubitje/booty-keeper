@@ -37,7 +37,6 @@
     <string name="contrib_feature_distribution_label">แผนภูมิวงกลม (การกระจายตามหมวดหมู่)</string>
     <string name="contrib_feature_plans_unlimited_label">จำนวนแผนไม่จำกัด</string>
     <string name="contrib_feature_print_label">ส่งออกรายการทำรายการเป็น PDF</string>
-    <string name="contrib_feature_csv_import_label">นำเข้า CSV</string>
     <string name="contrib_feature_split_template_label">แม่แบบการแยกจำนวนไม่จำกัด</string>
     <string name="contrib_feature_history_label">แผนภูมิประวัติ</string>
     <string name="contrib_feature_synchronization_label">การซิงโครไนซ์บนคลาวด์</string>

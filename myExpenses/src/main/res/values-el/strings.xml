@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">Γράφημα πίτας (Κατανομή ανά κατηγορία)</string>
     <string name="contrib_feature_plans_unlimited_label">Απεριόριστος αριθμός σχεδίων</string>
     <string name="contrib_feature_print_label">Εξαγάγετε τη λίστα συναλλαγών σε PDF</string>
-    <string name="contrib_feature_csv_import_label">Εισαγωγή CSV</string>
     <string name="contrib_feature_split_template_label">Απεριόριστος αριθμός προτύπων διαίρεσης</string>
     <string name="contrib_feature_history_label">Γράφημα ιστορικού</string>
     <string name="licence_status_free">Ελεύθερο</string>

@@ -10,7 +10,6 @@ import kotlinx.coroutines.CoroutineDispatcher
 import okhttp3.OkHttpClient
 import org.totschnig.myexpenses.MyApplication
 import org.totschnig.myexpenses.activity.BaseActivity
-import org.totschnig.myexpenses.activity.CsvImportActivity
 import org.totschnig.myexpenses.activity.EditActivity
 import org.totschnig.myexpenses.activity.ExpenseEdit
 import org.totschnig.myexpenses.activity.MyExpenses
@@ -36,8 +35,6 @@ import org.totschnig.myexpenses.export.pdf.PdfPrinter
 import org.totschnig.myexpenses.feature.BankingFeature
 import org.totschnig.myexpenses.feature.FeatureManager
 import org.totschnig.myexpenses.feature.OcrFeature
-import org.totschnig.myexpenses.fragment.CsvImportDataFragment
-import org.totschnig.myexpenses.fragment.CsvImportParseFragment
 import org.totschnig.myexpenses.fragment.CurrencyList
 import org.totschnig.myexpenses.fragment.HistoryChart
 import org.totschnig.myexpenses.fragment.OnBoardingPrivacyFragment
@@ -262,11 +259,9 @@ interface AppComponent {
 
     fun inject(baseDialogFragment: BaseDialogFragment)
 
-    fun inject(csvImportParseFragment: CsvImportParseFragment)
 
     fun inject(featureViewModel: FeatureViewModel)
 
-    fun inject(csvImportDataFragment: CsvImportDataFragment)
 
     fun inject(debtViewModel: DebtViewModel)
 
@@ -300,7 +295,6 @@ interface AppComponent {
 
     fun inject(planExecutor: PlanExecutor)
 
-    fun inject(csvImportActivity: CsvImportActivity)
 
     fun inject(preferencesContribFragment: PreferencesContribFragment)
 

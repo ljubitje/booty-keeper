@@ -31,7 +31,6 @@
     <string name="contrib_feature_distribution_label">Cirkeldiagram (Verdeling per categorie)</string>
     <string name="contrib_feature_plans_unlimited_label">Onbeperkt aantal abonnementen</string>
     <string name="contrib_feature_print_label">Exporteer de transactielijst naar PDF</string>
-    <string name="contrib_feature_csv_import_label">CSV importeren</string>
     <string name="income">Inkomsten</string>
     <string name="pm_creditcard">Kredietkaart</string>
     <string name="pref_security_question_title">Beveiligingsvraag</string>

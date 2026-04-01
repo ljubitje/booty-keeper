@@ -17,7 +17,6 @@
     <string name="contrib_feature_distribution_label">پائی چارٹ (تقسیم فی زمر)</string>
     <string name="contrib_feature_plans_unlimited_label">منصوبوں کی لامحدود تعداد</string>
     <string name="contrib_feature_print_label">لین دین کی فہرست PDF میں برآمد کریں</string>
-    <string name="contrib_feature_csv_import_label">CSV درآمد</string>
     <string name="contrib_feature_split_template_label">تقسیم ٹیمپلیٹس کی لامحدود تعداد</string>
     <string name="contrib_feature_history_label">تاریخ کا چارٹ</string>
     <string name="contrib_feature_category_tree_label">زمرے کا درخت</string>

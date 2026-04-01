@@ -283,7 +283,6 @@
     <string name="account_types">帳戶類型</string>
     <string name="contrib_feature_split_template_label">無限數量的分割模板</string>
     <string name="dialog_confirm_discard_changes">放棄更改？</string>
-    <string name="contrib_feature_csv_import_label">CSV 導入</string>
     <string name="dialog_balance_delete">刪除對帳交易</string>
     <string name="dialog_command_disabled_insert_transfer">轉帳交易需要第二個帳戶。</string>
     <string name="import_accounts_success" tools:ignore="PluralsCandidate">%1$d 帳戶已成功匯入。</string>

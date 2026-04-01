@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label" tools:ignore="UnusedResources">Biểu đồ quạt (dựa theo phân phối danh mục)</string>
     <string name="contrib_feature_plans_unlimited_label" tools:ignore="UnusedResources">Tạo các kế hoạch với số lượng không giới hạn</string>
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">Xuất danh sách giao dịch sang dạng PDF</string>
-    <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">Nhập CSV</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Không giới hạn số lượng bản mẫu chia tách</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Biểu đồ thời gian</string>
     <string name="licence_status_free">Miễn phí</string>

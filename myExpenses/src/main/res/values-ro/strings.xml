@@ -31,7 +31,6 @@
     <string name="contrib_feature_attach_picture_label" tools:ignore="UnusedResources">Ataseaza imagine la tranzactie</string>
     <string name="contrib_feature_plans_unlimited_label" tools:ignore="UnusedResources">Număr nelimitat de scadenţe</string>
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">Export listă tranzacţii în PDF</string>
-    <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">CSV import</string>
     <string name="licence_status_free">Gratuit</string>
     <string name="contrib_key">Cheie Contrib</string>
     <string name="extended_key">Cheie Extinse</string>

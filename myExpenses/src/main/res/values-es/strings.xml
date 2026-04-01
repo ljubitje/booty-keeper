@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">Gráfico de sectores (Distribución por categoría)</string>
     <string name="contrib_feature_plans_unlimited_label">Número de proyectos ilimitados</string>
     <string name="contrib_feature_print_label">Exportar lista de transacciones a PDF</string>
-    <string name="contrib_feature_csv_import_label">Importar desde CSV</string>
     <string name="contrib_feature_split_template_label">Número ilimitado de plantillas divididas</string>
     <string name="contrib_feature_history_label">Historial gráfico</string>
     <string name="licence_status_free">Gratis</string>

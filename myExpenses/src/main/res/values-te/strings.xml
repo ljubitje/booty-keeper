@@ -487,7 +487,6 @@
     <string name="licence_status_free">ఉచితం</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">చరిత్ర చార్ట్</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">స్ప్లిట్ టెంప్లేట్ల అపరిమిత సంఖ్య</string>
-    <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">CSV దిగుమతి</string>
     <string name="export_to_format">%s కి ఎగుమతి చేయండి</string>
     <string name="io_error_unable_to_create_file">%2$s ఫోల్డర్‌లో %1$s ఫైల్‌ను సృష్టించడం సాధ్యం కాలేదు</string>
     <string name="menu_undelete_transaction">రాబట్టుకోవటం</string>

@@ -390,9 +390,6 @@ class PreferenceActivity : SyncBackendSetupActivity(), ContribIFace, SortUtility
 
     override fun contribFeatureCalled(feature: ContribFeature, tag: Serializable?) {
         when (feature) {
-            ContribFeature.CSV_IMPORT -> {
-                startActivity(Intent(this, CsvImportActivity::class.java))
-            }
             ContribFeature.AUTOMATIC_FX_DOWNLOAD -> {
                 twoPanePreference.getDetailFragment<PreferenceDataFragment>()?.activateAutomaticDownload()
             }

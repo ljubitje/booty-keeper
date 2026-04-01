@@ -28,7 +28,6 @@
     <string name="contrib_feature_accounts_unlimited_label">Neograničen broj računa</string>
     <string name="contrib_feature_plans_unlimited_label">Neograničen broj planova</string>
     <string name="contrib_feature_print_label">Izvezi popis transakcija u PDF</string>
-    <string name="contrib_feature_csv_import_label">CSV uvoz</string>
     <string name="contrib_key">Ključ doprinositelja</string>
     <string name="extended_key">Prošireni ključ</string>
     <!-- Placeholder: 1 will be replace with either My Expenses Contrib Key or My Expenses Extended Key -->

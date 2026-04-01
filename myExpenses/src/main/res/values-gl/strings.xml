@@ -27,7 +27,6 @@
     <string name="contrib_feature_attach_picture_label">Anexar imaxe á transacción</string>
     <string name="contrib_feature_plans_unlimited_label">Número de plans ilimitado</string>
     <string name="contrib_feature_print_label">Exportar a listaxe de transaccións a PDF</string>
-    <string name="contrib_feature_csv_import_label">Importar CSV</string>
     <string name="currency">Moeda</string>
     <string name="current_balance">Saldo actual</string>
     <string name="date">Data</string>

@@ -33,7 +33,6 @@
     <string name="contrib_feature_distribution_label">Pie chart (Distribution per category)</string>
     <string name="contrib_feature_plans_unlimited_label">Unlimited number of plans</string>
     <string name="contrib_feature_print_label">Export transaction list to PDF</string>
-    <string name="contrib_feature_csv_import_label">CSV import</string>
     <string name="contrib_feature_split_template_label">Unlimited number of split templates</string>
     <string name="contrib_feature_history_label">History chart</string>
     <string name="contrib_feature_category_tree_label">Arbitrarily deep category hierarchy</string>

@@ -23,7 +23,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.totschnig.myexpenses.R
 import org.totschnig.myexpenses.activity.BackupRestoreActivity
-import org.totschnig.myexpenses.activity.CsvImportActivity
 import org.totschnig.myexpenses.activity.GrisbiImport
 import org.totschnig.myexpenses.activity.ManageCategories
 import org.totschnig.myexpenses.activity.ManageCurrencies
@@ -91,12 +90,6 @@ class SettingsTest : BaseUiTest<PreferenceActivity>() {
         intended(QifImport::class)
     }
 
-    @Test
-    fun importCsv() {
-        navigateTo(withText(ioTitle), withText(getString(R.string.pref_import_title, "CSV")))
-        handleContribDialog(ContribFeature.CSV_IMPORT)
-        intended(CsvImportActivity::class)
-    }
 
     private val backupRestoreTitle: String
         get() = getString(R.string.menu_backup) + " / " + getString(R.string.pref_restore_title)

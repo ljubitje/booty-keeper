@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">Tortadiagram (Elosztás kategóriánként)</string>
     <string name="contrib_feature_plans_unlimited_label">Korlátlan számú terv</string>
     <string name="contrib_feature_print_label">Tranzakciók listájának exportálása PDF-be</string>
-    <string name="contrib_feature_csv_import_label">CSV-importálás</string>
     <string name="contrib_feature_split_template_label">Korlátlan számú osztott sablon</string>
     <string name="contrib_feature_history_label">Előzménydiagram</string>
     <string name="licence_status_free">Ingyenes</string>

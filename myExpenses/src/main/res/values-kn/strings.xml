@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">ಪೈ ಚಾರ್ಟ್ (ಪ್ರತಿ ವರ್ಗಕ್ಕೆ ವಿತರಣೆ)</string>
     <string name="contrib_feature_plans_unlimited_label">ಅನಿಯಮಿತ ಸಂಖ್ಯೆಯ ಯೋಜನೆಗಳು</string>
     <string name="contrib_feature_print_label">ವಹಿವಾಟಿನ ಪಟ್ಟಿಯನ್ನು ಪಿಡಿಎಫ್‌ಗೆ ರಫ್ತು ಮಾಡಿ</string>
-    <string name="contrib_feature_csv_import_label">ಸಿಎಸ್ವಿ ಆಮದು</string>
     <string name="contrib_feature_split_template_label">ವಿಭಜಿತ ಟೆಂಪ್ಲೆಟ್ಗಳ ಅನಿಯಮಿತ ಸಂಖ್ಯೆ</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">ಇತಿಹಾಸ ಚಾರ್ಟ್</string>
     <string name="licence_status_free">ಉಚಿತ</string>

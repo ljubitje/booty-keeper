@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label" tools:ignore="UnusedResources">Carta pai (Agihan per katagori)</string>
     <string name="contrib_feature_plans_unlimited_label" tools:ignore="UnusedResources">Bilang plan tidak terhad</string>
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">Eksport senarai transaksi menjadi PDF</string>
-    <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">Import CSV</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Bilang templat berasingan tidak terhad</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Carta sejarah</string>
     <string name="licence_status_free">Percuma</string>

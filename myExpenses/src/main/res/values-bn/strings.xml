@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">পাই চার্ট (ক্যাটাগরি অনুযায়ী বিতরণ)</string>
     <string name="contrib_feature_plans_unlimited_label">আনলিমিটেড প্লান সংখ্যা</string>
     <string name="contrib_feature_print_label">লেনদেনের তালিকা PDF-এ এক্সপোর্ট করুন</string>
-    <string name="contrib_feature_csv_import_label">CSV ইমপোর্ট</string>
     <string name="contrib_feature_split_template_label">আনলিমিটেড স্প্লিট টেমপ্লেট</string>
     <string name="contrib_feature_history_label">ইতিহাস চার্ট</string>
     <string name="contrib_feature_category_tree_label">স্বেচ্ছাকৃতভাবে গভীর ক্যাটাগরি পদানুক্রম</string>

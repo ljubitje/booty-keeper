@@ -42,7 +42,6 @@ class PreferencesIOFragment: BasePreferenceIOBRFragment() {
 
     override fun onPreferenceTreeClick(preference: Preference) = when {
         super.onPreferenceTreeClick(preference) -> true
-        handleContrib(PrefKey.IMPORT_CSV, ContribFeature.CSV_IMPORT, preference) -> true
         else -> false
     }
 }

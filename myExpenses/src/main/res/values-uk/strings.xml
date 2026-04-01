@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">Секторна діаграма (розподіл за категоріями)</string>
     <string name="contrib_feature_plans_unlimited_label">Необмежена кількість планів</string>
     <string name="contrib_feature_print_label">Експорт транзакцій в PDF</string>
-    <string name="contrib_feature_csv_import_label">Імпортування CSV</string>
     <string name="contrib_feature_split_template_label">Необмежена кількість шаблонів поділу</string>
     <string name="contrib_feature_history_label">Історія</string>
     <string name="licence_status_free">Безкоштовна версія</string>

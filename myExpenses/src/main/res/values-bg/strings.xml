@@ -32,7 +32,6 @@
     <string name="contrib_feature_distribution_label">Графично разпределение (по категория)</string>
     <string name="contrib_feature_plans_unlimited_label">Неограничен брой планове</string>
     <string name="contrib_feature_print_label">Експортиране в PDF на списък транзакции</string>
-    <string name="contrib_feature_csv_import_label">Импорт от CSV</string>
     <string name="contrib_feature_split_template_label">Неограничен брой шаблони за  разпределяне</string>
     <string name="contrib_feature_history_label">Графика на историята</string>
     <string name="licence_status_free">Безплатен</string>
