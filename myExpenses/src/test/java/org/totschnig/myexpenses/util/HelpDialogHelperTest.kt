@@ -40,7 +40,6 @@ import org.totschnig.myexpenses.activity.ManageTemplates
 import org.totschnig.myexpenses.activity.MethodEdit
 import org.totschnig.myexpenses.activity.MyExpenses
 import org.totschnig.myexpenses.activity.ProtectedFragmentActivity
-import org.totschnig.myexpenses.activity.RoadmapVoteActivity
 
 @RunWith(ParameterizedRobolectricTestRunner::class)
 class HelpDialogHelperTest(private val activity: Class<out ProtectedFragmentActivity>) :
@@ -68,8 +67,7 @@ class HelpDialogHelperTest(private val activity: Class<out ProtectedFragmentActi
             arrayOf(ManageTags::class.java),
             arrayOf(ManageTemplates::class.java),
             arrayOf(MethodEdit::class.java),
-            arrayOf(MyExpenses::class.java),
-            arrayOf(RoadmapVoteActivity::class.java)
+            arrayOf(MyExpenses::class.java)
         )
     }
 

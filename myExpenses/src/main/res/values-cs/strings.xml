@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Export seznamu transakcí do PDF</string>
     <string name="contrib_feature_csv_import_label">Import CSV souboru</string>
     <string name="contrib_feature_split_template_label">Neomezený počet rozdělených šablon</string>
-    <string name="contrib_feature_roadmap_voting_label">Právo na hlasování v <b>plánu vyvíjených součástí</b></string>
     <string name="contrib_feature_history_label">Graf historie</string>
     <string name="licence_status_free">Zdarma</string>
     <string name="contrib_key">Klíč Contrib</string>
@@ -675,7 +674,6 @@
     <string name="translated_by">Přeložil</string>
     <string name="content_description_dates_are_linked">Datum rezervace a datum hodnoty jsou aktualizovány společně</string>
     <string name="content_description_dates_are_not_linked">Datum rezervace a datum hodnoty nejsou aktualizovány společně</string>
-    <string name="roadmap_vote">Hlasování o plánovaných součástech</string>
     <string name="warning_account_for_transaction_is_closed">Nejméně jednu z vybraných transakcí nelze upravit:</string>
     <string name="object_sealed">Předmět se vztahuje k uzavřenému účtu.</string>
     <string name="content_description_download_exchange_rate">Stáhnout směnný kurz</string>
@@ -879,7 +877,6 @@
     </plurals>
     <string name="encrypt_database">Šifrování databáze</string>
     <string name="menu_unlink_transfer">Odpojit přenos</string>
-    <string name="roadmap_intro">Hlasování o plánu 2024 je nyní otevřeno! Hlasujte pro funkce a vylepšení, které jsou pro vás nejdůležitější.</string>
     <string name="backup_save_to_sync_backend">Uložit do %s</string>
     <string name="contact_us">Napište nám</string>
     <string name="icons_for_categories">Ikony pro kategorie</string>

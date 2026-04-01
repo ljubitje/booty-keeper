@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Export de la liste des opérations au format PDF</string>
     <string name="contrib_feature_csv_import_label">Import CSV</string>
     <string name="contrib_feature_split_template_label">Nombre illimité de modèles ventilés</string>
-    <string name="contrib_feature_roadmap_voting_label">Voter sur la <b>feuille de route pour le développement</b></string>
     <string name="contrib_feature_history_label">Graphique historique</string>
     <string name="licence_status_free">Gratuit</string>
     <string name="contrib_key">Clé Contrib</string>
@@ -667,7 +666,6 @@
     <string name="translated_by">Traduit par</string>
     <string name="content_description_dates_are_linked">La date d\'enregistrement et la date de valeur sont mises à jour ensemble</string>
     <string name="content_description_dates_are_not_linked">La date d\'enregistrement et la date de valeur ne sont pas mises à jour ensemble</string>
-    <string name="roadmap_vote">Vote sur la feuille de route</string>
     <string name="warning_account_for_transaction_is_closed">Au moins une des transactions sélectionnées ne peut pas être modifiée :</string>
     <string name="object_sealed">L\'objet fait référence à un compte fermé.</string>
     <string name="content_description_download_exchange_rate">Télécharger le taux de change</string>
@@ -944,7 +942,6 @@
     <string name="warning_transform_to_transfer">L\'opération sélectionnée sera remplacée par un transfert de %1$s vers %2$s.</string>
     <string name="remap_date">Sur toutes les opérations sélectionnées, la date sera fixée à %s.</string>
     <string name="menu_transform_to_transfer">Transformer en transfert</string>
-    <string name="roadmap_intro">Le vote pour la feuille de route 2024 est maintenant ouvert ! Votez pour les fonctionnalités et les améliorations qui comptent le plus pour vous.</string>
     <string name="merge_categories_prompt">Sélectionnez la catégorie que vous souhaitez conserver</string>
     <string name="merge_categories_dialog_title">Fusionner les catégories</string>
     <string name="subcategories_merged_recursively">Si l’une des catégories fusionnées a des sous-catégories avec le même label, celles-ci seront fusionnées en premier, récursivement.</string>

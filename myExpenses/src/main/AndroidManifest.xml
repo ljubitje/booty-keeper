@@ -327,16 +327,6 @@
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.RoadmapVoteActivity"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-        </activity>
         <activity android:name=".activity.HistoryActivity" />
 
         <activity

@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Tranzakciók listájának exportálása PDF-be</string>
     <string name="contrib_feature_csv_import_label">CSV-importálás</string>
     <string name="contrib_feature_split_template_label">Korlátlan számú osztott sablon</string>
-    <string name="contrib_feature_roadmap_voting_label">Szavazási jog a <b>fejlesztési ütemtervről</b></string>
     <string name="contrib_feature_history_label">Előzménydiagram</string>
     <string name="licence_status_free">Ingyenes</string>
     <string name="contrib_key">Contrib Kulcs</string>
@@ -661,7 +660,6 @@
     <string name="translated_by">A fordítást készítette</string>
     <string name="content_description_dates_are_linked">A foglalás és az érték dátuma együtt van frissítve</string>
     <string name="content_description_dates_are_not_linked">A foglalási dátum és az érték dátuma nem frissül együtt</string>
-    <string name="roadmap_vote">Ütemterv szavazás</string>
     <string name="warning_account_for_transaction_is_closed">A kiválasztott tranzakciók közül legalább egy nem szerkeszthető:</string>
     <string name="object_sealed">Az objektum egy lezárt számlára utal.</string>
     <string name="content_description_download_exchange_rate">Árfolyam letöltése</string>
@@ -923,7 +921,6 @@
     <string name="default_transfer_category">Alapértelmezett átviteli kategória</string>
     <string name="pref_sync_now_all_summary">%s szinkronizálja az ugyanahhoz a háttérhez tartozó összes fiókot</string>
     <string name="warning_transform_to_transfer">A kiválasztott tranzakciót a %1$s -ről a %2$s-re történő átutalás váltja fel.</string>
-    <string name="roadmap_intro">Megkezdődött a szavazás a 2024-es ütemtervről! Szavazzon az Ön számára legfontosabb funkciókra és fejlesztésekre.</string>
     <string name="menu_unlink_transfer">Az átvitel leválasztása</string>
     <string name="pref_unmapped_transaction_as_transfer_summary_off">ráfordításként/bevételként számolják el</string>
     <string name="pref_unmapped_transaction_as_transfer_summary_on">átutalásnak számítanak</string>

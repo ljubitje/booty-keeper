@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Експорт транзакцій в PDF</string>
     <string name="contrib_feature_csv_import_label">Імпортування CSV</string>
     <string name="contrib_feature_split_template_label">Необмежена кількість шаблонів поділу</string>
-    <string name="contrib_feature_roadmap_voting_label">Можливість голосувати <b>в плані розвитку програми</b></string>
     <string name="contrib_feature_history_label">Історія</string>
     <string name="licence_status_free">Безкоштовна версія</string>
     <string name="contrib_key">Платна версія</string>
@@ -870,12 +869,10 @@
     <string name="warning_delete_default_transfer_category">Категорія %s налаштована як категорія передачі за замовчуванням і не повинна видалятися.</string>
     <string name="pref_transaction_amount_color_source_title">Кольори для сум</string>
     <string name="pref_sync_now_all_summary">%s синхронізує всі рахунки для одного сервера</string>
-    <string name="roadmap_vote">Голосування за дорожню карту</string>
     <string name="icons_for_categories">Значки для категорій</string>
     <string name="merge_parties_strategy_group">Дублікати групуються як залежні.</string>
     <string name="widget_title_budget">Мій бюджет</string>
     <string name="merge_parties_strategy_delete">Дублікати видаляються.</string>
-    <string name="roadmap_intro">Голосування за дорожню карту 2024 року відкрито! Голосуйте за функції та покращення, які для вас найважливіші.</string>
     <string name="menu_unlink_transfer">Від\'єднати переказ</string>
     <string name="warning_unlink_transfer">Вибраний переказ буде від’єднано: його замінять звичайні транзакції в обох рахунках.</string>
     <string name="menu_transform_to_transfer">Перетворити в переказ</string>

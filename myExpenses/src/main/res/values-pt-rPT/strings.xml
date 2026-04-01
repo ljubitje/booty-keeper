@@ -618,7 +618,6 @@
     <string name="content_description_download_exchange_rate">Baixar a taxa de câmbio</string>
     <string name="object_sealed">O objeto se refere a uma conta encerrada.</string>
     <string name="warning_account_for_transaction_is_closed">Pelo menos uma das transações selecionadas não pode ser editada:</string>
-    <string name="roadmap_vote">Votar no roteiro</string>
     <string name="content_description_dates_are_not_linked">A data do pagamento e a data da contabilização não são atualizadas juntas</string>
     <string name="content_description_dates_are_linked">A data do pagamento e a data da contabilização são atualizadas juntas</string>
     <string name="translated_by">Traduzido por</string>
@@ -738,7 +737,6 @@
     <string name="sync_error_will_try_again_later">Tentarei novamente mais tarde.</string>
     <string name="auto_backup_cloud_success">O ficheiro de backup %1$s foi armazenado com sucesso no destino %2$s.</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Diagrama histórico</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources">Direito de voto no <b>roteiro de desenvolvimento</b></string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Número ilimitado de modelos de divisão de transações</string>
     <string name="contrib_feature_distribution_label" tools:ignore="UnusedResources">Gráfico de pizza (distribuição por categoria)</string>
     <string name="crash_reports_user_info">O {app_name} enviará automaticamente relatórios sobre falhas da aplicação aos seus desenvolvedores, o que permitir-lhes-á corrigir os problemas mais rapidamente.</string>
@@ -887,7 +885,6 @@
     <string name="menu_transform_to_transfer">Converter em transferência</string>
     <string name="warning_transform_to_transfer">A transação selecionada será substituída por uma transferência de %1$s para %2$s.</string>
     <string name="remap_date">Em todas as transações selecionadas, a data será definida como %s.</string>
-    <string name="roadmap_intro">A votação do guião para 2024 já está aberta! Vote nos recursos e melhorias que são mais importantes para si.</string>
     <string name="merge_categories_dialog_title">Mesclar Categorias</string>
     <string name="subcategories_merged_recursively">Se alguma das categorias mescladas tiver subcategorias com o mesmo rótulo, elas serão mescladas primeiro, de forma recursiva.</string>
     <string name="merge_categories_prompt">Selecione a categoria que deseja manter</string>

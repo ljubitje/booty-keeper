@@ -300,12 +300,6 @@ open class LicenceHandler(
     open val purchaseExtraInfo: String?
         get() = null
 
-    open val roadmapVoteKey: Pair<String, String>?
-        get() = if (isProfessionalEnabled)
-            prefHandler.getString(PrefKey.NEW_LICENCE)?.let {
-                DistributionHelper.Distribution.GITHUB.name to it
-            }
-        else null
 
     /**
      * @return true if licenceStatus has been upEd

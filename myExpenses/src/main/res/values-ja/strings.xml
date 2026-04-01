@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">取引リストを PDF にエクスポート</string>
     <string name="contrib_feature_csv_import_label">CSV インポート</string>
     <string name="contrib_feature_split_template_label">無制限の分割テンプレート</string>
-    <string name="contrib_feature_roadmap_voting_label"><b>開発ロードマップ</b> の投票権</string>
     <string name="contrib_feature_history_label">履歴チャート</string>
     <string name="licence_status_free">無料</string>
     <string name="contrib_key">貢献キー</string>
@@ -648,7 +647,6 @@
     <string name="translated_by">翻訳者</string>
     <string name="content_description_dates_are_linked">予約日と約定日は一緒に更新されます</string>
     <string name="content_description_dates_are_not_linked">予約日と約定日は一緒に更新されません</string>
-    <string name="roadmap_vote">ロードマップの投票</string>
     <string name="warning_account_for_transaction_is_closed">選択された取引に編集できないものがあります:</string>
     <string name="object_sealed">オブジェクトが閉じた勘定を参照しています。</string>
     <string name="content_description_download_exchange_rate">為替レートをダウンロード</string>

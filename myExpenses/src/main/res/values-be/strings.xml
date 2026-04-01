@@ -501,7 +501,6 @@
     <string name="contrib_feature_accounts_unlimited_label">Неабмежаваная колькасць акаўнтаў</string>
     <string name="contrib_feature_plans_unlimited_label">Неабмежаваная колькасць тарыфных планаў</string>
     <string name="contrib_feature_print_label">Экспарт спісу транзакцый у фармат PDF</string>
-    <string name="contrib_feature_roadmap_voting_label">Права голасу па <b>дарожнай карце развіцця</b></string>
     <string name="contrib_feature_history_label">Гістарычная дыяграма</string>
     <string name="contrib_feature_csv_import_label">Імпарт CSV-файла</string>
     <string name="contrib_feature_split_template_label">Неабмежаваная колькасць падзеленых шаблонаў</string>
@@ -552,7 +551,6 @@
     <string name="sub_budget_under_allocated_error">%s ужо размеркаваны па падкатэгорыях. Калі вы не выдаліце з іх грошы, вы павінны хаця б размеркаваць гэтую суму ў асноўную катэгорыю.</string>
     <string name="backup_is_encrypted">Файл рэзервовай копіі зашыфраваны. Каб расшыфраваць яго, вам трэба ўказаць яго пароль.</string>
     <string name="menu_close">Зачыніць</string>
-    <string name="roadmap_vote">Дарожная карта і галасаванне</string>
     <string name="content_description_dates_are_linked">Дата браніравання і дата валютавання абнаўляюцца разам</string>
     <string name="content_description_dates_are_not_linked">Дата браніравання і дата валютавання не абнаўляюцца разам</string>
     <string name="pref_exchange_rates_api_key_summary">Калі ласка, зарэгіструйце бясплатны акаўнт на %s і падайце свой ідэнтыфікатар праграмы</string>
@@ -886,7 +884,6 @@
     <string name="default_transfer_category">Катэгорыя перадачы па змаўчанні</string>
     <string name="pref_sync_now_all_summary">%s сінхранізуе ўсе акаўнты для аднаго і таго ж бэкенда</string>
     <string name="warning_unlink_transfer">Выбраны перавод будзе адвязаны: ён будзе заменены звычайнымі транзакцыямі на абодвух рахунках.</string>
-    <string name="roadmap_intro">Галасаванне па дарожнай карце на 2024 год адкрыта! Галасуйце за функцыі і паляпшэнні, якія найбольш важныя для вас.</string>
     <string name="not_enough_data">Недастаткова дадзеных</string>
     <string name="archive">Архіў</string>
     <string name="warning_archive_inconsistent_state">Транзакцыі ў выбраным дыяпазоне дат маюць супярэчлівыя статусы (%s).</string>

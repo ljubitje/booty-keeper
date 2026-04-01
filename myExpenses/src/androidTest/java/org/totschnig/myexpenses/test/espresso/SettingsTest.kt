@@ -31,7 +31,6 @@ import org.totschnig.myexpenses.activity.ManageMethods
 import org.totschnig.myexpenses.activity.ManageSyncBackends
 import org.totschnig.myexpenses.activity.PreferenceActivity
 import org.totschnig.myexpenses.activity.QifImport
-import org.totschnig.myexpenses.activity.RoadmapVoteActivity
 import org.totschnig.myexpenses.model.ContribFeature
 import org.totschnig.myexpenses.testutils.BaseUiTest
 import org.totschnig.myexpenses.testutils.TestShard5
@@ -126,12 +125,6 @@ class SettingsTest : BaseUiTest<PreferenceActivity>() {
     fun manageSync() {
         navigateTo(R.string.synchronization, R.string.pref_manage_sync_backends_title)
         intended(ManageSyncBackends::class)
-    }
-
-    @Test
-    fun roadmap() {
-        navigateTo(R.string.help_and_feedback, R.string.roadmap_vote)
-        intended(RoadmapVoteActivity::class)
     }
 
     @Test

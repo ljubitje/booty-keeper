@@ -35,13 +35,6 @@
             android:title="@string/help_button_rate" />
 
         <Preference
-            android:key="roadmap_vote"
-            android:title="@string/roadmap_vote">
-            <intent
-                android:targetClass="org.totschnig.myexpenses.activity.RoadmapVoteActivity"
-                android:targetPackage="@string/application_id" />
-        </Preference>
-        <Preference
             android:key="@string/pref_tell_a_friend_key"
             android:title="@string/menu_share" />
     </PreferenceCategory>

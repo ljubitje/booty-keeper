@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">تصدير قائمة العمليات إلى PDF</string>
     <string name="contrib_feature_csv_import_label">إستيراد ملف CSV</string>
     <string name="contrib_feature_split_template_label">عدد غير محدود من القوالب المنقسمة</string>
-    <string name="contrib_feature_roadmap_voting_label">حق التصويت على <b> مخططات التنمية</b></string>
     <string name="contrib_feature_history_label">مخطط زمني</string>
     <string name="licence_status_free">خالي</string>
     <string name="contrib_key">مفتاح المساهمة</string>
@@ -690,7 +689,6 @@
     <string name="translated_by">مت الترجمة بواسطة</string>
     <string name="content_description_dates_are_linked">يتم تحديث تاريخ الحجز وتاريخ القيمة معاً</string>
     <string name="content_description_dates_are_not_linked">لا يتم تحديث تاريخ الحجز وتاريخ القيمة معاً</string>
-    <string name="roadmap_vote">التصويت على خارطة الطريق</string>
     <string name="warning_account_for_transaction_is_closed">لا يمكن تحرير واحدة على الأقل من المعاملات المحددة:</string>
     <string name="object_sealed">يشير العنصر إلى حساب مغلق.</string>
     <string name="content_description_download_exchange_rate">تنزيل سعر الصرف</string>
@@ -963,7 +961,6 @@
     <string name="one_time_payment">دفعة مالية لمرة واحدة</string>
     <string name="dialog_contrib_trial_info_play">لن يتم تحويل هذه النسخة التجريبية المجانية  أبدًا إلى أي نوع من الاشتراكات.</string>
     <string name="dialog_contrib_subscription_info_play">يبدأ هذا الاشتراك فورًا، مع إصدار فاتورة شهرية أو سنوية، ويمكن إلغاؤه في أي وقت.</string>
-    <string name="roadmap_intro">تصويت خارطة الطريق لعام 2024 مفتوح الآن! شارك في التصويت على الميزات والتحسينات الأهم بالنسبة لك.</string>
     <string name="contact_us">اتصل بنا</string>
     <string name="default_transfer_category">فئة النقل الافتراضية</string>
     <string name="menu_aggregate_neutral_categories">تجميع الفئات المحايدة</string>

@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">ייצא רשימת עסקאות ל- PDF</string>
     <string name="contrib_feature_csv_import_label">ייבוא CSV</string>
     <string name="contrib_feature_split_template_label">מספר בלתי מוגבל של תבניות מפוצלות</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources">זכות הצבעה על <b>מפת דרכים להמשך הפיתוח</b></string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">תרשים היסטוריה</string>
     <string name="licence_status_free">חופשי / חינמי</string>
     <string name="contrib_key">מפתח תורם</string>
@@ -668,7 +667,6 @@
     <string name="translated_by">המתרגם</string>
     <string name="content_description_dates_are_linked">תאריך ההזמנה ותאריך הערך מתעדכנים יחד</string>
     <string name="content_description_dates_are_not_linked">תאריך ההזמנה ותאריך הערך אינם מעודכנים יחד</string>
-    <string name="roadmap_vote">הצבעה על מפת דרכים</string>
     <string name="warning_account_for_transaction_is_closed">לא ניתן לערוך לפחות אחת מהעסקאות שנבחרו:</string>
     <string name="object_sealed">אובייקט מתייחס לחשבון סגור.</string>
     <string name="content_description_download_exchange_rate">עדכן שערי חליפין</string>

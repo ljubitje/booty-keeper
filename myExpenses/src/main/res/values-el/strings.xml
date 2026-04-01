@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Εξαγάγετε τη λίστα συναλλαγών σε PDF</string>
     <string name="contrib_feature_csv_import_label">Εισαγωγή CSV</string>
     <string name="contrib_feature_split_template_label">Απεριόριστος αριθμός προτύπων διαίρεσης</string>
-    <string name="contrib_feature_roadmap_voting_label">Δικαίωμα ψήφου για τον <b>χάρτη πορείας</b></string>
     <string name="contrib_feature_history_label">Γράφημα ιστορικού</string>
     <string name="licence_status_free">Ελεύθερο</string>
     <string name="contrib_key">Contrib κλειδί</string>
@@ -721,7 +720,6 @@
     <string name="object_sealed">Το αντικείμενο αναφέρεται σε κλειστό λογαριασμό.</string>
     <string name="content_description_edit_plan">Επεξεργασία προγράμματος στην εφαρμογή ημερολογίου</string>
     <string name="budget_under_allocated_error">%s έχουν ήδη κατανεμηθεί σε κατηγορίες. Εάν δεν αφαιρέσετε χρήματα από αυτά, πρέπει τουλάχιστον να προϋπολογισμό αυτό το ποσό.</string>
-    <string name="roadmap_vote">Ψηφοφορία χάρτη πορείας</string>
     <string name="menu_create_budget">Νέος προϋπολογισμός</string>
     <string name="sync_io_exception_unlocking">Σφάλμα κατά την κατάργηση κλειδώματος από το απομακρυσμένο backend.</string>
     <string name="dialog_multi_tag_append">Προσθέστε νέες ετικέτες σε υπάρχουσες ετικέτες</string>

@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">Xuất danh sách giao dịch sang dạng PDF</string>
     <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">Nhập CSV</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Không giới hạn số lượng bản mẫu chia tách</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources">Có quyền bầu chọn đối với <b>quá trình phát triển ứng dụng</b></string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Biểu đồ thời gian</string>
     <string name="licence_status_free">Miễn phí</string>
     <string name="contrib_key">Khóa đóng góp</string>
@@ -688,7 +687,6 @@
     <string name="warning_unlink_transfer">Chuyển khoản đã chọn sẽ bị hủy liên kết: Nó sẽ được thay thế bằng các giao dịch thông thường trong cả hai tài khoản.</string>
     <string name="menu_transform_to_transfer">Chuyển thành chuyển khoản</string>
     <string name="warning_transform_to_transfer">Giao dịch đã chọn sẽ được thay thế bằng chuyển khoản từ %1$s sang %2$s.</string>
-    <string name="roadmap_intro">Cuộc bỏ phiếu Lộ trình năm 2024 hiện đã mở! Bình chọn cho các tính năng và cải tiến quan trọng nhất đối với bạn.</string>
     <string name="auto_fill_focus">Đặt trọng tâm vào người nhận thanh toán</string>
     <string name="tags_create_or_select">Tạo hoặc chọn thẻ</string>
     <string name="cb_label_merge_accounts">Hợp nhất tài khoản</string>
@@ -713,7 +711,6 @@
     <string name="add_shortcut">Thêm phím tắt</string>
     <string name="orphaned_transaction_relink">Giao dịch có thể được liên kết lại với phiên bản sự kiện trên %s.</string>
     <string name="menu_aggregate_neutral_categories">Tổng hợp các danh mục trung tính</string>
-    <string name="roadmap_vote">Lộ trình bỏ phiếu</string>
     <string name="warning_delete_category_with_budget">Đối với ít nhất một danh mục được chọn, có phân bổ ngân sách, cũng sẽ bị xóa.</string>
     <string name="search_account">Tìm kiếm tài khoản</string>
     <string name="image_capture_not_installed">Không tìm thấy ứng dụng nào để chụp ảnh.</string>

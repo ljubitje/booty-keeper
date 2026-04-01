@@ -85,7 +85,6 @@ import org.totschnig.myexpenses.model.ContribFeature
 import org.totschnig.myexpenses.model.Money
 import org.totschnig.myexpenses.preference.PrefKey
 import org.totschnig.myexpenses.provider.KEY_DATE
-import org.totschnig.myexpenses.retrofit.Vote
 import org.totschnig.myexpenses.ui.IDiscoveryHelper
 import org.totschnig.myexpenses.util.TextUtils
 import org.totschnig.myexpenses.util.Utils
@@ -103,11 +102,9 @@ import org.totschnig.myexpenses.util.ui.DisplayProgress
 import org.totschnig.myexpenses.util.ui.displayProgress
 import org.totschnig.myexpenses.util.ui.getAmountColor
 import org.totschnig.myexpenses.viewmodel.MyExpensesViewModel
-import org.totschnig.myexpenses.viewmodel.RoadmapViewModel
 import org.totschnig.myexpenses.viewmodel.SumInfo
 import org.totschnig.myexpenses.viewmodel.TransactionListViewModel
 import org.totschnig.myexpenses.viewmodel.data.FullAccount
-import org.totschnig.myexpenses.viewmodel.repository.RoadmapRepository
 import timber.log.Timber
 import java.io.Serializable
 import java.time.LocalDate
@@ -156,7 +153,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
 
     private var currentBalance: String = ""
 
-    private val roadmapViewModel: RoadmapViewModel by viewModels()
 
     lateinit var binding: ActivityMainBinding
 
@@ -302,7 +298,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
         viewModel = ViewModelProvider(this)[modelClass]
         with(injector) {
             inject(viewModel)
-            inject(roadmapViewModel)
         }
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -746,8 +741,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
             })
 
             R.id.CANCEL_CALLBACK_COMMAND -> finishActionMode()
-
-            R.id.ROADMAP_COMMAND -> startActivity(Intent(this, RoadmapVoteActivity::class.java))
 
             R.id.BALANCE_SHEET_COMMAND -> {
                 openBalanceSheet()
@@ -1214,39 +1207,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
     /**
      * Currently not used
      */
-    protected fun voteReminderCheck() {
-        val prefKey = "vote_reminder_shown_${RoadmapRepository.VERSION}"
-        if (!prefHandler.getBoolean(prefKey, false) && Utils.getDaysSinceUpdate(this) > 1) {
-            roadmapViewModel.getLastVote().observe(this) { vote: Vote? ->
-                val hasNotVoted = vote == null
-                if (hasNotVoted) {
-                    ConfirmationDialogFragment.newInstance(Bundle().apply {
-                        putCharSequence(KEY_MESSAGE, getString(R.string.roadmap_intro))
-                        putInt(KEY_COMMAND_POSITIVE, R.id.ROADMAP_COMMAND)
-                        putString(ConfirmationDialogFragment.KEY_PREFKEY, prefKey)
-                        putInt(KEY_POSITIVE_BUTTON_LABEL, R.string.roadmap_vote)
-                    }).show(supportFragmentManager, "ROAD_MAP_VOTE_REMINDER")
-                }
-            }
-        }
-    }
-
-    /**
-     * Can be used to ask user who has already voted to update their vote. Currently not used
-     */
-    /*  private void voteReminderCheck2() {
-        roadmapViewModel.getShouldShowVoteReminder().observe(this, shouldShow -> {
-          if (shouldShow) {
-            prefHandler.putLong(PrefKey.VOTE_REMINDER_LAST_CHECK, System.currentTimeMillis());
-            showSnackBar(getString(R.string.reminder_vote_update), Snackbar.LENGTH_INDEFINITE,
-                    new SnackbarAction(getString(R.string.vote_reminder_action), v -> {
-              Intent intent = new Intent(this, RoadmapVoteActivity.class);
-              startActivity(intent);
-            }));
-          }
-        });
-      }*/
-
     override val scrollsHorizontally: Boolean = true
 
     override fun contribFeatureNotCalled(feature: ContribFeature) {

@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Esporta l\'elenco delle transazioni in formato PDF</string>
     <string name="contrib_feature_csv_import_label">Importa CSV</string>
     <string name="contrib_feature_split_template_label">Numero illimitato di modelli per operazioni frazionate</string>
-    <string name="contrib_feature_roadmap_voting_label">Votare direttamente sulla <b>roadmap di sviluppo</b></string>
     <string name="contrib_feature_history_label">Grafico storico</string>
     <string name="licence_status_free">Gratuito</string>
     <string name="contrib_key">Licenza Contributore</string>
@@ -664,7 +663,6 @@
     <string name="translated_by">Tradotto da</string>
     <string name="content_description_dates_are_linked">Data di prenotazione e data di valuta vengono aggiornate insieme</string>
     <string name="content_description_dates_are_not_linked">Data di prenotazione e data di valuta non vengono aggiornate insieme</string>
-    <string name="roadmap_vote">Voto sulla Roadmap</string>
     <string name="warning_account_for_transaction_is_closed">Almeno una delle transazioni selezionate non può essere modificata:</string>
     <string name="object_sealed">L\'oggetto fa riferimento ad un account chiuso.</string>
     <string name="content_description_download_exchange_rate">Scarica il tasso di cambio</string>
@@ -932,7 +930,6 @@
     <string name="warning_delete_default_transfer_category">La categoria %s è configurata come categoria di bonifico predefinita e non deve essere eliminata.</string>
     <string name="default_transfer_category">Categoria di trasferimento predefinita</string>
     <string name="menu_transform_to_transfer">Converti in trasferimento</string>
-    <string name="roadmap_intro">La votazione sulla Roadmap 2024 è ora aperta! Vota per le funzionalità e i miglioramenti che più ti interessano.</string>
     <string name="pref_sync_now_all_summary">%s sincronizza tutti i conti dello stesso back-end</string>
     <string name="menu_unlink_transfer">Scorpora il trasferimento</string>
     <string name="warning_unlink_transfer">Il trasferimento selezionato sarà scorporato: verrà sostituito da transazioni normali in entrambi i conti.</string>

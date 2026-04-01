@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="warning_account_for_transaction_is_closed">ఎంచుకున్న లావాదేవీలలో కనీసం ఒకదాన్ని సవరించలేము:</string>
-    <string name="roadmap_vote">రోడ్‌మ్యాప్ ఓటు</string>
     <string name="content_description_dates_are_not_linked">బుకింగ్ తేదీ మరియు విలువ తేదీ కలిసి నవీకరించబడవు</string>
     <string name="content_description_dates_are_linked">బుకింగ్ తేదీ మరియు విలువ తేదీ కలిసి నవీకరించబడతాయి</string>
     <string name="translated_by">అనువాదించినవారు</string>
@@ -487,7 +486,6 @@
     <string name="contrib_key">కంట్రిబ్యూట్ కీ</string>
     <string name="licence_status_free">ఉచితం</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">చరిత్ర చార్ట్</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources"><b> అభివృద్ధి రోడ్‌మ్యాప్ </b></string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">స్ప్లిట్ టెంప్లేట్ల అపరిమిత సంఖ్య</string>
     <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">CSV దిగుమతి</string>
     <string name="export_to_format">%s కి ఎగుమతి చేయండి</string>

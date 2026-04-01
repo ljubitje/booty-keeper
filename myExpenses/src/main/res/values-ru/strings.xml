@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Экспорт списка операций в PDF</string>
     <string name="contrib_feature_csv_import_label">Импорт данных в формате CSV</string>
     <string name="contrib_feature_split_template_label">Неограниченное число шаблонов разделенных операций</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources">Право голоса на <b>дорожной карте разработки</b></string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">История</string>
     <string name="licence_status_free">Бесплатный</string>
     <string name="contrib_key">Contrib-ключ</string>
@@ -673,7 +672,6 @@
     <string name="translated_by">Перевод</string>
     <string name="content_description_dates_are_linked">Дата бронирования и дата стоимости обновятся вместе</string>
     <string name="content_description_dates_are_not_linked">Дата бронирования и дата стоимости не обновятся вместе</string>
-    <string name="roadmap_vote">Дорожная карта и голосование</string>
     <string name="warning_account_for_transaction_is_closed">По крайней мере, одна из выбранных транзакций не может быть отредактирована:</string>
     <string name="object_sealed">Объект относится к закрытому счету.</string>
     <string name="content_description_download_exchange_rate">Загрузить курс обмена</string>
@@ -938,7 +936,6 @@
     <string name="warning_delete_archive">Все транзакции, содержащиеся в этом архиве (%d), будут удалены.</string>
     <string name="menu_transform_to_transfer">Преобразовать в перевод</string>
     <string name="subcategories_merged_recursively">Если в объединяемых категориях есть подкатегории с одинаковым названием, они будут сначала объединены рекурсивно.</string>
-    <string name="roadmap_intro">Открыто голосование по дорожной карте 2024 года! Выберите те функции и улучшения, которые для вас наиболее важны.</string>
     <string name="warning_nested_archives">Вложенные архивы не поддерживаются.</string>
     <string name="button_activate_again">Включить снова</string>
     <string name="credit_limit_reached">Вы достигли своего кредитного лимита.</string>

@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">பரிவர்த்தனை பட்டியலை PDF ஆக ஏற்றுமதி</string>
     <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">CSV இறக்குமதி</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">வரம்பற்ற பிரிவு வார்ப்புருக்கள்</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources"><b>மேம்பாட்டு  திட்டத்தில்</b> வாக்களிக்கும் உரிமை</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">வரலாற்று விளக்கப்படம்</string>
     <string name="licence_status_free">இலவசம்</string>
     <string name="contrib_key">பங்களிப்பு திறவுகோல்</string>
@@ -659,7 +658,6 @@
     <string name="translated_by">இவர்களால் மொழிபெயர்க்கப்பட்டது</string>
     <string name="content_description_dates_are_linked">பதிவு தேதி மற்றும் மதிப்பு தேதி ஒன்றாக புதுப்பிக்கப்படுகிறது</string>
     <string name="content_description_dates_are_not_linked">பதிவு தேதி மற்றும் மதிப்பு தேதி ஒன்றாக புதுப்பிக்கப்படவில்லை</string>
-    <string name="roadmap_vote">திட்ட வாக்களிப்பு</string>
     <string name="warning_account_for_transaction_is_closed">தேர்ந்தெடுக்கப்பட்ட பரிவர்த்தனைகளில் குறைந்தபட்சம் ஒன்றையாவது தொகுக்க முடியவில்லை:</string>
     <string name="object_sealed">பொருள் ஒரு மூடப்பட்ட கணக்கைக் குறிக்கிறது.</string>
     <string name="content_description_download_exchange_rate">மாற்று விகிதத்தைப் பதிவிறக்குக</string>
@@ -948,7 +946,6 @@
     <string name="pref_transaction_amount_color_source_title">தொகைகளுக்கான வண்ணங்கள்</string>
     <string name="warning_transform_to_transfer">தேர்ந்தெடுக்கப்பட்ட பரிவர்த்தனை %1$s இலிருந்து %2$s க்கு மாற்றுவதன் மூலம் மாற்றப்படும்.</string>
     <string name="menu_transform_to_transfer">பரிமாற்றமாக மாற்றவும்</string>
-    <string name="roadmap_intro">2024 சாலை வரைபட வாக்கெடுப்பு இப்போது திறந்திருக்கும்! உங்களுக்கு மிகவும் முக்கியத்துவம் வாய்ந்த நற்பொருத்தங்கள் மற்றும் மேம்பாடுகளுக்கு வாக்களியுங்கள்.</string>
     <string name="subcategories_merged_recursively">இணைக்கப்பட்ட வகைகளில் ஏதேனும் ஒரே லேபிளைக் கொண்ட துணைப்பிரிவுகளைக் கொண்டிருந்தால், அவை முதலில் மீண்டும் ஒன்றிணைக்கப்படும்.</string>
     <string name="merge_categories_prompt">நீங்கள் வைத்திருக்க விரும்பும் வகையைத் தேர்ந்தெடுக்கவும்</string>
     <string name="not_enough_data">போதுமான தரவு இல்லை</string>

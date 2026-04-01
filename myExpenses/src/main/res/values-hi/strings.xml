@@ -240,7 +240,6 @@
     <string name="menu_create_split_part_transfer">नया ट्रांसफर विभाजित भाग</string>
     <string name="method">भुगतान विधि</string>
     <string name="no_app_handling_ftp_available">कोई ऐप हैंडलिंग ftp उपलब्ध नहीं है। स्थापित करना <i>Send With FTP</i>\?</string>
-    <string name="contrib_feature_roadmap_voting_label"><b>विकास रोडमैप</b> पर सही मतदान</string>
     <string name="contrib_feature_history_label">इतिहास चार्ट</string>
     <string name="dialog_contrib_text_2">कृपया <i>{app_name}</i> को अपग्रेड करके योगदान दें और निम्नलिखित सुविधाओं तक अप्रतिबंधित पहुंच प्राप्त करें:</string>
     <string name="menu_edit_split">विभाजन संपादित करें</string>

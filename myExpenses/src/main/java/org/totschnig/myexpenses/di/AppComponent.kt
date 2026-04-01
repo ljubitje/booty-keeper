@@ -87,7 +87,6 @@ import org.totschnig.myexpenses.viewmodel.PlannerViewModel
 import org.totschnig.myexpenses.viewmodel.PriceHistoryViewModel
 import org.totschnig.myexpenses.viewmodel.PrintLayoutConfigurationViewModel
 import org.totschnig.myexpenses.viewmodel.RestoreViewModel
-import org.totschnig.myexpenses.viewmodel.RoadmapViewModel
 import org.totschnig.myexpenses.viewmodel.SettingsViewModel
 import org.totschnig.myexpenses.viewmodel.TemplatesListViewModel
 import org.totschnig.myexpenses.viewmodel.TransactionEditViewModel
@@ -198,8 +197,6 @@ interface AppComponent {
     fun inject(adHandler: BaseAdHandlerImpl)
 
     fun inject(contribDialogFragment: ContribDialogFragment)
-
-    fun inject(roadmapViewModel: RoadmapViewModel)
 
     fun inject(historyChart: HistoryChart)
 

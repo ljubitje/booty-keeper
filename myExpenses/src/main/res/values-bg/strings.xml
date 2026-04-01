@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Експортиране в PDF на списък транзакции</string>
     <string name="contrib_feature_csv_import_label">Импорт от CSV</string>
     <string name="contrib_feature_split_template_label">Неограничен брой шаблони за  разпределяне</string>
-    <string name="contrib_feature_roadmap_voting_label">Право да гласувате на <b>картата за развитие</b></string>
     <string name="contrib_feature_history_label">Графика на историята</string>
     <string name="licence_status_free">Безплатен</string>
     <string name="contrib_key">ключ за Основен вариант</string>
@@ -659,7 +658,6 @@
     <string name="translated_by">Превод на български</string>
     <string name="content_description_dates_are_linked">Датата на резервиране и вальорът да се актуализират заедно</string>
     <string name="content_description_dates_are_not_linked">Датата на резервация и вальорът да не се актуализират заедно</string>
-    <string name="roadmap_vote">Гласуване в картата за развитие</string>
     <string name="warning_account_for_transaction_is_closed">Поне една от избраните транзакции не може да се редактира:</string>
     <string name="object_sealed">Обектът се отнася за затворена сметка.</string>
     <string name="content_description_download_exchange_rate">Изтегляне на валутни курсове</string>
@@ -929,7 +927,6 @@
     <string name="pref_transaction_amount_color_source_title">Оцветяване на суми</string>
     <string name="menu_transform_to_transfer">Превърни в превод</string>
     <string name="warning_transform_to_transfer">Избраната транзакция ще бъде заменена с превод от %1$s към %2$s.</string>
-    <string name="roadmap_intro">Отворено е гласуването в Пътната карта 2024! Избери функциите и подобренията, които са най-важни за теб.</string>
     <string name="merge_categories_dialog_title">Обединяване на категории</string>
     <string name="warning_archived_transfer_cannot_be_edited">Преводът не може да бъде редактиран, защото отсрещната страна е архивирана.</string>
     <string name="warning_unlink_transfer">Избраният превод ще бъде заменен от нормални транзакции в двете сметки.</string>

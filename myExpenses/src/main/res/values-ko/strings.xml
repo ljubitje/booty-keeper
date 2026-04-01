@@ -33,7 +33,6 @@
     <string name="contrib_feature_plans_unlimited_label" tools:ignore="UnusedResources">개수 제한 없는 재무 계획</string>
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">거래 내역 목록을 PDF로 내보내기</string>
     <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">CSV 가져오기</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources"><b>개발 로드맵에</b> 바로 투표</string>
     <string name="contrib_key">기부 확인 키</string>
     <string name="extended_key">확장 키</string>
     <!-- Placeholder: 1 will be replace with either My Expenses Contrib Key or My Expenses Extended Key -->

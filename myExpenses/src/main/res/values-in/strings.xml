@@ -49,7 +49,6 @@
     <string name="contrib_key_requires">Dibutuhkan %1$s.</string>
     <string name="licence_status_free">Gratis</string>
     <string name="contrib_feature_history_label">Bagan riwayat</string>
-    <string name="contrib_feature_roadmap_voting_label">Ikut tentukan <b>peta jalan pengembangan</b></string>
     <string name="app_name">Pengeluaran Ku</string>
     <string name="account_type_bank">Akun Bank</string>
     <string name="account_type_ccard">Kartu kredit</string>

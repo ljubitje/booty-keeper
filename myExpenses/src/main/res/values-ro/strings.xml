@@ -468,7 +468,6 @@
     <string name="no_accounts">Fără conturi.</string>
     <string name="search_tag">Căutați etichetă</string>
     <string name="csv_import_records_discarded" tools:ignore="PluralsCandidate">Înregistrările %d au fost eliminate.</string>
-    <string name="contrib_feature_roadmap_voting_label">Dreptul de vot asupra foii <b>dezvoltare</b></string>
     <string name="contrib_feature_history_label">Diagrama istoricului</string>
     <string name="dialog_command_disabled_insert_transfer">Tranzacțiile de transfer necesită un al doilea cont.</string>
     <string name="pref_auto_fill_summary">Completați datele din ultima tranzacție pentru același beneficiar/plătitor</string>
@@ -684,7 +683,6 @@
     <string name="button_relink_keep_date">Reconectați, dar păstrați data</string>
     <string name="button_relink_update_date">Reconectați și actualizați data</string>
     <string name="onboarding_privacy_title">Datele tale rămân în mâinile tale</string>
-    <string name="roadmap_vote">Vot pentru foaia de parcurs</string>
     <string name="onboarding_privacy_intro">Datele dvs. financiare nu sunt trimise către niciun server, nici operat de noi, nici de o terță parte.</string>
     <string name="language_download_requested">Traducerile pentru limba %s sunt solicitate din Magazin Play</string>
     <string name="feature_download_requested">Caracteristica %s este solicitată din Magazinul Play.</string>
@@ -889,7 +887,6 @@
     <string name="default_transfer_category">Categoria de transfer implicită</string>
     <string name="menu_unlink_transfer">Deconectați transferul</string>
     <string name="menu_transform_to_transfer">Transformați în transfer</string>
-    <string name="roadmap_intro">Votul pentru foaia de parcurs 2024 este acum deschis! Votați pentru funcțiile și îmbunătățirile care contează cel mai mult pentru dvs.</string>
     <string name="merge_categories_prompt">Selectați categoria pe care doriți să o păstrați</string>
     <string name="pref_csv_export_category_separator_summary">Separator între nivelurile ierarhiei categoriilor</string>
     <string name="pref_unmapped_transaction_as_transfer_summary_on">sunt considerate drept transfer</string>

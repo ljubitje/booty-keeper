@@ -356,7 +356,6 @@
     <string name="warning_change_fraction_digits_3">如果金額更新，您將丟失有關其小數部分的資訊。</string>
     <string name="decimal_separator">小數點分隔符</string>
     <string name="contrib_feature_distribution_label">餅圖（每個類別的分佈）</string>
-    <string name="contrib_feature_roadmap_voting_label">對<b>開發路線圖</b>投票</string>
     <string name="contrib_feature_history_label">歷史圖表</string>
     <string name="licence_status_free">自由的</string>
     <string name="contrib_key_requires">需要%1$s。</string>

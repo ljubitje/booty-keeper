@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">可将交易记录清单以PDF的文件型式导出</string>
     <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">导入 CSV</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">无限数量的拆分款项模板</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources">对<b>程序开发路线图</b>的投票权</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">收支历史图表</string>
     <string name="licence_status_free">免费版</string>
     <string name="contrib_key">贡献版密钥(Contrib Key)</string>
@@ -651,7 +650,6 @@
     <string name="translated_by">翻译者</string>
     <string name="content_description_dates_are_linked">账面交易日期(booking date)和生效日期(value date)会一起更新</string>
     <string name="content_description_dates_are_not_linked">账面交易日期(booking date)和生效日期(value date)不会一起更新</string>
-    <string name="roadmap_vote">程序开发蓝图投票</string>
     <string name="warning_account_for_transaction_is_closed">至少一个所选交易无法编辑：</string>
     <string name="object_sealed">对象是指已关闭的账户。</string>
     <string name="content_description_download_exchange_rate">下载汇率</string>

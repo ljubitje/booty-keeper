@@ -44,7 +44,6 @@
     <string name="date_format">Datumindeling</string>
     <string name="contrib_key">Bijdragen Sleutel</string>
     <string name="extended_key">Uitgebreide Sleutel</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources">Stemrecht op <b>ontwikkelingsroutekaart</b></string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Geschiedenis grafiek</string>
     <string name="licence_status_free">Gratis</string>
     <string name="date_format_illegal">Illegale datumindeling</string>
@@ -467,7 +466,6 @@
     <string name="menu_reopen">Heropenen</string>
     <string name="content_description_dates_are_linked">Boekingsdatum en valutadatum worden samen bijgewerkt</string>
     <string name="content_description_dates_are_not_linked">Boekingsdatum en valutadatum worden niet samen bijgewerkt</string>
-    <string name="roadmap_vote">Routekaart Stemming</string>
     <string name="warning_account_for_transaction_is_closed">Minstens één van de geselecteerde transacties kan niet worden bewerkt:</string>
     <string name="object_sealed">Object verwijst naar een afgesloten rekening.</string>
     <string name="pref_exchange_rate_provider_summary">Selecteer provider om wisselkoersen te downloaden</string>
@@ -843,7 +841,6 @@
     <string name="menu_transform_to_transfer">Converteren naar overdracht</string>
     <string name="warning_transform_to_transfer">De geselecteerde transactie wordt vervangen door een overdracht van %1$s naar %2$s.</string>
     <string name="remap_date">Bij alle geselecteerde transacties wordt de datum ingesteld op %s.</string>
-    <string name="roadmap_intro">De stemming over de routekaart 2024 is nu geopend! Stem op de functies en verbeteringen die jij het belangrijkst vindt.</string>
     <string name="merge_categories_dialog_title">Categorieën Samenvoegen</string>
     <string name="archive">Archief</string>
     <string name="subcategories_merged_recursively">Als een van de samengevoegde categorieën subcategorieën met hetzelfde label heeft, worden deze eerst recursief samengevoegd.</string>

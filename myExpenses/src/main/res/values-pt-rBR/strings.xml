@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Exportar lista de transações para PDF</string>
     <string name="contrib_feature_csv_import_label">Importação CSV</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Número ilimitado de modelos de divisão de transações</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources">Direito de voto no <b>roteiro de desenvolvimento</b></string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Diagrama histórico</string>
     <string name="licence_status_free">Gratuita</string>
     <string name="contrib_key">Chave de contribuição</string>
@@ -667,7 +666,6 @@
     <string name="translated_by">Traduzido por</string>
     <string name="content_description_dates_are_linked">A data do pagamento e a data da contabilização são atualizadas juntas</string>
     <string name="content_description_dates_are_not_linked">A data do pagamento e a data da contabilização não são atualizadas juntas</string>
-    <string name="roadmap_vote">Votar no roteiro</string>
     <string name="warning_account_for_transaction_is_closed">Pelo menos uma das transações selecionadas não pode ser editada:</string>
     <string name="object_sealed">O objeto se refere a uma conta encerrada.</string>
     <string name="content_description_download_exchange_rate">Baixar a taxa de câmbio</string>
@@ -936,7 +934,6 @@
     <string name="warning_delete_default_transfer_category">A categoria %s está configurada como categoria de transferência padrão e não deve ser apagada.</string>
     <string name="default_transfer_category">Categoria de transferência padrão</string>
     <string name="pref_unmapped_transaction_as_transfer_summary_off">são considerados como despesa / receita</string>
-    <string name="roadmap_intro">A votação do roteiro para 2024 já está aberta! Vote nos recursos e melhorias que são mais importantes para você.</string>
     <string name="pref_sync_now_all_summary">%s sincroniza todas as contas para o mesmo back-end</string>
     <string name="warning_unlink_transfer">A transferência selecionada será desvinculada: Ela será substituída por transações normais em ambas as contas.</string>
     <string name="menu_transform_to_transfer">Converter em transferência</string>

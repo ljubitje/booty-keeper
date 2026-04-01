@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">Muamele listesini PDF dosyasına aktar</string>
     <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">CSV içe aktar</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Sınırsız sayıda bölünmüş şablonlar</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources"><b>Geliştirme yol haritası</b> hakkında oy verme hakkı</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Tarihçe grafiği</string>
     <string name="licence_status_free">Ücretsiz</string>
     <string name="contrib_key">Katkı Anahtarı</string>
@@ -659,7 +658,6 @@
     <string name="translated_by">Çevirenler</string>
     <string name="content_description_dates_are_linked">Muamele tarihi ve değer tarihi birlikte güncellenir</string>
     <string name="content_description_dates_are_not_linked">Muamele tarihi ve değer tarihi birlikte güncellenmez</string>
-    <string name="roadmap_vote">Gelecek işlevler Oylaması</string>
     <string name="warning_account_for_transaction_is_closed">Seçili muamelelerden en az biri düzenlenemez:</string>
     <string name="object_sealed">Nesne kapalı bir hesaba atıfta bulunmaktadır.</string>
     <string name="content_description_download_exchange_rate">Döviz kurunu indir</string>
@@ -931,7 +929,6 @@
     <string name="remap_date">Seçilen tüm muamelelerde tarih %s olarak ayarlanacak.</string>
     <string name="menu_transform_to_transfer">Havaleye dönüştür</string>
     <string name="warning_transform_to_transfer">Seçilen muamele %1$s\'den %2$s\'ye bir havale ile değiştirilecek.</string>
-    <string name="roadmap_intro">2024 Yol Haritası oylaması başladı! Sizin için en önemli olan özellikler ve iyileştirmeler için oy verin.</string>
     <string name="merge_categories_prompt">Tutmak istediğiniz kategoriyi seçin</string>
     <string name="merge_categories_dialog_title">Kategorileri Birleştir</string>
     <string name="subcategories_merged_recursively">Birleştirilen kategorilerden herhangi birinin aynı etikete sahip alt kategorileri varsa, bunlar önce özyinelemeli olarak birleştirilecektir.</string>

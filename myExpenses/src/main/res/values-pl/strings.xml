@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">Eksport listy transakcji do PDF</string>
     <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">Import CSV</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Nieograniczona liczba podzielonych szablonów</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources">Głosowanie bezpośrednio na mapie drogowej <b>rozwoju</b></string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Wykres historii</string>
     <string name="licence_status_free">Darmowa</string>
     <string name="contrib_key">Klucz Contrib</string>
@@ -718,7 +717,6 @@
     <string name="content_description_edit_plan">Edytuj plan w aplikacji kalendarza</string>
     <string name="budget_under_allocated_error">%s zostały już przydzielone do kategorii. O ile nie usuniesz z nich pieniędzy, musisz przynajmniej zaplanować tę kwotę w budżecie.</string>
     <string name="notifications_permission_required_auto_backup">Przyznając uprawnienia do wysyłania powiadomień, będziesz informowany o automatycznych kopiach zapasowych.</string>
-    <string name="roadmap_vote">Głosowanie na plan działania</string>
     <string name="encrypt_database">Zaszyfruj bazę danych</string>
     <string name="pref_warning_only_one_protection">Zanim będziesz mógł skorzystać z ochrony %1$s, musisz wyłączyć ochronę %2$s.</string>
     <string name="dialog_confirm_rollover_delete">Wszystkie kwoty rolowania za ten okres zostaną usunięte.</string>

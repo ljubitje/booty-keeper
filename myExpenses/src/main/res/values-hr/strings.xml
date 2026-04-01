@@ -374,8 +374,6 @@
     <string name="crash_dialog_text">Dogodila se neočekivana greška prisiljavajući prekid rada programa. Pomogni nam ispraviti grešku slanjem podataka o grešci. Sve što moraš uraditi je pritisnuti „U redu”.</string>
     <string name="dialog_contrib_text_2">Doprinesi putem nadogradnje programa <i>{app_name}</i> i dobij neograničen pristup sljedećim funkcijama:</string>
     <string name="pref_value_date_summary">Dozvoli postavljanje datuma vrijednosti uz datuma uknjiženja. Vrijeme transakcije će se sakriti. Ova se postavka ne primjenjuje na gotovinske račune.</string>
-    <string name="roadmap_vote">Glas u planu razvoja</string>
-    <string name="contrib_feature_roadmap_voting_label">Pravo glasanja u <b>planiranju razvoja</b></string>
     <string name="contrib_feature_distribution_label">Kružni dijagram (distribucija po kategorijama)</string>
     <string name="currency_code_already_definded">Valuta je već definirana.</string>
     <string name="ungroup_split_transaction_success">Višedjelna transakcija je uspješno razgrupirana.</string>
@@ -882,7 +880,6 @@
     <string name="pref_csv_export_category_separator_summary">Znak odjeljivanja razina hijerarhije kategorija</string>
     <string name="remap_date">Za sve odabrane transakcije će se datum postaviti na %s.</string>
     <string name="menu_transform_to_transfer">Konvertiraj u prijenos</string>
-    <string name="roadmap_intro">Glasanje za plan razvoja aplikacije za 2024. je sada otvoreno! Glasaj za funkcije i poboljšanja koja su za tebe najvažnija.</string>
     <string name="not_enough_data">Nema dovoljno podataka</string>
     <string name="buy">Kupi</string>
     <string name="pref_scroll_to_current_date_app_launch">samo kada se aplikacija pokrene</string>

@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Esportatu transakzio zerrenda PDFra</string>
     <string name="contrib_feature_csv_import_label">CSV inportazioa</string>
     <string name="contrib_feature_split_template_label">Zatiketa txantiloi kopuru mugagabea</string>
-    <string name="contrib_feature_roadmap_voting_label"><b>Garapen ibilbidean</b> bozkatzeko aukera</string>
     <string name="contrib_feature_history_label">Historikoaren diagrama</string>
     <string name="licence_status_free">Doan</string>
     <string name="contrib_key">Kontribuzio Gakoa</string>

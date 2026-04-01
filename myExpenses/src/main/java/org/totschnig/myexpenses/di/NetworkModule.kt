@@ -17,10 +17,8 @@ import org.totschnig.myexpenses.retrofit.CoinApi
 import org.totschnig.myexpenses.retrofit.ExchangeRateService
 import org.totschnig.myexpenses.retrofit.Frankfurter
 import org.totschnig.myexpenses.retrofit.OpenExchangeRates
-import org.totschnig.myexpenses.retrofit.RoadmapService
 import org.totschnig.myexpenses.util.DelegatingSocketFactory
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler
-import org.totschnig.myexpenses.viewmodel.repository.RoadmapRepository.Companion.ROADMAP_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.IOException
@@ -164,21 +162,5 @@ open class NetworkModule {
             api3: CoinApi
         ) = ExchangeRateService(api1, api2, api3)
 
-        @JvmStatic
-        @Provides
-        @Singleton
-        fun provideRoadmapService(builder: OkHttpClient.Builder, converterFactory: GsonConverterFactory): RoadmapService {
-            val okHttpClient: OkHttpClient = builder
-                .connectTimeout(20, TimeUnit.SECONDS)
-                .writeTimeout(20, TimeUnit.SECONDS)
-                .readTimeout(30, TimeUnit.SECONDS)
-                .build()
-            val retrofit = Retrofit.Builder()
-                .baseUrl(ROADMAP_URL)
-                .addConverterFactory(converterFactory)
-                .client(okHttpClient)
-                .build()
-            return retrofit.create(RoadmapService::class.java)
-        }
     }
 }

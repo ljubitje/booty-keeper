@@ -224,7 +224,6 @@
     <string name="menu_vote" tools:ignore="UnusedResources">\?/10</string>
     <string name="menu_refresh">Refresh</string>
     <string name="menu_learn_more">@string/learn_more</string>
-    <string name="vote_reminder_action" tools:ignore="UnusedResources">Vote</string>
     <string name="menu_set_weight">Set weight</string>
     <string name="menu_result">Result</string>
     <string name="menu_clear">Clear</string>
@@ -233,18 +232,8 @@
     <string name="menu_rollover" tools:ignore="UnusedResources">@string/budget_table_header_rollover</string>
     <string name="menu_sort" tools:ignore="UnusedResources">@string/display_options_sort_list_by</string>
     <string name="menu_archive">@string/action_archive</string>
-    <string name="roadmap_loading">Loading issues …</string>
-    <string name="roadmap_submitting">Submitting vote …</string>
     <string name="db_error_cursor_null">Cursor is null</string>
     <string name="db_error_cursor_empty">Cursor is empty</string>
-    <!--<string name="roadmap_particpate">Participate</string>-->
-    <string name="roadmap_update_confirmation">Your vote will be updated</string>
-    <string name="roadmap_email_rationale">In order to guarantee fair participation, we require validation of your vote by email.</string>
-    <string name="roadmap_vote_success">Your vote has been recorded. An email with a link for validation has been sent to you.</string>
-    <string name="roadmap_vote_outdated">Your vote cannot be recorded, because your locally cached issue list is outdated. Please select Refresh from the menu and submit your vote again.</string>
-    <string name="roadmap_vote_validation_failure">Your vote was not recorded, because your professional licence status could not be validated. Please try again later, or contact support@myexpenses.mobi.</string>
-    <string name="roadmap_consent_checkbox">Consent to be contacted for sharing ideas on how issues you voted for should be implemented</string>
-    <string name="reminder_vote_update" tools:ignore="UnusedResources">The list of issues on the roadmap might have changed since you last voted. You might want to update your vote.</string>
     <!-- During onboarding, user can select to restore data from synchronized account-specific data . This is the title for the tab where the accounts are listed -->
     <string name="onboarding_restore_from_cloud_sync_accounts">@string/pref_manage_accounts_title</string>
     <string name="pref_planner_advanced_key">planner_advanced</string>

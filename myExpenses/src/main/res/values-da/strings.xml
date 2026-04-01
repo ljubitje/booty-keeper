@@ -423,7 +423,6 @@
     <string name="image_capture_not_installed">Ingen app til at tage billeder.</string>
     <string name="pref_auto_fill_summary">Udfyld data fra sidste transaktion for samme modtager/betaler</string>
     <string name="pref_manage_sync_backends_summary">Tilføj backends til synkronisering af konti (%s).</string>
-    <string name="contrib_feature_roadmap_voting_label">Stemmeret på <b>udviklingsplan</b></string>
     <string name="dialog_contrib_trial_info" tools:ignore="PluralsCandidate">Din nuværende licensstatus (%1$s) lader dig prøve %2$s i %3$d dage (indtil %4$s).</string>
     <string name="dialog_contrib_usage_limit_with_dialog">Med din nuværende licensstatus (%1$s) vises denne dialog ved hvert brug.</string>
     <string name="button_label_close">Luk</string>
@@ -814,7 +813,6 @@
     <string name="button_relink_update_date">Tilknyt igen, og opdater dato</string>
     <string name="pref_unmapped_transaction_as_transfer_summary_on">tælles som overførsel</string>
     <string name="pref_sync_now_all_summary">%s synkroniserer alle konti for den samme backend</string>
-    <string name="roadmap_intro">Afstemningen i 2024 Udviklingsplan er nu åben! Stem på de funktioner og forbedringer, der betyder mest for dig.</string>
     <string name="budget_only_current_period">Indstil kun til %s</string>
     <string name="budget_table_header_rollover">Fremførsel</string>
     <string name="rollover_edit_invalid">Summen af fremførelsen tildelt en kategori og fremførelser tildelt underkategorier må ikke overskride restbeløbet.</string>
@@ -837,7 +835,6 @@
     <string name="pref_debug_logging_share_summary">Del logfiler</string>
     <string name="pref_csv_export_split_amount_summary">Brug separate kolonner til indtægt og udgifter</string>
     <string name="redesign">Redesign</string>
-    <string name="roadmap_vote">Udviklingsplan Afstemning</string>
     <string name="object_sealed">Objekt henviser til en lukket konto.</string>
     <string name="budget_filter_all_tags">Alle etiketter</string>
     <string name="menu_remap">Omlæg</string>

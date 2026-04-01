@@ -486,18 +486,6 @@
         <item>create_sync_backend</item>
     </string-array>
 
-    <string-array name="RoadmapVoteActivity_menuitems">
-        <item>search</item>
-        <item>vote</item>
-        <item>refresh</item>
-        <item>result</item>
-        <item>clear</item>
-    </string-array>
-
-    <string-array name="RoadmapVoteActivity_cabitems">
-        <item>learn_more</item>
-        <item>set_weight</item>
-    </string-array>
 
     <string-array name="PriceHistory_cabitems">
         <item>edit</item>

@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">Eksport senarai transaksi menjadi PDF</string>
     <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">Import CSV</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Bilang templat berasingan tidak terhad</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources">Hak mengundi dalam <b>peta jalan pembangunan</b></string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Carta sejarah</string>
     <string name="licence_status_free">Percuma</string>
     <string name="contrib_key">Kunci Sumbang</string>
@@ -771,7 +770,6 @@
     </plurals>
     <string name="pref_csv_export_split_date_time_summary">Gunakan lajur berasingan untuk tarikh dan masa</string>
     <string name="pref_unmapped_transaction_as_transfer_summary_on">dikira sebagai pemindahan</string>
-    <string name="roadmap_vote">Undi Peta Jalan</string>
     <string name="title_webui">Antara Muka Pengguna Web</string>
     <string name="pref_copy_attachments_summary_on">Fail disalin ke folder aplikasi.</string>
     <string name="pref_unmapped_transaction_as_transfer_title">Transaksi tidak dipetakan</string>
@@ -854,7 +852,6 @@
     <string name="pref_copy_attachments_summary_off">Fail tidak disalin, hanya rujukan disimpan.</string>
     <string name="pref_feature_uninstall_summary">Gedung Play cuba untuk akhirnya mengalih keluar modul tersebut di latar belakang.</string>
     <string name="github_sponsors">Kunci lesen juga diberikan kepada &lt;a href=%s&gt;Penaja Github&lt;/a&gt;.</string>
-    <string name="roadmap_intro">Undian Pelan Hala Tuju 2024 kini dibuka! Undi untuk ciri dan penambahbaikan yang paling penting kepada anda.</string>
     <string name="subcategories_merged_recursively">Jika mana-mana kategori yang digabungkan mempunyai subkategori dengan label yang sama, kategori tersebut akan digabungkan terlebih dahulu, secara rekursif.</string>
     <string name="notifications_permission_required_auto_backup">Dengan memberikan kebenaran untuk menghantar pemberitahuan, anda akan dimaklumkan tentang auto-sandar.</string>
     <string name="exchange_rate_not_supported">Pembekal kadar pertukaran yang dikonfigurasikan tidak memberikan kadar %1$s : %2$s. Anda boleh cuba memilih yang lain dalam tetapan.</string>

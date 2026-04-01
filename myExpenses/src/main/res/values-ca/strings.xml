@@ -317,7 +317,6 @@
     <string name="pref_ui_home_screen_shortcuts">Dreceres a la pantalla d\'inici</string>
     <string name="progress_dialog_printing">Generant %s</string>
     <string name="qif_parse_failure_found_multiple_accounts">Múltiples comptes trobats a l\'arxiu %s.</string>
-    <string name="contrib_feature_roadmap_voting_label">Votació correcta a <b> fulla de ruta per al desenvolupament </b></string>
     <string name="contrib_feature_history_label">Gràfica històrica</string>
     <string name="licence_status_free">Gratuït</string>
     <string name="number_format_illegal">Format de nombre il·legal</string>
@@ -618,7 +617,6 @@
     <string name="budget_exceeded_error_1_2">Tot el seu pressupost ha estat assignat a altres categories.</string>
     <string name="budget_under_allocated_error">%s ha estat assignat a altres categories. Fora que retiri diners de les mateixes, ha de pressupostar aquella quantitat.</string>
     <string name="licence_has_expired_n_days">La vostra clau professiona va expirar fa %d dies.</string>
-    <string name="roadmap_vote">Votar full de ruta</string>
     <string name="warning_account_for_transaction_is_closed">Com a mínim una de les següents transaccions no pot ser editada:</string>
     <string name="backup_wrong_password">La còpia de seguretat sembla encriptada amb una contrasenya diferent.</string>
     <string name="pref_exchange_rates_api_key_summary">Siusplau registri un compte gratuït a %s i proveeixi la seva App ID</string>
@@ -852,7 +850,6 @@
     <string name="pref_unmapped_transaction_as_transfer_title">Operacions no assignades</string>
     <string name="warning_delete_default_transfer_category">La categoria %s està configurada com a categoria de transferència predeterminada i no s\'hauria d\'eliminar.</string>
     <string name="remap_date">En totes les operacions seleccionades, la data s\'establirà a %s.</string>
-    <string name="roadmap_intro">El vot sobre el full de ruta 2024 ja està obert! Vota les característiques i millores que més t\'estimes.</string>
     <string name="subcategories_merged_recursively">Si alguna de les categories fusionades té subcategories amb la mateixa etiqueta, aquestes es fusionaran primer, recursivament.</string>
     <string name="pref_csv_export_category_separator_summary">Separador entre nivells de jerarquia de categories</string>
     <string name="pref_clone_with_current_date_summary_on">Les operacions clonades tindran la data actual</string>

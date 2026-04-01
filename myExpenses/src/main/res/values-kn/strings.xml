@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">ವಹಿವಾಟಿನ ಪಟ್ಟಿಯನ್ನು ಪಿಡಿಎಫ್‌ಗೆ ರಫ್ತು ಮಾಡಿ</string>
     <string name="contrib_feature_csv_import_label">ಸಿಎಸ್ವಿ ಆಮದು</string>
     <string name="contrib_feature_split_template_label">ವಿಭಜಿತ ಟೆಂಪ್ಲೆಟ್ಗಳ ಅನಿಯಮಿತ ಸಂಖ್ಯೆ</string>
-    <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources"><b>ಅಭಿವೃದ್ಧಿ ಮಾರ್ಗಸೂಚಿಯಲ್ಲಿ</b> ಮತದಾನ</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">ಇತಿಹಾಸ ಚಾರ್ಟ್</string>
     <string name="licence_status_free">ಉಚಿತ</string>
     <string name="contrib_key">ಕೊಡುಗೆ ಕೀ</string>
@@ -657,7 +656,6 @@
     <string name="translated_by">ಅನುವಾದಿಸಿದ್ದಾರೆ</string>
     <string name="content_description_dates_are_linked">ಬುಕಿಂಗ್ ದಿನಾಂಕ ಮತ್ತು ಮೌಲ್ಯದ ದಿನಾಂಕವನ್ನು ಒಟ್ಟಿಗೆ ನವೀಕರಿಸಲಾಗುತ್ತದೆ</string>
     <string name="content_description_dates_are_not_linked">ಬುಕಿಂಗ್ ದಿನಾಂಕ ಮತ್ತು ಮೌಲ್ಯದ ದಿನಾಂಕವನ್ನು ಒಟ್ಟಿಗೆ ನವೀಕರಿಸಲಾಗುವುದಿಲ್ಲ</string>
-    <string name="roadmap_vote">ಮಾರ್ಗಸೂಚಿ ಮತ</string>
     <string name="warning_account_for_transaction_is_closed">ಆಯ್ದ ವಹಿವಾಟುಗಳಲ್ಲಿ ಒಂದನ್ನು ಸಂಪಾದಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ:</string>
     <string name="object_sealed">ವಸ್ತು ಮುಚ್ಚಿದ ಖಾತೆಯನ್ನು ಸೂಚಿಸುತ್ತದೆ.</string>
     <string name="content_description_download_exchange_rate">ವಿನಿಮಯ ದರವನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
