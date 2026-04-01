@@ -47,7 +47,6 @@
     <string name="dialog_contrib_trial_info" tools:ignore="PluralsCandidate">Ваша бягучая ліцэнзія (%1$s) дазваляе вам паспрабаваць %2$s на працягу %3$d дзён (да %4$s).</string>
     <string name="dialog_contrib_usage_limit_with_dialog">З вашым бягучым статусам ліцэнзіі (%1$s), гэты дыялог будзе адлюстроўвацца пры кожным выкарыстанні.</string>
     <string name="dialog_title_warning_delete_category">Выдаліць катэгорыю?</string>
-    <string name="contrib_feature_pro_support_label"><b>падтрымка па электроннай пошце</b> з гарантаваным адказам на працягу 2 рабочых дзён</string>
     <string name="contrib_feature_synchronization_label">Сінхранізацыя з воблакам</string>
     <string name="warning_reset_account_matched">Калі вы працягнеце, транзакцыі, якія адпавядаюць бягучаму фільтру, будуць выдалены з базы дадзеных і не могуць быць адноўлены.</string>
     <string name="warning_delete_category_with_budget">Як мінімум для адной выбранай катэгорыі ёсць бюджэтныя размеркаванні, якія таксама будуць выдалены.</string>

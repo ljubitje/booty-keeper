@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">লেনদেনের তালিকা PDF-এ এক্সপোর্ট করুন</string>
     <string name="contrib_feature_csv_import_label">CSV ইমপোর্ট</string>
     <string name="contrib_feature_split_template_label">আনলিমিটেড স্প্লিট টেমপ্লেট</string>
-    <string name="contrib_feature_pro_support_label"><b>ইমেল সাপোর্ট</b> ২ কার্যদিবসের মধ্যে প্রতিউত্তর</string>
     <string name="contrib_feature_roadmap_voting_label"><b>ডেভেলপমেন্ট রোডম্যাপে</b> ভোটাধিকার</string>
     <string name="contrib_feature_history_label">ইতিহাস চার্ট</string>
     <string name="contrib_feature_category_tree_label">স্বেচ্ছাকৃতভাবে গভীর ক্যাটাগরি পদানুক্রম</string>

@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Exportar lista de transacciones a PDF</string>
     <string name="contrib_feature_csv_import_label">Importar desde CSV</string>
     <string name="contrib_feature_split_template_label">Número ilimitado de plantillas divididas</string>
-    <string name="contrib_feature_pro_support_label"><b>Soporte por correo electrónico</b> con respuesta garantizada en 2 días laborales</string>
     <string name="contrib_feature_roadmap_voting_label">Derecho a participar en la <b>hoja de ruta de desarrollo</b></string>
     <string name="contrib_feature_history_label">Historial gráfico</string>
     <string name="licence_status_free">Gratis</string>

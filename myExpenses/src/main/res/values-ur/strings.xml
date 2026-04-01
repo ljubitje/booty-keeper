@@ -22,7 +22,6 @@
     <string name="contrib_feature_split_template_label">تقسیم ٹیمپلیٹس کی لامحدود تعداد</string>
     <string name="contrib_feature_history_label">تاریخ کا چارٹ</string>
     <string name="contrib_feature_category_tree_label">زمرے کا درخت</string>
-    <string name="contrib_feature_pro_support_label" tools:ignore="UnusedResources">2 کاروباری دنوں کے اندر ضمانت شدہ جواب کے ساتھ <b>ای میل سپورٹ</b></string>
     <string name="licence_status_free">مفت</string>
     <string name="contrib_key">کنٹریب کلید</string>
     <string name="extended_key">توسیعی کلید</string>

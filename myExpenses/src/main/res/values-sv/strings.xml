@@ -168,7 +168,6 @@
     <string name="menu_forward">Vidarebefordra</string>
     <string name="pref_manage_methods_title">Betalningsmetoder</string>
     <string name="no_filemanager_installed">Ingen filhanterare installerad</string>
-    <string name="contrib_feature_pro_support_label"><b>Hjälp via e-post</b> med garanterat svar inom 2 arbetsdagar</string>
     <string name="no_categories">Inga kategorier.</string>
     <string name="warning_backup">Databasen och egenskaper kommer att sparas till \"%1$s\".</string>
     <plurals name="warning_delete_template">

@@ -561,7 +561,6 @@
     <string name="dialog_confirm_discard_changes">Odbaciti promjene\?</string>
     <string name="licence_status_free">Besplatno</string>
     <string name="contrib_feature_history_label">Dijagram povijesti</string>
-    <string name="contrib_feature_pro_support_label"><b>Email podrška</b> uz zajamčen odgovor u roku od 2 radna dana</string>
     <string name="contrib_feature_split_template_label">Neograničen broj predložaka za višedjelnu transakciju</string>
     <string name="contrib_feature_attach_picture_label">Priloži sliku transakciji</string>
     <string name="contrib_feature_ad_free_label">Bez oglasa</string>

@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">Export seznamu transakcí do PDF</string>
     <string name="contrib_feature_csv_import_label">Import CSV souboru</string>
     <string name="contrib_feature_split_template_label">Neomezený počet rozdělených šablon</string>
-    <string name="contrib_feature_pro_support_label"><b>Emailová podpora</b> s garantovanou odpovědí během 2 pracovních dnů</string>
     <string name="contrib_feature_roadmap_voting_label">Právo na hlasování v <b>plánu vyvíjených součástí</b></string>
     <string name="contrib_feature_history_label">Graf historie</string>
     <string name="licence_status_free">Zdarma</string>

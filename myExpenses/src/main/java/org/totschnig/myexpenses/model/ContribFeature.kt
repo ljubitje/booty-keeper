@@ -40,7 +40,6 @@ enum class ContribFeature(
     CSV_IMPORT(licenceStatus = LicenceStatus.EXTENDED),
     SYNCHRONIZATION(licenceStatus = LicenceStatus.EXTENDED),
     SPLIT_TEMPLATE(TrialMode.NONE, LicenceStatus.PROFESSIONAL),
-    PRO_SUPPORT(TrialMode.NONE, LicenceStatus.PROFESSIONAL),
     ROADMAP_VOTING(
         TrialMode.NONE,
         LicenceStatus.PROFESSIONAL
@@ -79,7 +78,6 @@ enum class ContribFeature(
             CSV_IMPORT -> R.string.contrib_feature_csv_import_label
             SYNCHRONIZATION -> R.string.contrib_feature_synchronization_label
             SPLIT_TEMPLATE -> R.string.contrib_feature_split_template_label
-            PRO_SUPPORT -> R.string.contrib_feature_pro_support_label
             ROADMAP_VOTING -> R.string.contrib_feature_roadmap_voting_label
             HISTORY -> R.string.contrib_feature_history_label
             BUDGET -> R.string.contrib_feature_budget_label

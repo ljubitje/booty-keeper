@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label" tools:ignore="UnusedResources">Muamele listesini PDF dosyasına aktar</string>
     <string name="contrib_feature_csv_import_label" tools:ignore="UnusedResources">CSV içe aktar</string>
     <string name="contrib_feature_split_template_label" tools:ignore="UnusedResources">Sınırsız sayıda bölünmüş şablonlar</string>
-    <string name="contrib_feature_pro_support_label" tools:ignore="UnusedResources">2 iş günü sonrasında cevap garantili <b>e-posta desteği</b></string>
     <string name="contrib_feature_roadmap_voting_label" tools:ignore="UnusedResources"><b>Geliştirme yol haritası</b> hakkında oy verme hakkı</string>
     <string name="contrib_feature_history_label" tools:ignore="UnusedResources">Tarihçe grafiği</string>
     <string name="licence_status_free">Ücretsiz</string>

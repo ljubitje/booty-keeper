@@ -35,7 +35,6 @@
     <string name="contrib_feature_print_label">صادرات لیست معامله به PDF</string>
     <string name="contrib_feature_csv_import_label">واردات CSV</string>
     <string name="contrib_feature_split_template_label">تعداد نامحدودی از قالب های تقسیم شده</string>
-    <string name="contrib_feature_pro_support_label"><b>پشتیبانی از طریق رایانامه</b> با ضمانت پاسخگویی در حداکثر مدت ۲ روز کاری</string>
     <string name="contrib_feature_roadmap_voting_label">حق رای دادن در <b> نقشه راه توسعه</b></string>
     <string name="contrib_feature_history_label">نمودار جریان</string>
     <string name="licence_status_free">آزاد</string>

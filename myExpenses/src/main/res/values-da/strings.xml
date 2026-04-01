@@ -436,7 +436,6 @@
     <string name="dialog_contrib_subscription_info_play">Dette abonnement træder i kraft med det samme, faktureres månedligt eller årligt og kan opsiges når som helst.</string>
     <string name="dialog_title_warning_delete_category">Slet kategori?</string>
     <string name="dialog_contrib_usage_limit_plans" tools:ignore="PluralsCandidate">Din nuværende licensstatus (%2$s) lader dig oprette %1$d planer.</string>
-    <string name="contrib_feature_pro_support_label"><b>E-mail-support</b> med garanteret svar inden for 2 bankdage</string>
     <string name="dialog_contrib_reminder_remove_limitation">Fjern denne begrænsning og få adgang til flere funktioner ved at opgradere <i>{app_name}</i>.</string>
     <string name="select_payee">Vælg betaler/modtager</string>
     <string name="move_category_success">Én kategori blev flyttet.</string>
