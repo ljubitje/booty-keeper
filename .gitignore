@@ -7,3 +7,8 @@ fastlane
 ChangeLog.install
 google-services.json
 .kotlin
+
+# Booty
+sync-report.md
+.direnv/
+MEMORY/

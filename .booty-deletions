@@ -1,0 +1,9 @@
+# Booty deletions manifest
+# Files and directories listed here were intentionally removed from upstream.
+# sync.sh uses this to re-apply deletions after upstream merge and to detect
+# conflicts when upstream modifies files near deletion boundaries.
+#
+# Format: one path per line, relative to repo root.
+# Directories end with /
+# Lines starting with # are comments.
+# Empty lines are ignored.
