@@ -95,10 +95,6 @@ class PreferencesProtectionFragment : BasePreferenceFragment() {
             preferenceActivity.checkGdprConsent(true)
             true
         }
-        matches(preference, PrefKey.NO_ADS) -> {
-            preferenceActivity.contribFeatureRequested(ContribFeature.AD_FREE)
-            true
-        }
 
         else -> false
     }

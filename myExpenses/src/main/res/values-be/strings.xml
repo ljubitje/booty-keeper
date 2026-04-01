@@ -517,7 +517,6 @@
     <string name="dialog_synced_to_other">Акаўнт з uuid %s ўжо існуе ў лакальнай базе дадзеных і прывязаная да іншага выдаленаму серверу.</string>
     <string name="warning_synchronization_folder_usage">Гэта папка выкарыстоўваецца для сінхранізацыі даных паміж устаноўкамі {app_name} на розных прыладах. Калі ласка, не змяняйце яго змесціва ўручную.</string>
     <string name="pref_sync_notification_summary">Паведамляць аб прагрэсе сінхранізацыі</string>
-    <string name="contrib_feature_ad_free_label">Няма аб\'яваў</string>
     <string name="status_reconciled">узгадніць</string>
     <string name="status_cleared">ачысціць</string>
     <string name="status_unreconciled">не ўзгадняць</string>

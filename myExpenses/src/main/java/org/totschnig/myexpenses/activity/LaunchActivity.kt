@@ -90,9 +90,7 @@ abstract class LaunchActivity : IapActivity() {
     }
 
     override fun onBillingSetupFinished() {
-        if (!licenceHandler.hasAccessTo(ContribFeature.AD_FREE)) {
-            checkGdprConsent(false)
-        }
+        // Booty is ad-free, no GDPR consent needed for ads
     }
 
     override fun onBillingSetupFailed(reason: String) {

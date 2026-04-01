@@ -294,7 +294,6 @@
     <string name="warning_balance_account">請將清算總額與銀行對帳單中的期末餘額進行比較。如果繼續，已清算的交易將被標記為已調節。</string>
     <string name="import_transactions_none">沒有交易導入帳戶 %1$s</string>
     <string name="dialog_command_disabled_balance">沒有已清算的交易需要對帳。</string>
-    <string name="contrib_feature_ad_free_label">無廣告</string>
     <string name="default_account_name">預算書</string>
     <plurals name="warning_delete_main_category">
         <item quantity="other">%1$d 所選類別有子類別，這些子類別也將被刪除。</item>

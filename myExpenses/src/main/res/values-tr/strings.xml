@@ -27,7 +27,6 @@
     <string name="app_name">Harcamalarım</string>
     <string name="backup_success">Veri tabanı ve tercihler \"%1$s\" konumuna başarıyla yazıldı.</string>
     <string name="category">Kategori</string>
-    <string name="contrib_feature_ad_free_label" tools:ignore="UnusedResources">Reklamsız</string>
     <string name="contrib_feature_accounts_unlimited_label" tools:ignore="UnusedResources">Sınırsız sayıda hesap</string>
     <string name="contrib_feature_attach_picture_label" tools:ignore="UnusedResources">Muameleye resim ekle</string>
     <string name="contrib_feature_distribution_label" tools:ignore="UnusedResources">Dilim grafik (kategori başına dağılım)</string>

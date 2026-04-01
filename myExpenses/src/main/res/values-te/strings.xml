@@ -507,7 +507,6 @@
     <string name="contrib_feature_distribution_label" tools:ignore="UnusedResources">పై చార్ట్ (వర్గానికి పంపిణీ)</string>
     <string name="contrib_feature_attach_picture_label" tools:ignore="UnusedResources">లావాదేవీకి చిత్రాన్ని అటాచ్ చేయండి</string>
     <string name="contrib_feature_accounts_unlimited_label" tools:ignore="UnusedResources">అపరిమిత సంఖ్యలో ఖాతాలు</string>
-    <string name="contrib_feature_ad_free_label" tools:ignore="UnusedResources">ప్రకటనలు లేవు</string>
     <string name="category">వర్గం</string>
     <string name="backup_success">డేటాబేస్ మరియు ప్రాధాన్యతలు విజయవంతంగా \"%1$s\" కు వ్రాయబడ్డాయి.</string>
     <string name="app_name">నా ఖర్చులు</string>

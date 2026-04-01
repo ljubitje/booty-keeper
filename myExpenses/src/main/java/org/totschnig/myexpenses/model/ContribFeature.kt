@@ -36,7 +36,6 @@ enum class ContribFeature(
     SPLIT_TRANSACTION,
     DISTRIBUTION,
     PRINT,
-    AD_FREE(TrialMode.NONE),
     CSV_IMPORT(licenceStatus = LicenceStatus.EXTENDED),
     SYNCHRONIZATION(licenceStatus = LicenceStatus.EXTENDED),
     SPLIT_TEMPLATE(TrialMode.NONE, LicenceStatus.PROFESSIONAL),
@@ -70,7 +69,6 @@ enum class ContribFeature(
             SPLIT_TRANSACTION -> R.string.contrib_feature_split_transaction_label
             DISTRIBUTION -> R.string.contrib_feature_distribution_label
             PRINT -> R.string.contrib_feature_print_label
-            AD_FREE -> R.string.contrib_feature_ad_free_label
             CSV_IMPORT -> R.string.contrib_feature_csv_import_label
             SYNCHRONIZATION -> R.string.contrib_feature_synchronization_label
             SPLIT_TEMPLATE -> R.string.contrib_feature_split_template_label

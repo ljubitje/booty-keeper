@@ -27,7 +27,6 @@
     <string name="app_name">My Expenses</string>
     <string name="backup_success">ডাটাবেস এবং পছন্দসমূহ সফলভাবে \"%1$s\" এ লেখা হয়েছে।</string>
     <string name="category">ক্যাটাগরি</string>
-    <string name="contrib_feature_ad_free_label">কোন বিজ্ঞাপন নেই</string>
     <string name="contrib_feature_accounts_unlimited_label">আনলিমিটেড অ্যাকাউন্ট</string>
     <string name="contrib_feature_attach_picture_label">লেনদেনের সাথে ছবি অ্যাট্যাচ করুন</string>
     <string name="contrib_feature_distribution_label">পাই চার্ট (ক্যাটাগরি অনুযায়ী বিতরণ)</string>

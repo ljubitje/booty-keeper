@@ -1210,9 +1210,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
     override val scrollsHorizontally: Boolean = true
 
     override fun contribFeatureNotCalled(feature: ContribFeature) {
-        if (!isGithub && feature == ContribFeature.AD_FREE) {
-            finish()
-        }
     }
 
     override fun onEditTransactionResult() {

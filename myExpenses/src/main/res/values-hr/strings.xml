@@ -561,7 +561,6 @@
     <string name="contrib_feature_history_label">Dijagram povijesti</string>
     <string name="contrib_feature_split_template_label">Neograničen broj predložaka za višedjelnu transakciju</string>
     <string name="contrib_feature_attach_picture_label">Priloži sliku transakciji</string>
-    <string name="contrib_feature_ad_free_label">Bez oglasa</string>
     <string name="account_types">Vrste računa</string>
     <string name="warning_plan_instance_delete">Stvorena transakcija za odabrani datum će se izbrisati.</string>
     <string name="auto_fill_focus">Postavi polje primaoca aktivnim</string>

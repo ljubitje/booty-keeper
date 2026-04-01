@@ -34,7 +34,6 @@
     <string name="category">หมวดหมู่</string>
     <string name="contrib_feature_accounts_unlimited_label">จำนวนบัญชีไม่จำกัด</string>
     <string name="contrib_feature_attach_picture_label">แนบรูปภาพกับรายการ</string>
-    <string name="contrib_feature_ad_free_label">ไม่มีการโฆษณา</string>
     <string name="contrib_feature_distribution_label">แผนภูมิวงกลม (การกระจายตามหมวดหมู่)</string>
     <string name="contrib_feature_plans_unlimited_label">จำนวนแผนไม่จำกัด</string>
     <string name="contrib_feature_print_label">ส่งออกรายการทำรายการเป็น PDF</string>

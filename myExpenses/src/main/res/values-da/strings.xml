@@ -25,7 +25,6 @@
     <string name="app_name">Mine Udgifter</string>
     <string name="backup_success">Database og indstillinger blev gemt på \"%1$s\".</string>
     <string name="category">Kategori</string>
-    <string name="contrib_feature_ad_free_label">Ingen reklamer</string>
     <string name="contrib_feature_accounts_unlimited_label">Ubegrænset antal konti</string>
     <string name="contrib_feature_attach_picture_label">Vedhæft billede til transaktion</string>
     <string name="contrib_feature_plans_unlimited_label">Ubegrænset antal planer</string>

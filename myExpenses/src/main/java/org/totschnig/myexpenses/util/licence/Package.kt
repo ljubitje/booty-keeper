@@ -131,7 +131,7 @@ sealed class AddOnPackage(
         val values: List<AddOnPackage>
             get() = listOf(
                 SplitTemplate, History, Budget, Ocr, WebUi, CategoryTree,
-                AccountsUnlimited, PlansUnlimited, SplitTransaction, Distribution, Print, AdFree,
+                AccountsUnlimited, PlansUnlimited, SplitTransaction, Distribution, Print,
                 CsvImport, Synchronization, Banking, AutomaticFxDownload
             )
     }
@@ -192,9 +192,6 @@ sealed class AddOnPackage(
     @Keep
     data object Print : AddOnPackage(ContribFeature.PRINT)
 
-    @Parcelize
-    @Keep
-    data object AdFree : AddOnPackage(ContribFeature.AD_FREE)
 
     @Parcelize
     @Keep
