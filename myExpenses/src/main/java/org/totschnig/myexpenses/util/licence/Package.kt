@@ -192,10 +192,6 @@ sealed class AddOnPackage(
     @Keep
     data object Print : AddOnPackage(ContribFeature.PRINT)
 
-
-    @Parcelize
-    @Keep
-
     @Parcelize
     @Keep
     data object Synchronization : AddOnPackage(ContribFeature.SYNCHRONIZATION)
