@@ -25,7 +25,6 @@ import org.totschnig.myexpenses.dialog.buildColorDialog
 import org.totschnig.myexpenses.dialog.configureCurrencySpinner
 import org.totschnig.myexpenses.dialog.configureTypeSpinner
 import org.totschnig.myexpenses.model.AccountType
-import org.totschnig.myexpenses.model.ContribFeature
 import org.totschnig.myexpenses.model.CurrencyContext
 import org.totschnig.myexpenses.model2.Account
 import org.totschnig.myexpenses.preference.PrefKey
@@ -120,9 +119,6 @@ class OnboardingDataFragment : OnboardingFragment(), AdapterView.OnItemSelectedL
             }
             Menu.NONE -> {
                 hostActivity.fetchAccountData(item.title.toString())
-            }
-            R.id.Banking -> {
-                hostActivity.contribFeatureCalled(ContribFeature.BANKING, null)
             }
             !in arrayOf(R.id.SetupMain, R.id.SetupFromRemote) -> {
                 hostActivity.startSetup(item.itemId)

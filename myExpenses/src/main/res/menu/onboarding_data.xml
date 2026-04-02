@@ -19,9 +19,4 @@
                 android:title="@string/onboarding_restore_from_local" />
         </menu>
     </item>
-    <item
-        android:visible="@bool/fints"
-        android:id="@+id/Banking"
-        android:title="Banking"
-        app:showAsAction="always" />
 </menu>

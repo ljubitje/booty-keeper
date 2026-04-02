@@ -16,7 +16,6 @@ import androidx.compose.ui.res.painterResource
 import com.livefront.sealedenum.GenSealedEnum
 import kotlinx.parcelize.Parcelize
 import org.totschnig.myexpenses.R
-import org.totschnig.myexpenses.activity.BaseActivity
 import org.totschnig.myexpenses.preference.PrefKey
 import org.totschnig.myexpenses.util.TextUtils
 
@@ -86,15 +85,6 @@ sealed class MenuItem(
         R.string.menu_sync_now,
         R.drawable.ic_sync
     )
-
-    data object FinTsSync : MenuItem(
-        R.id.FINTS_SYNC_COMMAND,
-        0,
-        R.drawable.ic_bank
-    ) {
-        override fun getLabel(context: Context) =
-            (context as? BaseActivity)?.bankingFeature?.syncMenuTitle(context) ?: "FinTS"
-    }
 
     data object ShowStatusHandle : MenuItem(
         R.id.SHOW_STATUS_HANDLE_COMMAND,

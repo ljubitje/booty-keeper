@@ -268,15 +268,7 @@ class MyExpensesV2 : BaseMyExpenses<MyExpensesV2ViewModel>(),
                             adView = {
                                 adHandler.Banner()
                             },
-                            bankIcon = { modifier, id ->
-                                banks.value.find { it.id == id }
-                                    ?.let { bank ->
-                                        bankingFeature.bankIconRenderer?.invoke(
-                                            modifier,
-                                            bank
-                                        )
-                                    }
-                            }
+                            bankIcon = { _, _ -> }
                         ) { pageAccount, isCurrent ->
                             Page(
                                 pageAccount,

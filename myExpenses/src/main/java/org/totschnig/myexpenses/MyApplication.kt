@@ -42,7 +42,6 @@ import org.acra.util.StreamReader
 import org.totschnig.myexpenses.activity.OnboardingActivity
 import org.totschnig.myexpenses.di.AppComponent
 import org.totschnig.myexpenses.di.DaggerAppComponent
-import org.totschnig.myexpenses.feature.BankingFeature
 import org.totschnig.myexpenses.feature.FeatureManager
 import org.totschnig.myexpenses.feature.OcrFeature
 import org.totschnig.myexpenses.feature.RESTART_ACTION
@@ -255,7 +254,6 @@ open class MyApplication : Application(), SharedPreferences.OnSharedPreferenceCh
                         plantTree(LicenceHandler.TAG)
                         plantTree(BaseTransactionProvider.TAG)
                         plantTree(OcrFeature.TAG)
-                        plantTree(BankingFeature.TAG)
                     } catch (e: Exception) {
                         report(e)
                     }

@@ -132,7 +132,7 @@ sealed class AddOnPackage(
             get() = listOf(
                 SplitTemplate, History, Budget, CategoryTree,
                 AccountsUnlimited, PlansUnlimited, SplitTransaction, Distribution, Print,
-                Synchronization, Banking, AutomaticFxDownload
+                Synchronization, AutomaticFxDownload
             )
     }
 
@@ -190,9 +190,6 @@ sealed class AddOnPackage(
     @Keep
     data object Synchronization : AddOnPackage(ContribFeature.SYNCHRONIZATION)
 
-    @Parcelize
-    @Keep
-    data object Banking : AddOnPackage(ContribFeature.BANKING)
 
     @Parcelize
     @Keep

@@ -11,7 +11,6 @@
     <string name="title_dropbox">Dropbox</string>
     <string name="title_webdav">WebDAV</string>
     <string name="title_sqlcrypt">SqlCrypt</string>
-    <string name="title_fints">FinTS</string>
     <string name="title_onedrive">Microsoft OneDrive</string>
     <string name="title_jackson">Jackson</string>
 </resources>

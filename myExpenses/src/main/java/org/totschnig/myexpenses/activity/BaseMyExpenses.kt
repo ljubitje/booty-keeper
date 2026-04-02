@@ -502,16 +502,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
                     )
                 }
 
-            R.id.FINTS_SYNC_COMMAND -> (currentAccount as? FullAccount)
-                ?.takeIf { it.bankId != null }
-                ?.let {
-                    contribFeatureRequested(
-                        ContribFeature.BANKING,
-                        Triple(it.bankId, it.id, it.type.id)
-                    )
-                }
-
-
             R.id.SAFE_MODE_COMMAND -> {
                 prefHandler.putBoolean(PrefKey.DB_SAFE_MODE, true)
                 viewModel.triggerAccountListRefresh()
@@ -899,17 +889,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
                 }
             }
 
-            ContribFeature.BANKING -> {
-                val (bankId, accountId, accountTypeId) = tag as Triple<Long, Long, Long>
-                bankingFeature.startSyncFragment(
-                    bankId,
-                    accountId,
-                    accountTypeId,
-                    supportFragmentManager
-                )
-            }
-
-
             else -> super.contribFeatureCalled(feature, tag)
         }
     }
@@ -1095,7 +1074,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
             R.id.HISTORY_COMMAND, R.id.RESET_COMMAND, R.id.PRINT_COMMAND -> hasItems
             R.id.DISTRIBUTION_COMMAND -> sumInfo.value.mappedCategories
             R.id.BALANCE_COMMAND -> isReal && type.supportsReconciliation && !sealed
-            R.id.FINTS_SYNC_COMMAND -> (this as? FullAccount)?.bankId != null
             R.id.ARCHIVE_COMMAND -> isReal && !sealed && hasItems
             R.id.SEARCH_COMMAND -> hasItems
             R.id.SHOW_STATUS_HANDLE_COMMAND -> (this as? FullAccount)?.reconciliationAvailable == true

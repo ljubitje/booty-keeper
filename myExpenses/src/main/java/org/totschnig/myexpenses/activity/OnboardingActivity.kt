@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.ViewGroup.MarginLayoutParams
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
@@ -35,13 +34,6 @@ class OnboardingActivity : SyncBackendSetupActivity() {
     private lateinit var binding: OnboardingBinding
     private lateinit var pagerAdapter: MyPagerAdapter
     private lateinit var onBackPressedCallback: OnBackPressedCallback
-
-    private val startBanking =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == RESULT_OK) {
-                start()
-            }
-        }
 
     @State
     var accountName: String? = null
@@ -194,14 +186,6 @@ class OnboardingActivity : SyncBackendSetupActivity() {
         if (args.getInt(ConfirmationDialogFragment.KEY_COMMAND_NEGATIVE) == R.id.ENCRYPT_CANCEL_COMMAND) {
             prefHandler.putBoolean(PrefKey.ENCRYPT_DATABASE, false)
             privacyFragment?.setupMenu()
-        }
-    }
-
-    override fun startBanking() {
-        bankingFeature.bankingActivityClass?.let {
-            startBanking.launch(Intent(this, bankingFeature.bankingActivityClass))
-        } ?: run {
-            showSnackBar("BankingFeature not installed")
         }
     }
 

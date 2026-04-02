@@ -32,7 +32,6 @@ import org.totschnig.myexpenses.dialog.TransactionListComposeDialogFragment
 import org.totschnig.myexpenses.dialog.VersionDialogFragment
 import org.totschnig.myexpenses.dialog.select.SelectFromTableDialogFragment
 import org.totschnig.myexpenses.export.pdf.PdfPrinter
-import org.totschnig.myexpenses.feature.BankingFeature
 import org.totschnig.myexpenses.feature.FeatureManager
 import org.totschnig.myexpenses.feature.OcrFeature
 import org.totschnig.myexpenses.fragment.CurrencyList
@@ -154,8 +153,6 @@ interface AppComponent {
     fun gson(): Gson
 
     fun ocrFeature(): OcrFeature?
-
-    fun bankingFeature(): BankingFeature?
 
     fun okHttpClientBuilder(): OkHttpClient.Builder
 

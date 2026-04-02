@@ -60,9 +60,6 @@
             android:fragment="org.totschnig.myexpenses.fragment.preferences.PreferencesPrintFragment"
             android:key="print"
             android:title="@string/menu_print" />
-        <Preference
-            android:key="@string/pref_banking_fints_key"
-            android:title="Multibanking" />
     </PreferenceCategory>
 
     <Preference

@@ -26,7 +26,6 @@ enum class Module(@StringRes val labelResId: Int) {
     WEBDAV(R.string.title_webdav),
     ONEDRIVE(R.string.title_onedrive),
     SQLCRYPT(R.string.title_sqlcrypt),
-    FINTS(R.string.title_fints),
     JACKSON(R.string.title_jackson);
 
     val moduleName: String
@@ -95,7 +94,6 @@ sealed class Feature(vararg val requiredModules: Module) {
             return !prefHandler.encryptDatabase
         }
     }
-    data object FINTS: Feature(Module.FINTS)
 }
 
 

@@ -37,7 +37,7 @@ include ':webdav'
 //include ':PlayStoreApi'
 include ':sqlcrypt'
 include ':preferences'
-include ':fints'
+//include ':fints'  // Removed: Booty
 include ':shared-test'
 include ':onedrive'
 include ':jackson'

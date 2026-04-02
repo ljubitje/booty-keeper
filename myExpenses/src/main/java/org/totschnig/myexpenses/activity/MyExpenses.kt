@@ -370,15 +370,7 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
                                     data.any { it.isHomeAggregate },
                             expansionHandlerGroups = viewModel.expansionHandler("collapsedHeadersDrawer_${accountGrouping}"),
                             expansionHandlerAccounts = viewModel.expansionHandler("expandedAccounts"),
-                            bankIcon = { modifier, id ->
-                                banks.value.find { it.id == id }
-                                    ?.let { bank ->
-                                        bankingFeature.bankIconRenderer?.invoke(
-                                            modifier,
-                                            bank
-                                        )
-                                    }
-                            },
+                            bankIcon = { _, _ -> },
                             flags = viewModel.accountFlags.collectAsState(emptyList()).value
                         )
                     }?.onFailure {
@@ -882,7 +874,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
                     R.id.RESET_COMMAND,
                     R.id.PRINT_COMMAND,
                     R.id.SYNC_COMMAND,
-                    R.id.FINTS_SYNC_COMMAND,
                     R.id.ARCHIVE_COMMAND,
                     R.id.SEARCH_COMMAND
                 ).forEach {
@@ -912,9 +903,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
                     }
                 }
 
-                menu.findItem(R.id.FINTS_SYNC_COMMAND)?.apply {
-                    title = bankingFeature.syncMenuTitle(this@MyExpenses)
-                }
             }
             menu.findItem(R.id.SEARCH_COMMAND)?.let {
                 it.isChecked = currentFilter.whereFilter.value != null
@@ -932,8 +920,7 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
                 R.id.SORT_MENU,
                 R.id.PRINT_COMMAND,
                 R.id.GROUPING_COMMAND,
-                R.id.SHOW_STATUS_HANDLE_COMMAND,
-                R.id.FINTS_SYNC_COMMAND
+                R.id.SHOW_STATUS_HANDLE_COMMAND
             )) {
                 menu.findItem(item)?.setEnabledAndVisible(false)
             }
@@ -1046,13 +1033,7 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
         binding.toolbar.bankIcon.isVisible = accountVisual == ACCOUNT_VISUAL_ICON
 
         when (accountVisual) {
-            ACCOUNT_VISUAL_ICON -> {
-                viewModel.banks.value.find { it.id == account.bankId }?.let {
-                    bankingFeature.bankIcon(it)
-                }?.let {
-                    binding.toolbar.bankIcon.setImageResource(it)
-                }
-            }
+            ACCOUNT_VISUAL_ICON -> {}
 
             ACCOUNT_VISUAL_COLOR -> {
                 (binding.toolbar.accountColorIndicator.background as GradientDrawable).setColor(

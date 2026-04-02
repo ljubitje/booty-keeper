@@ -29,10 +29,6 @@ class VersionInfo(val code: Int, val name: String) : Parcelable {
                 "${t(R.string.settings_label)}: ${t(R.string.ui_refinement)}"
             )
 
-            "363" -> arrayOf(
-                "Multibanking (${Locale.GERMANY.displayCountry})"
-            )
-
             "368" -> arrayOf(
                 "${t(R.string.menu_distribution)}, ${t(R.string.menu_budget)}: ${t(R.string.ui_refinement)}"
             )
@@ -92,7 +88,6 @@ class VersionInfo(val code: Int, val name: String) : Parcelable {
             )
 
             "385" -> arrayOf(
-                "FinTS: ING-DiBa",
                 // @formatter:off
                 "${t(R.string.menu_print)}: ${t(R.string.configuration)} (${t(R.string.paper_format)}, ${t(R.string.orientation)}, ${t(R.string.title_font_size)})"
                 // @formatter:on

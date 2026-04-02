@@ -105,7 +105,6 @@ import org.totschnig.myexpenses.dialog.MessageDialogFragment
 import org.totschnig.myexpenses.dialog.ProgressDialogFragment
 import org.totschnig.myexpenses.dialog.TransactionDetailFragment
 import org.totschnig.myexpenses.dialog.VersionDialogFragment
-import org.totschnig.myexpenses.feature.BankingFeature
 import org.totschnig.myexpenses.feature.Feature
 import org.totschnig.myexpenses.feature.FeatureManager
 import org.totschnig.myexpenses.feature.Module
@@ -322,22 +321,6 @@ abstract class BaseActivity : AppCompatActivity(), MessageDialogFragment.Message
 
     override fun contribFeatureCalled(feature: ContribFeature, tag: Serializable?) {
         when (feature) {
-            ContribFeature.BANKING -> {
-                if (featureViewModel.isFeatureAvailable(this, Feature.FINTS)) {
-                    startBanking()
-                } else {
-                    featureViewModel.requestFeature(this, Feature.FINTS)
-                }
-            }
-
-            ContribFeature.WEB_UI -> {
-                if (featureViewModel.isFeatureAvailable(this, Feature.WEBUI)) {
-                    activateWebUi()
-                } else {
-                    featureViewModel.requestFeature(this, Feature.WEBUI)
-                }
-            }
-
             else -> {}
         }
     }
@@ -417,8 +400,6 @@ abstract class BaseActivity : AppCompatActivity(), MessageDialogFragment.Message
     open fun onFeatureAvailable(feature: Feature) {
         featureManager.initActivity(this)
         when (feature) {
-            Feature.FINTS -> startBanking()
-            Feature.WEBUI -> activateWebUi()
             else -> {}
         }
     }
@@ -1457,9 +1438,6 @@ abstract class BaseActivity : AppCompatActivity(), MessageDialogFragment.Message
             Utils.getSimpleClassNameFromComponentName(it)
         } == OnboardingActivity::class.java.simpleName
 
-    val bankingFeature: BankingFeature
-        get() = requireApplication().appComponent.bankingFeature() ?: BankingFeature
-
     protected open fun restartAfterRestore() {
         (application as MyApplication).invalidateHomeCurrency()
         if (!isFinishing) {
@@ -1467,14 +1445,6 @@ abstract class BaseActivity : AppCompatActivity(), MessageDialogFragment.Message
             startActivity(Intent(this, prefHandler.mainScreenClass).apply {
                 addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             })
-        }
-    }
-
-    open fun startBanking() {
-        bankingFeature.bankingActivityClass?.let {
-            startActivity(Intent(this, bankingFeature.bankingActivityClass))
-        } ?: run {
-            showSnackBar("BankingFeature not installed")
         }
     }
 
