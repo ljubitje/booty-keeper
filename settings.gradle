@@ -26,7 +26,7 @@ dependencyResolutionManagement {
 //include ':mlkit_kore'
 //include ":tesseract"
 include ':myExpenses'
-include ':webui'
+//include ':webui'  // Removed: Booty
 //include ':ocr'  // Removed: Booty
 include ':PlayLicensingOrig', ':transactionscontract'
 include ':setupwizard'

@@ -154,13 +154,6 @@ sealed class MenuItem(
         isEnabledByDefault = false
     )
 
-    data object WebUI : MenuItem(
-        R.id.WEB_UI_COMMAND,
-        R.string.title_webui,
-        R.drawable.ic_computer,
-        isEnabledByDefault = false,
-        isCheckable = true
-    )
 
     data object Restore : MenuItem(
         R.id.RESTORE_COMMAND,
@@ -220,7 +213,6 @@ sealed class MenuItem(
                 Settings,
                 Help,
                 Backup,
-                WebUI,
                 Restore
             )
 
@@ -230,7 +222,6 @@ sealed class MenuItem(
                 Parties,
                 Settings,
                 Backup,
-                WebUI,
                 Restore
             )
 

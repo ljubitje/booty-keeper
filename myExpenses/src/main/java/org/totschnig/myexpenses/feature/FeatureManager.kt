@@ -21,7 +21,6 @@ import org.totschnig.myexpenses.util.crashreporting.CrashHandler
 import java.util.*
 
 enum class Module(@StringRes val labelResId: Int) {
-    WEBUI(R.string.title_webui),
     DRIVE(R.string.title_drive),
     DROPBOX(R.string.title_dropbox),
     WEBDAV(R.string.title_webdav),
@@ -82,13 +81,6 @@ sealed class Feature(vararg val requiredModules: Module) {
     }
 
 
-    data object WEBUI : Feature(Module.WEBUI) {
-        override suspend fun canUninstall(
-            context: Context,
-            prefHandler: PrefHandler,
-            datastore: DataStore<Preferences>
-        ) = datastore.data.map { it[prefHandler.getBooleanPreferencesKey(PrefKey.UI_WEB)] }.first() == false
-    }
 
     data object DRIVE : SyncBackend(Module.DRIVE)
     data object DROPBOX : SyncBackend(Module.DROPBOX, Module.JACKSON)

@@ -30,8 +30,6 @@ import org.totschnig.myexpenses.fragment.preferences.PreferenceDataFragment
 import org.totschnig.myexpenses.fragment.preferences.PreferencesAdvancedFragment
 import org.totschnig.myexpenses.fragment.preferences.PreferencesBackupRestoreFragment
 import org.totschnig.myexpenses.fragment.preferences.PreferencesBackupRestoreFragment.Companion.KEY_CHECKED_FILES
-import org.totschnig.myexpenses.fragment.preferences.PreferencesOcrFragment
-import org.totschnig.myexpenses.fragment.preferences.PreferencesWebUiFragment
 import org.totschnig.myexpenses.injector
 import org.totschnig.myexpenses.model.ContribFeature
 import org.totschnig.myexpenses.preference.PrefKey
@@ -313,29 +311,12 @@ class PreferenceActivity : SyncBackendSetupActivity(), ContribIFace, SortUtility
 
     override fun onFeatureAvailable(feature: Feature) {
         super.onFeatureAvailable(feature)
-        when (feature) {
-            Feature.WEBUI ->
-                twoPanePreference.getDetailFragment<PreferencesWebUiFragment>()
-                    ?.bindToWebUiService()
-
-            else -> {}
-        }
     }
 
     private fun showUnencryptedBackupWarning() {
         if (prefHandler.getString(PrefKey.EXPORT_PASSWORD, null) == null) showMessage(
             unencryptedBackupWarning
         )
-    }
-
-    fun onStartWebUi() {
-        if (licenceHandler.hasAccessTo(ContribFeature.WEB_UI) &&
-            featureViewModel.isFeatureAvailable(this, Feature.WEBUI)
-        ) {
-            activateWebUi()
-        } else {
-            contribFeatureRequested(ContribFeature.WEB_UI)
-        }
     }
 
     override fun onPositive(args: Bundle, checked: Boolean) {
