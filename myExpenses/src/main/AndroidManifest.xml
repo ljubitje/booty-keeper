@@ -134,7 +134,7 @@
                 <data
                     android:host="www.myexpenses.mobi"
                     android:path="/callback2.html"
-                    android:scheme="org.totschnig.myexpenses" />
+                    android:scheme="kle.ljubitje.booty" />
             </intent-filter>
             <intent-filter
                 android:autoVerify="true"
