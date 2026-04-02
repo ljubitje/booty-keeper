@@ -202,18 +202,11 @@ class MyExpensesV2 : BaseMyExpenses<MyExpensesV2ViewModel>(),
                                         AppEvent.CreateAccount -> createAccount()
                                         is AppEvent.CreateTransaction ->
                                             if (preCreateRowCheckForSealed()) {
-                                                when (event.action) {
-                                                    Action.Scan -> contribFeatureRequested(
-                                                        ContribFeature.OCR,
-                                                        true
-                                                    )
-
-                                                    else -> createRow(
-                                                        event.action.type,
-                                                        event.transferEnabled,
-                                                        event.action == Action.Income
-                                                    )
-                                                }
+                                                createRow(
+                                                    event.action.type,
+                                                    event.transferEnabled,
+                                                    event.action == Action.Income
+                                                )
                                             }
 
                                         is AppEvent.SetAccountGrouping -> viewModel.setGrouping(

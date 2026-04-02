@@ -23,19 +23,10 @@ object Bogus {
 
 @Module
 open class FeatureModule {
-    private var ocrFeature: OcrFeature? = null
     private var bankingFeature: BankingFeature? = null
 
     @Provides
-    fun provideOcrFeature(prefHandler: PrefHandler): OcrFeature? = ocrFeature ?:
-        try {
-            (Class.forName("org.totschnig.ocr.OcrFeatureImpl").getConstructor(PrefHandler::class.java)
-                .newInstance(prefHandler) as OcrFeature).also {
-                ocrFeature = it
-            }
-        } catch (_: ClassNotFoundException) {
-            null
-        }
+    fun provideOcrFeature(): OcrFeature? = null
 
     @Provides
     fun provideBankingFeature(): BankingFeature? = bankingFeature ?:

@@ -272,11 +272,6 @@ class PreferenceActivity : SyncBackendSetupActivity(), ContribIFace, SortUtility
                 showSnackBar(R.string.app_restart_required)
             }
 
-            getKey(PrefKey.OCR_ENGINE) -> checkOcrFeature()
-
-            getKey(PrefKey.TESSERACT_LANGUAGE) -> checkTessDataDownload()
-
-            getKey(PrefKey.MLKIT_SCRIPT) -> checkOcrFeature()
 
             getKey(PrefKey.SYNC_FREQUCENCY) ->
                 for (account in GenericAccountService.getAccounts(this)) {
@@ -316,22 +311,9 @@ class PreferenceActivity : SyncBackendSetupActivity(), ContribIFace, SortUtility
         }
     }
 
-    /**
-     * checks and requests OCR + engine + (script for mlkit)
-     */
-    private fun checkOcrFeature() {
-        if (!featureManager.isFeatureInstalled(Feature.OCR, this)) {
-            featureManager.requestFeature(Feature.OCR, this)
-        }
-    }
-
     override fun onFeatureAvailable(feature: Feature) {
         super.onFeatureAvailable(feature)
         when (feature) {
-            Feature.OCR, Feature.MLKIT, Feature.TESSERACT ->
-                twoPanePreference.getDetailFragment<PreferencesOcrFragment>()
-                    ?.configureOcrEnginePrefs()
-
             Feature.WEBUI ->
                 twoPanePreference.getDetailFragment<PreferencesWebUiFragment>()
                     ?.bindToWebUiService()

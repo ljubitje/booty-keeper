@@ -253,11 +253,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
         // Pass the event to ActionBarDrawerToggle, if it returns
         // true, then it has handled the app icon touch event
         return (drawerToggle?.onOptionsItemSelected(item) == true) || when (item.itemId) {
-            R.id.SCAN_MODE_COMMAND -> {
-                toggleScanMode()
-                true
-            }
-
             else -> handleGrouping(item) ||
                     handleSortDirection(item) ||
                     super.onOptionsItemSelected(item)
@@ -281,13 +276,7 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
         } == true
 
     private fun toggleScanMode() {
-        if (isScanMode()) {
-            prefHandler.putBoolean(PrefKey.OCR, false)
-            updateFab()
-            invalidateOptionsMenu()
-        } else {
-            contribFeatureRequested(ContribFeature.OCR, false)
-        }
+        // OCR removed from Booty
     }
 
     private lateinit var onBackPressedCallback: OnBackPressedCallback
@@ -686,9 +675,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
 
     override fun onFeatureAvailable(feature: Feature) {
         super.onFeatureAvailable(feature)
-        if (feature == Feature.OCR) {
-            activateOcrMode()
-        }
     }
 
     override fun startEdit(intent: Intent) {
@@ -889,10 +875,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
 
     override fun onPrepareOptionsMenu(menu: Menu): Boolean {
         if (accountData.isNotEmpty() && currentAccount != null) {
-            menu.findItem(R.id.SCAN_MODE_COMMAND)?.let {
-                it.isChecked = isScanMode()
-                checkMenuIcon(it, R.drawable.ic_scan)
-            }
             with(currentAccount!!) {
                 listOf(
                     R.id.DISTRIBUTION_COMMAND,
@@ -944,7 +926,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
                 R.id.SEARCH_COMMAND,
                 R.id.DISTRIBUTION_COMMAND,
                 R.id.HISTORY_COMMAND,
-                R.id.SCAN_MODE_COMMAND,
                 R.id.RESET_COMMAND,
                 R.id.SYNC_COMMAND,
                 R.id.BALANCE_COMMAND,
@@ -1016,8 +997,7 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
     override fun onFabClicked() {
         super.onFabClicked()
         if (preCreateRowCheckForSealed()) {
-            if (isScanMode()) contribFeatureRequested(ContribFeature.OCR, true)
-            else createRowDo(Transactions.TYPE_TRANSACTION, false)
+            createRowDo(Transactions.TYPE_TRANSACTION, false)
         }
     }
 
@@ -1173,23 +1153,11 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
         }
     }
 
-    fun isScanMode() = prefHandler.getBoolean(PrefKey.OCR, false)
+    fun isScanMode() = false
 
-    private fun activateOcrMode() {
-        prefHandler.putBoolean(PrefKey.OCR, true)
-        updateFab()
-        invalidateOptionsMenu()
-    }
 
     override fun contribFeatureCalled(feature: ContribFeature, tag: Serializable?) {
-        if (feature == ContribFeature.OCR && (tag as? Boolean) == false) {
-            if (featureViewModel.isFeatureAvailable(this, Feature.OCR)) {
-                activateOcrMode()
-            } else {
-                featureViewModel.requestFeature(this, Feature.OCR)
-            }
-        }
-        else super.contribFeatureCalled(feature, tag)
+        super.contribFeatureCalled(feature, tag)
     }
 
     val navigationView: NavigationView

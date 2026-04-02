@@ -251,10 +251,6 @@
             android:exported="false"
             android:theme="@style/EditDialog" />
         <activity
-            android:name=".activity.OcrLauncher"
-            android:exported="true"
-            android:theme="@style/Translucent" />
-        <activity
             android:name=".activity.ManageTemplates"
             android:exported="true"
             android:parentActivityName=".activity.MyExpenses"

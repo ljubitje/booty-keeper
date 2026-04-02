@@ -130,7 +130,7 @@ sealed class AddOnPackage(
         //https://youtrack.jetbrains.com/issue/KT-8970/Object-is-uninitialized-null-when-accessed-from-static-context-ex.-companion-object-with-initialization-loop
         val values: List<AddOnPackage>
             get() = listOf(
-                SplitTemplate, History, Budget, Ocr, WebUi, CategoryTree,
+                SplitTemplate, History, Budget, WebUi, CategoryTree,
                 AccountsUnlimited, PlansUnlimited, SplitTransaction, Distribution, Print,
                 Synchronization, Banking, AutomaticFxDownload
             )
@@ -160,9 +160,6 @@ sealed class AddOnPackage(
     @Keep
     data object Budget : AddOnPackage(ContribFeature.BUDGET)
 
-    @Parcelize
-    @Keep
-    data object Ocr : AddOnPackage(ContribFeature.OCR)
 
     @Parcelize
     @Keep

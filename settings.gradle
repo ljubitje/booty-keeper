@@ -27,7 +27,7 @@ dependencyResolutionManagement {
 //include ":tesseract"
 include ':myExpenses'
 include ':webui'
-include ':ocr'
+//include ':ocr'  // Removed: Booty
 include ':PlayLicensingOrig', ':transactionscontract'
 include ':setupwizard'
 //include ':ChangeLog'

@@ -74,12 +74,6 @@ sealed class MenuItem(
         )
     }
 
-    data object ScanMode : MenuItem(
-        R.id.SCAN_MODE_COMMAND,
-        R.string.menu_scan_mode,
-        R.drawable.ic_scan,
-        isCheckable = true
-    )
 
     data object Reset : MenuItem(
         R.id.RESET_COMMAND,
@@ -214,7 +208,6 @@ sealed class MenuItem(
                 Distribution,
                 History,
                 Parties,
-                ScanMode,
                 Reset,
                 Sync,
                 FinTsSync,

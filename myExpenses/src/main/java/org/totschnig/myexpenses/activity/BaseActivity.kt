@@ -816,12 +816,6 @@ abstract class BaseActivity : AppCompatActivity(), MessageDialogFragment.Message
     override fun dispatchCommand(command: Int, tag: Any?): Boolean {
         trackCommand(command)
         return when (command) {
-            R.id.TESSERACT_DOWNLOAD_COMMAND -> {
-                ocrViewModel.downloadTessData().observe(this) {
-                    downloadPending = it
-                }
-                true
-            }
 
             R.id.QUIT_COMMAND -> {
                 finish()
@@ -1588,7 +1582,6 @@ abstract class BaseActivity : AppCompatActivity(), MessageDialogFragment.Message
     }
 
     open fun startEditFromOcrResult(result: OcrResultFlat?, scanUri: Uri) {
-        recordUsage(ContribFeature.OCR)
         lifecycleScope.launch {
             getEditIntent()?.apply {
                 putExtra(KEY_OCR_RESULT, result)
