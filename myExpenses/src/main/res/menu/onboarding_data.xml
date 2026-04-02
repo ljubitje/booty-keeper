@@ -10,11 +10,6 @@
         app:showAsAction="always">
         <menu>
             <item
-                android:id="@+id/SetupFromRemote"
-                android:title="@string/onboarding_restore_from_cloud">
-                <menu />
-            </item>
-            <item
                 android:id="@+id/SetupFromLocal"
                 android:title="@string/onboarding_restore_from_local" />
         </menu>

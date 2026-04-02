@@ -32,13 +32,13 @@ include ':PlayLicensingOrig', ':transactionscontract'
 include ':setupwizard'
 //include ':ChangeLog'
 //include ':drive'
-include ':dropbox'
-include ':webdav'
+//include ':dropbox'  // Removed: Booty
+//include ':webdav'  // Removed: Booty
 //include ':PlayStoreApi'
 include ':sqlcrypt'
 include ':preferences'
 //include ':fints'  // Removed: Booty
 include ':shared-test'
-include ':onedrive'
-include ':jackson'
+//include ':onedrive'  // Removed: Booty
+//include ':jackson'  // Removed: Booty
 include ':jaxb-patch'

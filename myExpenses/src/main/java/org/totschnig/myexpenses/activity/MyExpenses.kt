@@ -873,7 +873,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
                     R.id.HISTORY_COMMAND,
                     R.id.RESET_COMMAND,
                     R.id.PRINT_COMMAND,
-                    R.id.SYNC_COMMAND,
                     R.id.ARCHIVE_COMMAND,
                     R.id.SEARCH_COMMAND
                 ).forEach {
@@ -915,7 +914,6 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
                 R.id.DISTRIBUTION_COMMAND,
                 R.id.HISTORY_COMMAND,
                 R.id.RESET_COMMAND,
-                R.id.SYNC_COMMAND,
                 R.id.BALANCE_COMMAND,
                 R.id.SORT_MENU,
                 R.id.PRINT_COMMAND,

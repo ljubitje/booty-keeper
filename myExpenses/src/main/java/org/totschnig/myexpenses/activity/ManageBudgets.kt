@@ -67,8 +67,6 @@ import org.totschnig.myexpenses.provider.filter.MethodCriterion
 import org.totschnig.myexpenses.provider.filter.PayeeCriterion
 import org.totschnig.myexpenses.provider.filter.SimpleCriterion
 import org.totschnig.myexpenses.provider.filter.TagCriterion
-import org.totschnig.myexpenses.sync.GenericAccountService
-import org.totschnig.myexpenses.util.populateWithSync
 import org.totschnig.myexpenses.viewmodel.BudgetListViewModel
 import org.totschnig.myexpenses.viewmodel.data.Budget
 
@@ -234,9 +232,6 @@ class ManageBudgets : ProtectedFragmentActivity() {
 
     override fun onPrepareOptionsMenu(menu: Menu): Boolean {
         super.onPrepareOptionsMenu(menu)
-        menu.findItem(R.id.SYNC_COMMAND_IMPORT)?.populateWithSync(
-            GenericAccountService.getAccountNames(this)
-        )
         lifecycleScope.launch {
             menu.findItem(R.id.GROUPING_COMMAND)?.subMenu
                 ?.findItem(viewModel.grouping().first().commandId)

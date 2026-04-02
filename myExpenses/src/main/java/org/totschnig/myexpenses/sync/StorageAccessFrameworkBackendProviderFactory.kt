@@ -3,9 +3,8 @@ package org.totschnig.myexpenses.sync
 import android.accounts.Account
 import android.accounts.AccountManager
 import android.content.Context
-import android.net.Uri
 import androidx.annotation.Keep
-import org.totschnig.myexpenses.activity.SafSetup
+import org.totschnig.myexpenses.activity.PreferenceActivity
 import androidx.core.net.toUri
 
 
@@ -21,6 +20,6 @@ class StorageAccessFrameworkBackendProviderFactory : SyncBackendProviderFactory(
         accountManager.getSyncProviderUrl(account).toUri()
     )
 
-    override val setupActivityClass = SafSetup::class.java
+    override val setupActivityClass = PreferenceActivity::class.java
 
 }

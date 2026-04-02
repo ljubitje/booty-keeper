@@ -72,7 +72,6 @@ import org.totschnig.myexpenses.util.checkMenuIcon
 import org.totschnig.myexpenses.util.configureSearch
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler
 import org.totschnig.myexpenses.util.prepareSearch
-import org.totschnig.myexpenses.util.prepareSync
 import org.totschnig.myexpenses.util.safeMessage
 import org.totschnig.myexpenses.util.setEnabledAndVisible
 import org.totschnig.myexpenses.viewmodel.CategoryViewModel
@@ -127,7 +126,6 @@ class ManageCategories : ProtectedFragmentActivity(),
             }
         }
         menu.prepareSearch(viewModel.filter)
-        menu.prepareSync(this)
         return true
     }
 

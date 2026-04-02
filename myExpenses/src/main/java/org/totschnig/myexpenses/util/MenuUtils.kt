@@ -22,7 +22,6 @@ import org.totschnig.myexpenses.model.sort.SortDirection.ASC
 import org.totschnig.myexpenses.model.sort.SortDirection.DESC
 import org.totschnig.myexpenses.provider.KEY_AMOUNT
 import org.totschnig.myexpenses.provider.KEY_DATE
-import org.totschnig.myexpenses.sync.GenericAccountService
 import org.totschnig.myexpenses.util.ui.UiUtils
 import org.totschnig.myexpenses.util.ui.resolveThemeColor
 
@@ -47,30 +46,6 @@ fun Menu.prepareSearch(filter: String?) {
                 setQuery(filter, false)
                 clearFocus()
             }
-        }
-    }
-}
-
-fun MenuItem.populateWithSync(accountNames: Array<String>) {
-    setEnabledAndVisible(accountNames.isNotEmpty())
-    subMenu?.let {
-        it.clear()
-        for (account in accountNames) {
-            it.add(itemId, Menu.NONE, Menu.NONE, account)
-        }
-    }
-}
-
-
-fun Menu.prepareSync(
-    context: Context,
-) {
-    val accountNames = GenericAccountService.getAccountNames(context)
-    findItem(R.id.SYNC_COMMAND)?.let { item ->
-        item.setEnabledAndVisible(accountNames.isNotEmpty())
-        item.subMenu?.let {
-            it.findItem(R.id.SYNC_COMMAND_EXPORT)?.populateWithSync(accountNames)
-            it.findItem(R.id.SYNC_COMMAND_IMPORT)?.populateWithSync(accountNames)
         }
     }
 }

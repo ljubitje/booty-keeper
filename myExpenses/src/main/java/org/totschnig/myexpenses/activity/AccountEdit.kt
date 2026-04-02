@@ -72,7 +72,6 @@ import org.totschnig.myexpenses.util.setEnabledAndVisible
 import org.totschnig.myexpenses.util.ui.addChipsBulk
 import org.totschnig.myexpenses.viewmodel.AccountEditViewModel
 import org.totschnig.myexpenses.viewmodel.CurrencyViewModel
-import org.totschnig.myexpenses.viewmodel.SyncBackendViewModel
 import org.totschnig.myexpenses.viewmodel.data.Currency
 import org.totschnig.myexpenses.viewmodel.data.Currency.Companion.create
 import org.totschnig.myexpenses.viewmodel.data.Tag
@@ -93,8 +92,6 @@ class AccountEdit : AmountActivity<AccountEditViewModel>(), ExchangeRateEdit.Hos
     private lateinit var currencyAdapter: CurrencyAdapter
     private lateinit var accountTypeAdapter: GroupedSpinnerAdapter<Boolean, AccountType>
     private lateinit var currencyViewModel: CurrencyViewModel
-    private lateinit var syncViewModel: SyncBackendViewModel
-
     val rowId: Long
         get() = intent.getLongExtra(KEY_ROWID, 0)
 
@@ -110,11 +107,9 @@ class AccountEdit : AmountActivity<AccountEditViewModel>(), ExchangeRateEdit.Hos
         val viewModelProvider = ViewModelProvider(this)
         currencyViewModel = viewModelProvider[CurrencyViewModel::class.java]
         viewModel = viewModelProvider[AccountEditViewModel::class.java]
-        syncViewModel = viewModelProvider[SyncBackendViewModel::class.java]
         with(injector) {
             inject(viewModel)
             inject(currencyViewModel)
-            inject(syncViewModel)
         }
 
         currencySpinner = SpinnerHelper(binding.Currency)
@@ -369,11 +364,7 @@ class AccountEdit : AmountActivity<AccountEditViewModel>(), ExchangeRateEdit.Hos
             }
 
             R.id.Sync -> {
-                if (position > 0) {
-                    contribFeatureRequested(ContribFeature.SYNCHRONIZATION)
-                } else {
-                    viewModel.syncAccountName = null
-                }
+                viewModel.syncAccountName = null
             }
 
             R.id.AccountType -> {
@@ -434,42 +425,8 @@ class AccountEdit : AmountActivity<AccountEditViewModel>(), ExchangeRateEdit.Hos
                 true
             }
 
-            R.id.SYNC_UNLINK_COMMAND -> {
-                viewModel.uuid?.let { uuid ->
-                    syncViewModel.syncUnlink(uuid).observe(this) { result ->
-                        result.onSuccess {
-                            syncSpinner.setSelection(0)
-                            syncSpinner.isEnabled = true
-                            binding.SyncUnlink.visibility = View.GONE
-                        }.onFailure {
-                            showSnackBar(it.safeMessage)
-                        }
-                    }
-                }
-                true
-            }
-
-            R.id.SYNC_SETTINGS_COMMAND -> {
-                syncSettings.launch(
-                    Intent(this, ManageSyncBackends::class.java).apply {
-                        putExtra(KEY_UUID, viewModel.uuid)
-                    }
-                )
-                true
-            }
-
             else -> false
         }
-
-    private val syncSettings =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            if (it.resultCode == RESULT_FIRST_USER) {
-                finish()
-            } else {
-                configureSyncBackendAdapter(true)
-            }
-        }
-
 
     override fun setupListeners() {
         super.setupListeners()
@@ -486,31 +443,9 @@ class AccountEdit : AmountActivity<AccountEditViewModel>(), ExchangeRateEdit.Hos
     }
 
     override fun contribFeatureCalled(feature: ContribFeature, tag: Serializable?) {
-        if (syncSpinner.selectedItemPosition > 0) {
-            val syncAccountName = syncSpinner.selectedItem as String
-            if (!newInstance) {
-                showSnackBar(R.string.progress_dialog_checking_sync_backend)
-                viewModel.uuid?.let { uuid ->
-                    syncViewModel.syncCheck(uuid, syncAccountName)
-                        .observe(this) { result ->
-                            result.onFailure {
-                                syncSpinner.setSelection(0)
-                                showHelp(it.safeMessage)
-                            }.onSuccess {
-                                viewModel.syncAccountName = syncAccountName
-                            }
-                        }
-                }
-            } else {
-                viewModel.syncAccountName = syncAccountName
-            }
-        }
     }
 
     override fun contribFeatureNotCalled(feature: ContribFeature) {
-        if (feature === ContribFeature.SYNCHRONIZATION) {
-            syncSpinner.setSelection(0)
-        }
     }
 
     private fun showHelp(message: String) {

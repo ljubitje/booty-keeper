@@ -14,19 +14,12 @@ import org.totschnig.myexpenses.activity.BaseActivity
 import org.totschnig.myexpenses.preference.PrefHandler
 import org.totschnig.myexpenses.preference.PrefKey
 import org.totschnig.myexpenses.preference.enumValueOrDefault
-import org.totschnig.myexpenses.sync.BackendService
-import org.totschnig.myexpenses.sync.GenericAccountService
 import org.totschnig.myexpenses.util.Utils
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler
 import java.util.*
 
 enum class Module(@StringRes val labelResId: Int) {
-    DRIVE(R.string.title_drive),
-    DROPBOX(R.string.title_dropbox),
-    WEBDAV(R.string.title_webdav),
-    ONEDRIVE(R.string.title_onedrive),
-    SQLCRYPT(R.string.title_sqlcrypt),
-    JACKSON(R.string.title_jackson);
+    SQLCRYPT(R.string.title_sqlcrypt);
 
     val moduleName: String
         get() = name.lowercase(Locale.ROOT)
@@ -65,26 +58,6 @@ sealed class Feature(vararg val requiredModules: Module) {
 
     }
 
-    sealed class SyncBackend(vararg requiredModules: Module) :
-        Feature(*requiredModules) {
-        override suspend fun canUninstall(
-            context: Context,
-            prefHandler: PrefHandler,
-            datastore: DataStore<Preferences>
-        ) =
-            GenericAccountService.getAccountNames(context).none { account ->
-                account.startsWith(
-                    BackendService.entries.first { it.feature == this }.label
-                )
-            }
-    }
-
-
-
-    data object DRIVE : SyncBackend(Module.DRIVE)
-    data object DROPBOX : SyncBackend(Module.DROPBOX, Module.JACKSON)
-    data object WEBDAV : SyncBackend(Module.WEBDAV)
-    data object ONEDRIVE : SyncBackend(Module.ONEDRIVE, Module.JACKSON)
     data object SQLCRYPT: Feature(Module.SQLCRYPT) {
         override suspend fun canUninstall(
             context: Context,

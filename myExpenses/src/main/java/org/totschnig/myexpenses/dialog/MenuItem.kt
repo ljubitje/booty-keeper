@@ -80,12 +80,6 @@ sealed class MenuItem(
         R.drawable.ic_menu_download
     )
 
-    data object Sync : MenuItem(
-        R.id.SYNC_COMMAND,
-        R.string.menu_sync_now,
-        R.drawable.ic_sync
-    )
-
     data object ShowStatusHandle : MenuItem(
         R.id.SHOW_STATUS_HANDLE_COMMAND,
         R.string.status,

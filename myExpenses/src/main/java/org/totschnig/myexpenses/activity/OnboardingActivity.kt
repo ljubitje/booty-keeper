@@ -9,34 +9,22 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.evernote.android.state.State
 import org.totschnig.myexpenses.R
 import org.totschnig.myexpenses.databinding.OnboardingBinding
 import org.totschnig.myexpenses.dialog.ConfirmationDialogFragment
-import org.totschnig.myexpenses.dialog.RestoreFromCloudDialogFragment
 import org.totschnig.myexpenses.fragment.OnBoardingPrivacyFragment
 import org.totschnig.myexpenses.fragment.OnboardingDataFragment
 import org.totschnig.myexpenses.fragment.OnboardingUiFragment
 import org.totschnig.myexpenses.preference.PrefKey
-import org.totschnig.myexpenses.provider.KEY_SYNC_ACCOUNT_NAME
-import org.totschnig.myexpenses.sync.json.AccountMetaData
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler
 import org.totschnig.myexpenses.util.distrib.DistributionHelper.versionNumber
-import org.totschnig.myexpenses.util.safeMessage
-import org.totschnig.myexpenses.viewmodel.RestoreViewModel.Companion.KEY_BACKUP_FROM_SYNC
-import org.totschnig.myexpenses.viewmodel.RestoreViewModel.Companion.KEY_PASSWORD
-import org.totschnig.myexpenses.viewmodel.SyncViewModel.SyncAccountData
 
-class OnboardingActivity : SyncBackendSetupActivity() {
+class OnboardingActivity : RestoreActivity() {
     private lateinit var binding: OnboardingBinding
     private lateinit var pagerAdapter: MyPagerAdapter
     private lateinit var onBackPressedCallback: OnBackPressedCallback
-
-    @State
-    var accountName: String? = null
 
     override val drawToTopEdge = true
 
@@ -97,9 +85,6 @@ class OnboardingActivity : SyncBackendSetupActivity() {
         binding.viewPager.setCurrentItem(currentItem + 1, true)
     }
 
-    private val dataFragment: OnboardingDataFragment?
-        get() = getFragmentAtPosition(2) as? OnboardingDataFragment
-
     private val privacyFragment: OnBoardingPrivacyFragment?
         get() = getFragmentAtPosition(1) as? OnBoardingPrivacyFragment
 
@@ -114,54 +99,10 @@ class OnboardingActivity : SyncBackendSetupActivity() {
         finish()
     }
 
-    override val createAccountTaskShouldReturnBackups = true
-
-    override val createAccountTaskShouldQueryLocalAccounts = false
-
-    override fun onReceiveSyncAccountData(data: SyncAccountData) {
-        lifecycleScope.launchWhenResumed {
-            dataFragment?.setupMenu()
-            accountName = data.accountName
-            if (data.backups.isNotEmpty() || data.remoteAccounts.isNotEmpty()) {
-                if (checkForDuplicateUuids(data.remoteAccounts)) {
-                    showSnackBar("Found accounts with duplicate uuids")
-                } else {
-                    RestoreFromCloudDialogFragment.newInstance(data.backups, data.remoteAccounts)
-                        .show(supportFragmentManager, FRAGMENT_TAG_RESTORE)
-                }
-            } else {
-                showSnackBar("Neither backups nor sync accounts found")
-            }
-        }
-    }
-
     override fun onPostRestoreTask(result: Result<Unit>) {
         super.onPostRestoreTask(result)
         result.onSuccess {
             restartAfterRestore()
-        }
-    }
-
-    fun setupFromBackup(backup: String?, password: String?) {
-        doRestore(Bundle(4).apply {
-            putString(KEY_SYNC_ACCOUNT_NAME, accountName)
-            putString(KEY_BACKUP_FROM_SYNC, backup)
-            putString(KEY_PASSWORD, password)
-        })
-    }
-
-    fun setupFromSyncAccounts(syncAccounts: List<AccountMetaData>) {
-        doWithEncryptionCheck {
-            showSnackBarIndefinite(R.string.progress_dialog_fetching_data_from_sync_backend)
-            syncViewModel.setupFromSyncAccounts(syncAccounts.map { it.uuid }, accountName!!)
-                .observe(this) { result ->
-                    dismissSnackBar()
-                    result.onSuccess {
-                        start()
-                    }.onFailure {
-                        showDismissibleSnackBar(it.safeMessage)
-                    }
-                }
         }
     }
 

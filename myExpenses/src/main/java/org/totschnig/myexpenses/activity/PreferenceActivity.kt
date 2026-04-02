@@ -51,7 +51,6 @@ import org.totschnig.myexpenses.viewmodel.LicenceValidationViewModel
 import org.totschnig.myexpenses.viewmodel.ModalProgressViewModel
 import org.totschnig.myexpenses.viewmodel.PriceCalculationViewModel
 import org.totschnig.myexpenses.viewmodel.SettingsViewModel
-import org.totschnig.myexpenses.viewmodel.SyncViewModel
 import org.totschnig.myexpenses.widget.AccountWidget
 import org.totschnig.myexpenses.widget.BudgetWidget
 import org.totschnig.myexpenses.widget.TemplateWidget
@@ -61,7 +60,7 @@ import timber.log.Timber
 import java.io.Serializable
 import javax.inject.Inject
 
-class PreferenceActivity : SyncBackendSetupActivity(), ContribIFace, SortUtilityDialogFragment.OnConfirmListener {
+class PreferenceActivity : RestoreActivity(), ContribIFace, SortUtilityDialogFragment.OnConfirmListener {
 
     @Inject
     lateinit var configurator: Configurator
@@ -336,11 +335,6 @@ class PreferenceActivity : SyncBackendSetupActivity(), ContribIFace, SortUtility
         if (requestCode == PermissionHelper.PERMISSIONS_REQUEST_WRITE_CALENDAR) {
             initialPrefToShow = prefHandler.getKey(PrefKey.PLANNER_CALENDAR_ID)
         }
-    }
-
-    override fun onReceiveSyncAccountData(data: SyncViewModel.SyncAccountData) {
-        twoPanePreference.getDetailFragment<PreferencesBackupRestoreFragment>()
-            ?.loadSyncAccountData(data.accountName)
     }
 
     override fun onResumeFragments() {

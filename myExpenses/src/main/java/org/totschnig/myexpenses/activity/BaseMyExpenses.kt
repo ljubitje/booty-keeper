@@ -489,19 +489,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
                 }
             }
 
-            R.id.SYNC_COMMAND -> (currentAccount as? FullAccount)
-                ?.takeIf { it.syncAccountName != null }
-                ?.let {
-                    requestSync(
-                        accountName = it.syncAccountName!!,
-                        uuid = if (prefHandler.getBoolean(
-                                PrefKey.SYNC_NOW_ALL,
-                                false
-                            )
-                        ) null else it.uuid
-                    )
-                }
-
             R.id.SAFE_MODE_COMMAND -> {
                 prefHandler.putBoolean(PrefKey.DB_SAFE_MODE, true)
                 viewModel.triggerAccountListRefresh()
@@ -1070,7 +1057,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
     fun BaseAccount?.isMenuItemVisible(itemId: Int): Boolean {
         val isReal = this is FullAccount && !isAggregate
         return when (itemId) {
-            R.id.SYNC_COMMAND -> (this as? FullAccount)?.syncAccountName != null
             R.id.HISTORY_COMMAND, R.id.RESET_COMMAND, R.id.PRINT_COMMAND -> hasItems
             R.id.DISTRIBUTION_COMMAND -> sumInfo.value.mappedCategories
             R.id.BALANCE_COMMAND -> isReal && type.supportsReconciliation && !sealed
@@ -1281,25 +1267,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
 
             showVersionDialog(prevVersion)
         } else {
-            lifecycleScope.launch(Dispatchers.IO) {
-                if ((!licenceHandler.hasTrialAccessTo(ContribFeature.SYNCHRONIZATION)
-                            && viewModel.repository.countAccounts(
-                        "$KEY_SYNC_ACCOUNT_NAME IS NOT NULL",
-                        null
-                    ) > 0
-                            && !prefHandler.getBoolean(
-                        PrefKey.SYNC_UPSELL_NOTIFICATION_SHOWN,
-                        false
-                    )
-                            )
-                ) {
-                    prefHandler.putBoolean(PrefKey.SYNC_UPSELL_NOTIFICATION_SHOWN, true)
-                    ContribUtils.showContribNotification(
-                        this@BaseMyExpenses,
-                        ContribFeature.SYNCHRONIZATION
-                    )
-                }
-            }
         }
         checkCalendarPermission()
     }

@@ -42,7 +42,6 @@ import org.totschnig.myexpenses.fragment.OnboardingUiFragment
 import org.totschnig.myexpenses.fragment.PartiesList
 import org.totschnig.myexpenses.fragment.PlannerFragment.PlanInstanceViewHolder
 import org.totschnig.myexpenses.fragment.StaleImagesList
-import org.totschnig.myexpenses.fragment.SyncBackendList
 import org.totschnig.myexpenses.fragment.TemplatesList
 import org.totschnig.myexpenses.fragment.preferences.BasePreferenceFragment
 import org.totschnig.myexpenses.fragment.preferences.PreferencesContribFragment
@@ -195,8 +194,6 @@ interface AppComponent {
     fun inject(historyChart: HistoryChart)
 
     fun inject(donateDialogFragment: DonateDialogFragment)
-
-    fun inject(syncBackendList: SyncBackendList)
 
     fun inject(currencyList: CurrencyList)
 

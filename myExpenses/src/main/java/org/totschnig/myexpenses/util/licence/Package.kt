@@ -188,10 +188,5 @@ sealed class AddOnPackage(
 
     @Parcelize
     @Keep
-    data object Synchronization : AddOnPackage(ContribFeature.SYNCHRONIZATION)
-
-
-    @Parcelize
-    @Keep
     data object AutomaticFxDownload: AddOnPackage(ContribFeature.AUTOMATIC_FX_DOWNLOAD)
 }

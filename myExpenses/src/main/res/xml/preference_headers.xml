@@ -49,10 +49,6 @@
 
     <PreferenceCategory android:title="@string/pref_category_title_features">
         <Preference
-            android:fragment="org.totschnig.myexpenses.fragment.preferences.PreferencesSyncFragment"
-            android:key="sync"
-            android:title="@string/synchronization" />
-        <Preference
             android:fragment="org.totschnig.myexpenses.fragment.preferences.PreferencesAttachPictureFragment"
             android:key="attach_picture"
             android:title="@string/contrib_feature_attach_picture_label" />

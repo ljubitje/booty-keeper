@@ -291,10 +291,6 @@
             android:exported="false"
             android:theme="@style/EditDialog" />
         <activity
-            android:name=".activity.ManageSyncBackends"
-            android:exported="false"
-            android:theme="@style/EditDialog" />
-        <activity
             android:name=".activity.AccountWidgetConfigure"
             android:exported="true"
             android:label="@string/account_widget_configuration"
@@ -323,10 +319,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.HistoryActivity" />
-
-        <activity
-            android:name=".activity.SafSetup"
-            android:theme="@style/Translucent" />
 
         <provider
             android:name=".provider.TransactionProvider"

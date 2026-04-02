@@ -79,10 +79,8 @@ import org.totschnig.myexpenses.provider.KEY_ROWID
 import org.totschnig.myexpenses.provider.KEY_SECOND_GROUP
 import org.totschnig.myexpenses.provider.KEY_YEAR
 import org.totschnig.myexpenses.provider.filter.asSimpleList
-import org.totschnig.myexpenses.sync.GenericAccountService
 import org.totschnig.myexpenses.util.TextUtils.concatResStrings
 import org.totschnig.myexpenses.util.buildAmountField
-import org.totschnig.myexpenses.util.populateWithSync
 import org.totschnig.myexpenses.util.setEnabledAndVisible
 import org.totschnig.myexpenses.viewmodel.BudgetViewModel2
 import org.totschnig.myexpenses.viewmodel.data.Budget
@@ -579,21 +577,6 @@ class BudgetActivity : DistributionBaseActivity<BudgetViewModel2>(), OnDialogRes
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when {
-        item.itemId == Menu.NONE && item.groupId == R.id.SYNC_COMMAND -> {
-            viewModel.exportBudget(item.title.toString())
-            true
-        }
-
-        item.itemId == R.id.SYNC_COMMAND_EXPORT -> {
-            viewModel.exportBudget()
-            true
-        }
-
-        item.itemId == R.id.SYNC_COMMAND_IMPORT -> {
-            showImportConfirmation.value = true
-            true
-        }
-
         else -> super.onOptionsItemSelected(item)
     }
 
@@ -622,40 +605,6 @@ class BudgetActivity : DistributionBaseActivity<BudgetViewModel2>(), OnDialogRes
             }
             lifecycleScope.launch {
                 menu.findItem(R.id.AGGREGATE_COMMAND).isChecked = viewModel.aggregateNeutral.first()
-            }
-            val isSynced = viewModel.isSynced()
-            menu.findItem(R.id.SYNC_COMMAND)?.let { menuItem ->
-                if (isSynced) {
-                    menuItem.subMenu?.let {
-                        it.clear()
-                        it.add(
-                            Menu.NONE,
-                            R.id.SYNC_COMMAND_EXPORT,
-                            Menu.NONE,
-                            getString(R.string.menu_export)
-                        )
-                        it.add(
-                            Menu.NONE,
-                            R.id.SYNC_COMMAND_IMPORT,
-                            Menu.NONE,
-                            getString(R.string.menu_import)
-                        )
-                    }
-                } else {
-                    viewModel.accountInfo.value?.let {
-                        if (it.accountId > 0 && it.syncAccountName == null) {
-                            //a budget for an account that is not synced can not be synced
-                            menuItem.setEnabledAndVisible(false)
-                        } else {
-                            menuItem.populateWithSync(
-                                //if the account is synced with a backend, we offer to sync with the same backend
-                                //budgets for aggregate accounts can be synced with any backend
-                                if (it.syncAccountName != null) arrayOf(it.syncAccountName) else
-                                    GenericAccountService.getAccountNames(this)
-                            )
-                        }
-                    }
-                }
             }
         }
         return true

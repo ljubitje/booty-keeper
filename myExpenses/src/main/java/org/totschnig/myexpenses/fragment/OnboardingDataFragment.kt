@@ -3,7 +3,6 @@ package org.totschnig.myexpenses.fragment
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
@@ -29,7 +28,6 @@ import org.totschnig.myexpenses.model.CurrencyContext
 import org.totschnig.myexpenses.model2.Account
 import org.totschnig.myexpenses.preference.PrefKey
 import org.totschnig.myexpenses.provider.KEY_CURRENCY
-import org.totschnig.myexpenses.sync.GenericAccountService.Companion.getAccountNames
 import org.totschnig.myexpenses.ui.SpinnerHelper
 import org.totschnig.myexpenses.ui.bindListener
 import org.totschnig.myexpenses.ui.setColor
@@ -98,13 +96,6 @@ class OnboardingDataFragment : OnboardingFragment(), AdapterView.OnItemSelectedL
     override val menuResId = R.menu.onboarding_data
 
     override fun setupMenu() {
-        toolbar.menu.findItem(R.id.SetupFromRemote).subMenu?.let {
-            it.clear()
-            hostActivity.addSyncProviderMenuEntries(it)
-            for (account in getAccountNames(requireActivity())) {
-                it.add(Menu.NONE, Menu.NONE, Menu.NONE, account)
-            }
-        }
         toolbar.setOnMenuItemClickListener { item: MenuItem -> onRestoreMenuItemSelected(item) }
     }
 
@@ -116,12 +107,6 @@ class OnboardingDataFragment : OnboardingFragment(), AdapterView.OnItemSelectedL
                         action = BackupRestoreActivity.ACTION_RESTORE
                     }
                 )
-            }
-            Menu.NONE -> {
-                hostActivity.fetchAccountData(item.title.toString())
-            }
-            !in arrayOf(R.id.SetupMain, R.id.SetupFromRemote) -> {
-                hostActivity.startSetup(item.itemId)
             }
         }
         return true
