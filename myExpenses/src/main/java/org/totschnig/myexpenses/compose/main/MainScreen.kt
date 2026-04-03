@@ -18,8 +18,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ReceiptLong
 import androidx.compose.material.icons.filled.AccountBalance
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.CheckBox
-import androidx.compose.material.icons.filled.CheckBoxOutlineBlank
+
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material3.BottomAppBarDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -209,7 +208,7 @@ fun MainScreenAdaptive(
     val quickItems = menuConfig.value.take(maxQuickItems)
     val overflowItems = menuConfig.value.drop(maxQuickItems)
 
-    val isWebUiActive by viewModel.isWebUiActive.collectAsState(false)
+
     Column {
         adView()
         NavigationSuiteScaffold(
@@ -241,13 +240,10 @@ fun MainScreenAdaptive(
 
                 (if (isRail) menuConfig.value else quickItems).forEach {
                     item(
-                        selected = if (it == MenuItem.WebUI) isWebUiActive else false,
+                        selected = false,
                         onClick = {
                             onAppEvent(
-                                AppEvent.MenuItemClicked(
-                                    it.id,
-                                    if (it == MenuItem.WebUI) !isWebUiActive else null
-                                )
+                                AppEvent.MenuItemClicked(it.id, null)
                             )
                         },
                         icon = { Icon(it.painter, null) },
@@ -393,21 +389,13 @@ fun MainScreenAdaptive(
                         modifier = Modifier.clickable {
                             showBottomSheet = false
                             onAppEvent(
-                                AppEvent.MenuItemClicked(
-                                    it.id,
-                                    if (it == MenuItem.WebUI) !isWebUiActive else null
-                                )
+                                AppEvent.MenuItemClicked(it.id, null)
                             )
                         },
                         headlineContent = { Text(it.getLabel(LocalContext.current)) },
                         leadingContent = {
                             Icon(
-                                if (it == MenuItem.WebUI) {
-                                    rememberVectorPainter(
-                                        if (isWebUiActive) Icons.Filled.CheckBox
-                                        else Icons.Filled.CheckBoxOutlineBlank
-                                    )
-                                } else it.painter,
+                                it.painter,
                                 contentDescription = null
                             )
                         },

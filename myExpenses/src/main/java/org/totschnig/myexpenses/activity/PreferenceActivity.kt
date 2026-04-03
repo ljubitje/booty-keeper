@@ -323,7 +323,7 @@ class PreferenceActivity : RestoreActivity(), ContribIFace, SortUtilityDialogFra
                 .observe(this) {
                     showSnackBar(resources.getQuantityString(R.plurals.delete_success, it, it))
                 }
-            R.id.WEB_UI_COMMAND -> onStartWebUi()
+
         }
     }
 

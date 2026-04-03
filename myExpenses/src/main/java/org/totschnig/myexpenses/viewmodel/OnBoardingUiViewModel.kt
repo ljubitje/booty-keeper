@@ -9,7 +9,7 @@ import org.totschnig.myexpenses.preference.PrefKey
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler
 import java.io.IOException
 
-class OnBoardingUiViewModel(application: Application) : SyncViewModel(application) {
+class OnBoardingUiViewModel(application: Application) : ContentResolvingAndroidViewModel(application) {
     fun setRenderer(compact: Boolean) {
         setBooleanPreference(PrefKey.UI_ITEM_RENDERER_LEGACY, compact)
     }
