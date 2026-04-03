@@ -412,9 +412,6 @@ class PreferenceActivity : RestoreActivity(), ContribIFace, SortUtilityDialogFra
         resultCode = RESULT_INVALIDATE_OPTIONS_MENU
     }
 
-    override val createAccountTaskShouldQueryRemoteAccounts = false
-    override val offerEncryption = false
-
     override fun onSortOrderConfirmed(sortedIds: LongArray) {
         viewModel?.sortAccounts(sortedIds)
     }
