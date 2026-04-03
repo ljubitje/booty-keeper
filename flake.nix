@@ -48,6 +48,11 @@
           export ANDROID_HOME="${androidSdk}/libexec/android-sdk"
           export ANDROID_SDK_ROOT="${androidSdk}/libexec/android-sdk"
           export JAVA_HOME="${pkgs.jdk21}"
+
+          # Auto-generate local.properties if in a booty checkout
+          if [ -f gradlew ] && [ ! -f local.properties ]; then
+            echo "sdk.dir=$ANDROID_HOME" > local.properties
+          fi
         '';
         runScript = "bash";
       };
