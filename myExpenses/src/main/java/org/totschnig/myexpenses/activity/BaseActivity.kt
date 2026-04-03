@@ -140,7 +140,6 @@ import org.totschnig.myexpenses.util.PermissionHelper
 import org.totschnig.myexpenses.util.PermissionHelper.PermissionGroup
 import org.totschnig.myexpenses.util.PictureDirHelper
 import org.totschnig.myexpenses.util.Utils
-import org.totschnig.myexpenses.util.ads.AdHandlerFactory
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler.Companion.report
 import org.totschnig.myexpenses.util.distrib.DistributionHelper.getVersionInfo
@@ -368,9 +367,6 @@ abstract class BaseActivity : AppCompatActivity(), MessageDialogFragment.Message
 
     @Inject
     lateinit var featureManager: FeatureManager
-
-    @Inject
-    lateinit var adHandlerFactory: AdHandlerFactory
 
     @Inject
     lateinit var currencyContext: CurrencyContext
@@ -1460,13 +1456,8 @@ abstract class BaseActivity : AppCompatActivity(), MessageDialogFragment.Message
         }
     }
 
-    open fun checkGdprConsent(forceShow: Boolean) {
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.RESUMED) {
-                adHandlerFactory.gdprConsent(this@BaseActivity, forceShow)
-            }
-        }
-    }
+    // Booty: ads removed — GDPR ad consent is a no-op
+    open fun checkGdprConsent(forceShow: Boolean) { }
 
     fun showTransferAccountMissingMessage() {
         showMessage(

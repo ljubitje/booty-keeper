@@ -302,19 +302,10 @@ class ContribDialogFragment : BaseDialogFragment(), View.OnClickListener,
     private val contribActivity: ContribInfoDialogActivity?
         get() = activity as ContribInfoDialogActivity?
 
+    // Booty: all features are free — positive button just grants access
     private fun onPositiveButtonClicked() {
         val ctx = contribActivity ?: return
-        selectedPackage?.let {
-            ctx.contribBuyDo(it)
-            dismiss()
-        } ?: run {
-            if (canTry) {
-                ctx.logEvent(Tracker.EVENT_CONTRIB_DIALOG_NEGATIVE, null)
-                ctx.finish(false)
-            } else {
-                showSnackBar(R.string.select_package)
-            }
-        }
+        ctx.finish(false)
     }
 
     private fun onNeutralButtonClicked() {

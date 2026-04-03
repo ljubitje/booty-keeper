@@ -38,7 +38,6 @@ import org.totschnig.myexpenses.preference.SimplePasswordDialogFragmentCompat
 import org.totschnig.myexpenses.preference.SimplePasswordPreference
 import org.totschnig.myexpenses.util.ICurrencyFormatter
 import org.totschnig.myexpenses.util.PermissionHelper.PermissionGroup
-import org.totschnig.myexpenses.util.ads.AdHandlerFactory
 import org.totschnig.myexpenses.util.licence.LicenceHandler
 import org.totschnig.myexpenses.util.tracking.Tracker
 import org.totschnig.myexpenses.viewmodel.SettingsViewModel
@@ -64,9 +63,6 @@ abstract class BasePreferenceFragment : PreferenceFragmentCompat(),
 
     @Inject
     lateinit var licenceHandler: LicenceHandler
-
-    @Inject
-    lateinit var adHandlerFactory: AdHandlerFactory
 
     @Inject
     lateinit var currencyFormatter: ICurrencyFormatter

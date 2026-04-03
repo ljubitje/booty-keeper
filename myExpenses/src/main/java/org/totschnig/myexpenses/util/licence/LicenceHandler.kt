@@ -25,7 +25,6 @@ import kotlinx.coroutines.launch
 import org.apache.commons.lang3.time.DateUtils
 import org.totschnig.myexpenses.BuildConfig
 import org.totschnig.myexpenses.R
-import org.totschnig.myexpenses.activity.IapActivity
 import org.totschnig.myexpenses.compose.AppTheme
 import org.totschnig.myexpenses.db2.Repository
 import org.totschnig.myexpenses.db2.countAccounts
@@ -35,7 +34,6 @@ import org.totschnig.myexpenses.model.CurrencyUnit
 import org.totschnig.myexpenses.preference.PrefHandler
 import org.totschnig.myexpenses.preference.PrefKey
 import org.totschnig.myexpenses.sync.GenericAccountService
-import org.totschnig.myexpenses.util.EU_COUNTRIES
 import org.totschnig.myexpenses.util.ICurrencyFormatter
 import org.totschnig.myexpenses.util.ShortcutHelper
 import org.totschnig.myexpenses.util.Utils
@@ -310,11 +308,7 @@ open class LicenceHandler(
         return false
     }
 
-    fun getPaymentOptions(aPackage: Package, userCountry: String) = listOfNotNull(
-        R.string.donate_button_paypal,
-        if (aPackage.defaultPrice >= 500 && EU_COUNTRIES.contains(userCountry))
-            R.string.donate_button_invoice else null
-    )
+    // Booty: removed getPaymentOptions, getPaypalUri, paypalLocale (no upstream payment flows)
 
     open val needsKeyEntry: Boolean
         get() = true
@@ -322,49 +316,8 @@ open class LicenceHandler(
     open val usesSubscriptions: Boolean
         get() = false
 
-    fun getPaypalUri(aPackage: Package): String {
-        val host = if (isSandbox) "www.sandbox.paypal.com" else "www.paypal.com"
-        var uri = "https://$host/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=${
-            aPackage.payPalButtonId(isSandbox)
-        }&on0=${aPackage.optionName}&os0=${aPackage::class.java.simpleName}&lc=$paypalLocale&currency_code=EUR"
-        prefHandler.getString(PrefKey.LICENCE_EMAIL, null)?.let {
-            uri += "&custom=" + Uri.encode(it)
-        }
-        Timber.d("Paypal URI: %s", uri)
-        return uri
-    }
-
-    val backendUri = when {
-        isSandbox -> "http://10.0.2.2:3000/"
-        else -> "https://licencedb.myexpenses.mobi/"
-    }
-
-    private val paypalLocale: String
-        get() {
-            val locale = Locale.getDefault()
-            return when (locale.language) {
-                "en" -> "en_US"
-                "fr" -> "fr_FR"
-                "es" -> "es_ES"
-                "zh" -> "zh_CN"
-                "ar" -> "ar_EG"
-                "de" -> "de_DE"
-                "nl" -> "nl_NL"
-                "pt" -> "pt_PT"
-                "da" -> "da_DK"
-                "ru" -> "ru_RU"
-                "id" -> "id_ID"
-                "iw", "he" -> "he_IL"
-                "it" -> "it_IT"
-                "ja" -> "ja_JP"
-                "no" -> "no_NO"
-                "pl" -> "pl_PL"
-                "ko" -> "ko_KO"
-                "sv" -> "sv_SE"
-                "th" -> "th_TH"
-                else -> "en_US"
-            }
-        }
+    // Kept for LicenceValidationViewModel compatibility (will fail gracefully)
+    val backendUri = "https://localhost/"
 
     suspend fun handleExpiration() {
         val licenceDuration = validUntilMillis - validSinceMillis
@@ -407,16 +360,7 @@ open class LicenceHandler(
         )
     }
 
-    open fun initBillingManager(activity: IapActivity, query: Boolean): BillingManager? {
-        return null
-    }
-
-    open suspend fun launchPurchase(
-        aPackage: Package,
-        shouldReplaceExisting: Boolean,
-        billingManager: BillingManager,
-    ) {
-    }
+    // Booty: removed initBillingManager and launchPurchase (no billing/IAP)
 
     private fun persistAddonFeatures() {
         val joinToString = addOnFeatures.joinToString(",", transform = ContribFeature::name)

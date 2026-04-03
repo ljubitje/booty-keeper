@@ -23,9 +23,7 @@ import org.totschnig.myexpenses.dialog.ArchiveDialogFragment
 import org.totschnig.myexpenses.dialog.BaseDialogFragment
 import org.totschnig.myexpenses.dialog.ContribDialogFragment
 import org.totschnig.myexpenses.dialog.DebtDetailsDialogFragment
-import org.totschnig.myexpenses.dialog.DonateDialogFragment
 import org.totschnig.myexpenses.dialog.EditCurrencyDialog
-import org.totschnig.myexpenses.dialog.ExtendProLicenceDialogFragment
 import org.totschnig.myexpenses.dialog.RemindRateDialogFragment
 import org.totschnig.myexpenses.dialog.TransactionDetailFragment
 import org.totschnig.myexpenses.dialog.TransactionListComposeDialogFragment
@@ -58,7 +56,6 @@ import org.totschnig.myexpenses.sync.SyncAdapter
 import org.totschnig.myexpenses.task.GrisbiImportTask
 import org.totschnig.myexpenses.util.ExchangeRateHandler
 import org.totschnig.myexpenses.util.ICurrencyFormatter
-import org.totschnig.myexpenses.util.ads.BaseAdHandlerImpl
 import org.totschnig.myexpenses.util.config.Configurator
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler
 import org.totschnig.myexpenses.util.licence.LicenceHandler
@@ -185,13 +182,9 @@ interface AppComponent {
 
     fun inject(transactionListComposeDialogFragment: TransactionListComposeDialogFragment)
 
-    fun inject(adHandler: BaseAdHandlerImpl)
-
     fun inject(contribDialogFragment: ContribDialogFragment)
 
     fun inject(historyChart: HistoryChart)
-
-    fun inject(donateDialogFragment: DonateDialogFragment)
 
     fun inject(currencyList: CurrencyList)
 
@@ -236,8 +229,6 @@ interface AppComponent {
     fun inject(basePreferenceFragment: BasePreferenceFragment)
 
     fun inject(calendarListPreferenceDialogFragmentCompat: CalendarListPreferenceDialogFragmentCompat)
-
-    fun inject(extendProLicenceDialogFragment: ExtendProLicenceDialogFragment)
 
     fun inject(versionDialogFragment: VersionDialogFragment)
 

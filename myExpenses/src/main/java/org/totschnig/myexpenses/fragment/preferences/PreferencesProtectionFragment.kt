@@ -5,12 +5,9 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.annotation.Keep
-import androidx.lifecycle.lifecycleScope
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
-import kotlinx.coroutines.launch
 import org.totschnig.myexpenses.R
-import org.totschnig.myexpenses.model.ContribFeature
 import org.totschnig.myexpenses.preference.PrefKey
 import org.totschnig.myexpenses.util.Utils
 import org.totschnig.myexpenses.util.distrib.DistributionHelper
@@ -51,16 +48,7 @@ class PreferencesProtectionFragment : BasePreferenceFragment() {
         requirePreference<PreferenceCategory>(PrefKey.CATEGORY_PRIVACY).isVisible =
             DistributionHelper.distribution.supportsTrackingAndCrashReporting
 
-        with(requirePreference<PreferenceCategory>(PrefKey.CATEGORY_ADS)) {
-            if (adHandlerFactory.isAdDisabled)  {
-                isVisible = false
-            } else {
-                lifecycleScope.launch {
-                    requirePreference<Preference>(PrefKey.PERSONALIZED_AD_CONSENT).isVisible =
-                        adHandlerFactory.isPrivacyOptionsRequired(requireActivity())
-                }
-            }
-        }
+        requirePreference<PreferenceCategory>(PrefKey.CATEGORY_ADS).isVisible = false
 
         requirePreference<Preference>(PrefKey.ENCRYPT_DATABASE_INFO).isVisible =
             prefHandler.encryptDatabase
@@ -91,11 +79,6 @@ class PreferencesProtectionFragment : BasePreferenceFragment() {
 
     override fun onPreferenceTreeClick(preference: Preference) = when {
         super.onPreferenceTreeClick(preference) -> true
-        matches(preference, PrefKey.PERSONALIZED_AD_CONSENT) -> {
-            preferenceActivity.checkGdprConsent(true)
-            true
-        }
-
         else -> false
     }
 

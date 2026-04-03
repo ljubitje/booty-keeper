@@ -180,7 +180,7 @@ dependencies {
     kapt libs.android.state.processor
     api libs.gson
 
-    implementation project(':PlayLicensingOrig')
+    //implementation project(':PlayLicensingOrig')  // Removed: Booty
     implementation libs.itextpdf
     api libs.acra.core
     implementation libs.acra.mail

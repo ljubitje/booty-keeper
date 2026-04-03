@@ -2,8 +2,6 @@ package org.totschnig.myexpenses.di
 
 import android.content.Context
 import android.provider.Settings
-import com.google.android.vending.licensing.AESObfuscator
-import com.google.android.vending.licensing.Obfuscator
 import com.google.android.vending.licensing.PreferenceObfuscator
 import dagger.Module
 import dagger.Provides
@@ -16,6 +14,7 @@ import org.totschnig.myexpenses.util.licence.LicenceHandler
 import javax.inject.Named
 import javax.inject.Singleton
 
+// Booty: simplified — no Google Play LVL obfuscator, plain SharedPreferences
 @Module
 open class LicenceModule {
     @Provides
@@ -45,40 +44,9 @@ open class LicenceModule {
     @Provides
     @Singleton
     fun provideLicencePrefs(
-        obfuscator: Obfuscator,
         application: MyApplication
     ): PreferenceObfuscator {
         val sp = application.getSharedPreferences("license_status_new", Context.MODE_PRIVATE)
-        return PreferenceObfuscator(sp, obfuscator)
+        return PreferenceObfuscator(sp)
     }
-
-    @Provides
-    @Singleton
-    open fun provideObfuscator(
-        @Named("deviceId") deviceId: String,
-        application: MyApplication
-    ): Obfuscator = AESObfuscator(
-        byteArrayOf(
-            -1,
-            -124,
-            -4,
-            -59,
-            -52,
-            1,
-            -97,
-            -32,
-            38,
-            59,
-            64,
-            13,
-            45,
-            -104,
-            -3,
-            -92,
-            -56,
-            -49,
-            65,
-            -25
-        ), application.packageName, deviceId
-    )
 }

@@ -5,11 +5,8 @@ import org.totschnig.myexpenses.di.*
 import org.totschnig.myexpenses.preference.PrefHandler
 import org.totschnig.myexpenses.testutils.MockLicenceModule
 import org.totschnig.myexpenses.ui.IDiscoveryHelper
-import org.totschnig.myexpenses.util.ads.AdHandlerFactory
 import org.totschnig.myexpenses.util.config.Configurator
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler
-import org.totschnig.myexpenses.util.licence.LicenceHandler
-import org.totschnig.myexpenses.util.tracking.Tracker
 import java.time.Clock
 
 //Used by Robolectric
@@ -21,15 +18,6 @@ class TestMyApplication : MyApplication() {
             .uiModule(object : UiModule() {
                 override fun provideDiscoveryHelper(prefHandler: PrefHandler) =
                     IDiscoveryHelper.NO_OP
-
-                override fun provideAdHandlerFactory(
-                    application: MyApplication,
-                    prefHandler: PrefHandler,
-                    userCountry: String,
-                    licenceHandler: LicenceHandler,
-                    tracker: Tracker,
-                    configurator: Configurator
-                ) = object : AdHandlerFactory {}
             })
             .crashHandlerModule(object: CrashHandlerModule() {
                 override fun providesCrashHandler(prefHandler: PrefHandler) = CrashHandler.NO_OP

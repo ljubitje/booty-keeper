@@ -28,7 +28,8 @@ dependencyResolutionManagement {
 include ':myExpenses'
 //include ':webui'  // Removed: Booty
 //include ':ocr'  // Removed: Booty
-include ':PlayLicensingOrig', ':transactionscontract'
+//include ':PlayLicensingOrig'  // Removed: Booty
+include ':transactionscontract'
 include ':setupwizard'
 //include ':ChangeLog'
 //include ':drive'

@@ -8,7 +8,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -88,8 +87,6 @@ import org.totschnig.myexpenses.provider.KEY_DATE
 import org.totschnig.myexpenses.ui.IDiscoveryHelper
 import org.totschnig.myexpenses.util.TextUtils
 import org.totschnig.myexpenses.util.Utils
-import org.totschnig.myexpenses.util.ads.AdHandler
-import org.totschnig.myexpenses.util.ads.NoOpAdHandler
 import org.totschnig.myexpenses.util.checkMenuIcon
 import org.totschnig.myexpenses.util.configureSortDirectionMenu
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler.Companion.report
@@ -115,8 +112,6 @@ import kotlin.math.sign
 const val DIALOG_TAG_OCR_DISAMBIGUATE = "DISAMBIGUATE"
 
 open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultListener, ContribIFace {
-
-    private lateinit var adHandler: AdHandler
 
     override val fabActionName = "CREATE_TRANSACTION"
 
@@ -534,22 +529,7 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
             openBalanceSheet()
         }
 
-        adHandler = adHandlerFactory.create(binding.viewPagerMain.adContainer, this)
-        if (adHandler != NoOpAdHandler) {
-            binding.viewPagerMain.adContainer.viewTreeObserver.addOnGlobalLayoutListener(
-                object : OnGlobalLayoutListener {
-                    override fun onGlobalLayout() {
-                        binding.viewPagerMain.adContainer.viewTreeObserver
-                            .removeOnGlobalLayoutListener(this)
-                        adHandler.startBanner()
-                    }
-                })
-            try {
-                adHandler.maybeRequestNewInterstitial()
-            } catch (e: Exception) {
-                report(e)
-            }
-        }
+        // Booty: ad initialization removed
 
         if (!isScanMode()) {
             floatingActionButton.visibility = View.INVISIBLE
@@ -1154,25 +1134,9 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
     override fun contribFeatureNotCalled(feature: ContribFeature) {
     }
 
+    // Booty: ad lifecycle methods removed
     override fun onEditTransactionResult() {
-        if (!adHandler.onEditTransactionResult()) {
-            reviewManager.onEditTransactionResult(this)
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        adHandler.onResume()
-    }
-
-    public override fun onDestroy() {
-        adHandler.onDestroy()
-        super.onDestroy()
-    }
-
-    override fun onPause() {
-        adHandler.onPause()
-        super.onPause()
+        reviewManager.onEditTransactionResult(this)
     }
 
     companion object {

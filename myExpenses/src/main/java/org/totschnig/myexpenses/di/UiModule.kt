@@ -1,6 +1,5 @@
 package org.totschnig.myexpenses.di
 
-import android.content.Context
 import androidx.fragment.app.FragmentActivity
 import dagger.Module
 import dagger.Provides
@@ -12,51 +11,15 @@ import org.totschnig.myexpenses.preference.PrefHandler
 import org.totschnig.myexpenses.ui.IDiscoveryHelper
 import org.totschnig.myexpenses.util.CurrencyFormatter
 import org.totschnig.myexpenses.util.ICurrencyFormatter
-import org.totschnig.myexpenses.util.ads.AdHandlerFactory
-import org.totschnig.myexpenses.util.config.Configurator
 import org.totschnig.myexpenses.util.distrib.ReviewManager
-import org.totschnig.myexpenses.util.licence.LicenceHandler
-import org.totschnig.myexpenses.util.tracking.Tracker
-import javax.inject.Named
 import javax.inject.Singleton
 
+// Booty: removed AdHandlerFactory provider (no ads)
 @Module
 open class UiModule {
     @Provides
     @Singleton
     fun provideImageViewIntentProvider(): ViewIntentProvider = SystemViewIntentProvider()
-
-    @Provides
-    @Singleton
-    open fun provideAdHandlerFactory(
-        application: MyApplication,
-        prefHandler: PrefHandler,
-        @Named(AppComponent.USER_COUNTRY) userCountry: String,
-        licenceHandler: LicenceHandler,
-        tracker: Tracker,
-        configurator: Configurator
-    ): AdHandlerFactory =
-        try {
-            Class.forName("org.totschnig.myexpenses.util.ads.PlatformAdHandlerFactory")
-                .getConstructor(
-                    Context::class.java,
-                    PrefHandler::class.java,
-                    String::class.java,
-                    LicenceHandler::class.java,
-                    Tracker::class.java,
-                    Configurator::class.java
-                )
-                .newInstance(
-                    application,
-                    prefHandler,
-                    userCountry,
-                    licenceHandler,
-                    tracker,
-                    configurator
-                ) as AdHandlerFactory
-        } catch (_: Exception) {
-            object : AdHandlerFactory {}
-        }
 
     @Provides
     @Singleton

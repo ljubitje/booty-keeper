@@ -48,8 +48,6 @@ import org.totschnig.myexpenses.preference.PrefKey
 import org.totschnig.myexpenses.preference.enumValueOrDefault
 import org.totschnig.myexpenses.provider.KEY_SORT_KEY
 import org.totschnig.myexpenses.provider.triggerAccountListRefresh
-import org.totschnig.myexpenses.util.ads.AdHandlerV2
-import org.totschnig.myexpenses.util.crashreporting.CrashHandler.Companion.report
 import org.totschnig.myexpenses.viewmodel.MyExpensesV2ViewModel
 import org.totschnig.myexpenses.viewmodel.SumInfo
 import org.totschnig.myexpenses.viewmodel.data.BaseAccount
@@ -68,8 +66,6 @@ enum class StartScreen {
 class MyExpensesV2 : BaseMyExpenses<MyExpensesV2ViewModel>(),
     SortUtilityDialogFragment.OnConfirmListener {
 
-    private lateinit var adHandler: AdHandlerV2
-
     override fun handleRootWindowInsets() {}
 
     override val currentAccount: BaseAccount?
@@ -86,26 +82,9 @@ class MyExpensesV2 : BaseMyExpenses<MyExpensesV2ViewModel>(),
         viewModel.selectionState.value = emptyList()
     }
 
-    val shouldShowAds
-        get() = !adHandlerFactory.isAdDisabled && adHandlerFactory.isInitialized
-
-    private fun maybeRequestNewInterstitial() {
-        if (shouldShowAds) {
-            try {
-                adHandler.maybeRequestNewInterstitial(this)
-            } catch (e: Exception) {
-                report(e)
-            }
-        }
-    }
-
+    // Booty: no ads
     override fun onEditTransactionResult() {
-        if (shouldShowAds) {
-            if (!adHandler.onEditTransactionResult(this)) {
-                //TODO
-                //reviewManager.onEditTransactionResult(this)
-            }
-        }
+        //TODO reviewManager.onEditTransactionResult(this)
     }
 
     @OptIn(ExperimentalMaterial3Api::class)
@@ -116,9 +95,6 @@ class MyExpensesV2 : BaseMyExpenses<MyExpensesV2ViewModel>(),
         with(injector) {
             inject(viewModel)
         }
-
-        adHandler = adHandlerFactory.createV2()
-        maybeRequestNewInterstitial()
 
         setContent {
             AppTheme {
@@ -265,9 +241,6 @@ class MyExpensesV2 : BaseMyExpenses<MyExpensesV2ViewModel>(),
                             onPrepareContextMenuItem = ::isContextMenuItemVisible,
                             onPrepareMenuItem = { itemId -> currentAccount.isMenuItemVisible(itemId) },
                             flags = viewModel.accountFlags.collectAsState(emptyList()).value,
-                            adView = {
-                                adHandler.Banner()
-                            },
                             bankIcon = { _, _ -> }
                         ) { pageAccount, isCurrent ->
                             Page(
