@@ -1112,15 +1112,10 @@ open class MyExpenses : BaseMyExpenses<MyExpensesViewModel>(), OnDialogResultLis
             show()
             alpha = if (sealed) 0.5f else 1f
             setImageResource(
-                when {
-                    sealed -> R.drawable.ic_lock
-                    scanMode -> R.drawable.ic_scan
-                    else -> R.drawable.ic_menu_add_fab
-                }
+                if (sealed) R.drawable.ic_lock else R.drawable.ic_menu_add_fab
             )
             contentDescription = when {
                 sealed -> getString(R.string.content_description_closed)
-                scanMode -> getString(R.string.contrib_feature_ocr_label)
                 else -> TextUtils.concatResStrings(
                     this@MyExpenses,
                     ". ",
