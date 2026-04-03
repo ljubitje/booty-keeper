@@ -18,9 +18,18 @@ plugins {
     id 'com.android.legacy-kapt'
 }
 
+ext.localProps = new Properties()
+def localPropsFile = rootProject.file('local.properties')
+if (localPropsFile.exists()) {
+    localProps.load(new FileInputStream(localPropsFile))
+}
+
 def getPropertyIfDefined(property, defaultValue) {
     if (project.hasProperty(property)) {
         return project.properties[property]
+    }
+    if (project.ext.localProps.containsKey(property)) {
+        return project.ext.localProps[property]
     }
     return defaultValue
 }
@@ -51,21 +60,20 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
-    /*signingConfigs {
+    signingConfigs {
         release {
             storeFile file(getPropertyIfDefined("RELEASE_STORE_FILE", "unknown"))
             storePassword getPropertyIfDefined("RELEASE_STORE_PASSWORD", "unknown")
             keyAlias getPropertyIfDefined("RELEASE_KEY_ALIAS", "unknown")
             keyPassword getPropertyIfDefined("RELEASE_KEY_PASSWORD", "unknown")
-
         }
-    }*/
+    }
 
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-project.txt'
-            //signingConfig signingConfigs.release
+            signingConfig signingConfigs.release
             manifestPlaceholders["appName"] = "@string/app_name"
             applicationIdSuffix ""
             //ndk.debugSymbolLevel = 'FULL'
