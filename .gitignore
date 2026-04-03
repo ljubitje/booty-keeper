@@ -1,6 +1,7 @@
 build
 .idea
 .gradle
+.claude
 *.iml
 local.properties
 fastlane
