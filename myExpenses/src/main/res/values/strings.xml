@@ -416,7 +416,6 @@
     <string name="comparison_operator_date_before">before</string>
     <!-- Used in dialogue where user can filter transactions based on their date. This is one of three possible values populating a dropdown. Allows to select transactions after a specified date. -->
     <string name="comparison_operator_date_after">after</string>
-    <string name="premium_failed_or_canceled" tools:ignore="UnusedResources">Purchasing failed or cancelled.</string>
     <string name="hint_auto_fill">Should data be filled in automatically from last transaction for same payee/payer? You can always change this behaviour from the settings.</string>
     <string name="change_fraction_digits_result" tools:ignore="PluralsCandidate">%1$d accounts with currency %2$s have been updated.</string>
     <string name="import_source_file">File</string>
@@ -474,7 +473,6 @@
     <string name="progress_dialog_updating_split_parts">Updating split parts</string>
     <string name="warning_cannot_move_split_transaction">This split transaction cannot be moved to account %1$s because there are transfer parts that refer to this account.</string>
     <string name="content_description_calculator_delete_button">Delete last digit</string>
-    <string name="paypal_callback_info">Your transaction has been completed, and a receipt for your purchase has been emailed to you. You may log into your account at www.paypal.com to view details of this transaction.</string>
     <string name="search_transfer">Search for transfer</string>
     <string name="search_account">Search for account</string>
     <!-- Sort plans (recurring transactions) by the next instance  -->
@@ -568,7 +566,6 @@
     <string name="switch_to_monthly" tools:ignore="UnusedResources">Switch to monthly subscription</string>
     <string name="extend_validity">Extend validity</string>
     <string name="progress_dialog_fetching_data_from_sync_backend">Fetching data from remote backend. This may take some time.</string>
-    <string name="donate_button_invoice">Invoice</string>
     <string name="auto_fill_account_from_aggregate_only">Only when started from aggregate account.</string>
     <string name="sync_auth_exception">Authorization failed.</string>
     <string name="sync_login_again">Please log in again.</string>
@@ -608,12 +605,6 @@
     <string name="booking_date">Booking date</string>
     <!-- the date when the entry to an account is considered effective in accounting (https://en.wikipedia.org/wiki/Value_date) as opposed to booking date -->
     <string name="value_date">Value date</string>
-    <string name="licence_expires_n_days" tools:ignore="PluralsCandidate">Your professional key will expire in %d days.</string>
-    <string name="licence_expires_tomorrow">Your professional key will expire tomorrow.</string>
-    <string name="licence_expires_today">Your professional key expires today.</string>
-    <string name="licence_expired_yesterday">Your professional key has expired yesterday.</string>
-    <string name="licence_has_expired_n_days" tools:ignore="PluralsCandidate">Your professional key has expired %d days ago.</string>
-    <string name="gdpr_consent_button_no">Pay for the ad-free version</string>
     <string name="sort_order">Sort order</string>
     <string name="navigation_drawer_accounts_title">Manage accounts</string>
     <string name="pref_sync_wifi_only_summary">Sync only when on Wi-Fi</string>
@@ -826,8 +817,6 @@
     <string name="merge_parties_select">Select name of merged party</string>
     <!-- This is the label for a field for accounts. Active tags are automatically added to new transactions when an account is selected. -->
     <string name="active_tags">Active Tags</string>
-    <!-- This is used in the title of the email by which user requests an invoice for payment via bank transfer -->
-    <string name="request_for_invoice">Request for Invoice</string>
     <!-- Enables Focus on the Payee field for Auto fill -->
     <string name="auto_fill_focus">Set Focus on Payee</string>
     <!-- This warning is shown when a user calls the Reset or Cancel commands on a scheduled transaction, for a date

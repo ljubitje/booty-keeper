@@ -442,7 +442,6 @@ open class MyApplication : Application(), SharedPreferences.OnSharedPreferenceCh
         lateinit var instance: MyApplication
             private set
         const val KEY_NOTIFICATION_ID = "notification_id"
-        const val INVOICES_EMAIL = "billing@myexpenses.mobi"
         private val currentProcessName: String?
             //from ACRA
             get() = try {

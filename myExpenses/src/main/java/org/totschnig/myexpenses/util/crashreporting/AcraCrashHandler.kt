@@ -33,7 +33,8 @@ class AcraCrashHandler(prefHandler: PrefHandler) : BaseCrashHandler(prefHandler)
             }
             mailSender {
                 reportAsFile = false
-                mailTo = "bug-reports@myexpenses.mobi"
+                // Booty: disabled upstream crash reporting
+                mailTo = ""
             }
         }
     }
