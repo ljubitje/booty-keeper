@@ -1,6 +1,6 @@
-# Booty Keeper
+# Booty Keeper, finance tracker
 
-A simplified, de-Googled fork of [MyExpenses](https://github.com/mtotschnig/MyExpenses).
+A simplified fork of [MyExpenses](https://github.com/mtotschnig/MyExpenses).
 
 ## What is this?
 
