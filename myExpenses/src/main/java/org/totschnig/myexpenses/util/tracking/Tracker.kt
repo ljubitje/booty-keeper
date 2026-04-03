@@ -18,7 +18,6 @@ interface Tracker {
     companion object {
         const val EVENT_DISPATCH_COMMAND = "dispatch_command"
         const val EVENT_SELECT_OPERATION_TYPE = "select_operation_type"
-        const val EVENT_CONTRIB_DIALOG_CANCEL = "contrib_dialog_cancel"
         const val EVENT_PREFERENCE_CLICK = "preference_click"
         const val EVENT_RATING_DIALOG = "rating_dialog"
         const val EVENT_BACKUP_PERFORMED = "backup_performed"

@@ -21,7 +21,6 @@ import org.totschnig.myexpenses.delegate.SplitDelegate
 import org.totschnig.myexpenses.delegate.TransferDelegate
 import org.totschnig.myexpenses.dialog.ArchiveDialogFragment
 import org.totschnig.myexpenses.dialog.BaseDialogFragment
-import org.totschnig.myexpenses.dialog.ContribDialogFragment
 import org.totschnig.myexpenses.dialog.DebtDetailsDialogFragment
 import org.totschnig.myexpenses.dialog.EditCurrencyDialog
 import org.totschnig.myexpenses.dialog.RemindRateDialogFragment
@@ -182,7 +181,6 @@ interface AppComponent {
 
     fun inject(transactionListComposeDialogFragment: TransactionListComposeDialogFragment)
 
-    fun inject(contribDialogFragment: ContribDialogFragment)
 
     fun inject(historyChart: HistoryChart)
 

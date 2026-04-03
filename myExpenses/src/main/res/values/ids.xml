@@ -16,8 +16,6 @@
 <resources>
     <item name="BACKUP_COMMAND" type="id" />
     <item name="CONTRIB_INFO_COMMAND" type="id" />
-    <item name="CONTRIB_INFO_DIALOG" type="id" />
-    <item name="CONTRIB_BUY_COMMAND" type="id" />
     <item name="CREATE_COMMAND" type="id" />
     <item name="CREATE_PART_COMMAND" type="id" />
     <item name="CREATE_SUB_COMMAND" type="id" />
