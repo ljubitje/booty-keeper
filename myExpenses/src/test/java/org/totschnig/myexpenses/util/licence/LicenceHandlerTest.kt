@@ -32,17 +32,18 @@ class LicenceHandlerTest {
         )
     }
 
+    // Booty: all features are free — isEnabledFor always returns true
     @Test
     @Parameters(
-        "null, CONTRIB, false",
-        "null, EXTENDED, false",
-        "null, PROFESSIONAL, false",
+        "null, CONTRIB, true",
+        "null, EXTENDED, true",
+        "null, PROFESSIONAL, true",
         "CONTRIB, CONTRIB, true",
-        "CONTRIB, EXTENDED, false",
-        "CONTRIB, PROFESSIONAL, false",
+        "CONTRIB, EXTENDED, true",
+        "CONTRIB, PROFESSIONAL, true",
         "EXTENDED, CONTRIB, true",
         "EXTENDED, EXTENDED, true",
-        "EXTENDED, PROFESSIONAL, false",
+        "EXTENDED, PROFESSIONAL, true",
         "PROFESSIONAL, CONTRIB, true",
         "PROFESSIONAL, EXTENDED, true",
         "PROFESSIONAL, PROFESSIONAL, true"
@@ -53,8 +54,9 @@ class LicenceHandlerTest {
             .isEqualTo(expected)
     }
 
+    // Booty: no upgrades — everything is already unlocked
     @Test
-    @Parameters("null, true", "CONTRIB, true", "EXTENDED, true", "PROFESSIONAL, false")
+    @Parameters("null, false", "CONTRIB, false", "EXTENDED, false", "PROFESSIONAL, false")
     fun isUpgradeable(hasStatus: String, expected: Boolean) {
         licenceHandler.licenceStatus = parse(hasStatus)
         Truth.assertThat(licenceHandler.isUpgradeable).isEqualTo(expected)

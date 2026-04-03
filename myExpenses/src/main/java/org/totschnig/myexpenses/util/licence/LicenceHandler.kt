@@ -94,8 +94,9 @@ open class LicenceHandler(
         persistAddonFeatures()
     }
 
+    // Booty: always licensed
     val hasAnyLicence: Boolean
-        get() = licenceStatus != null || addOnFeatures.isNotEmpty()
+        get() = true
 
     private fun addFeatures(features: List<ContribFeature>) {
         addOnFeatures.addAll(features)
@@ -127,11 +128,12 @@ open class LicenceHandler(
     fun hasAccessTo(feature: ContribFeature) =
         isEnabledFor(feature.licenceStatus) || addOnFeatures.contains(feature)
 
-    open fun isEnabledFor(licenceStatus: LicenceStatus) =
-        (this.licenceStatus?.compareTo(licenceStatus) ?: -1) >= 0
+    // Booty: all features are free — always grant access
+    open fun isEnabledFor(licenceStatus: LicenceStatus) = true
 
+    // Booty: no upgrades — everything is already unlocked
     val isUpgradeable: Boolean
-        get() = licenceStatus?.isUpgradeable != false
+        get() = false
 
     open fun init() {
         this.licenceStatus = enumValueOrNull<LicenceStatus>(
