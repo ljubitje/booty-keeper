@@ -1537,7 +1537,7 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
     }
 
     fun Throwable.processDataLoadingFailure() = when (this) {
-        is SQLiteDowngradeFailedException -> "Database cannot be downgraded from a newer version. Please either uninstall MyExpenses, before reinstalling, or upgrade to a new version." to true
+        is SQLiteDowngradeFailedException -> "Database cannot be downgraded from a newer version. Please either uninstall Booty Keeper, before reinstalling, or upgrade to a new version." to true
         is SQLiteUpgradeFailedException -> "Database upgrade failed. Please contact ${
             getString(
                 R.string.support_email

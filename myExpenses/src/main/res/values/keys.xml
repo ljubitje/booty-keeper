@@ -199,7 +199,7 @@
      so we leave it without localization -->
     <string name="error_accessing_market">No market application found</string>
     <string name="restore_cannot_downgrade">You cannot restore a backup from a newer database schema version (%1$d). The current one is %2$d.</string>
-    <string name="website">https://www.myexpenses.mobi</string>
+    <string name="website">https://codeberg.org/ljubitje/booty-keeper</string>
 
     <string name="instant_plan" tools:ignore="UnusedResources">@string/plan</string>
     <string name="pref_protection_password_title">@string/password</string>
@@ -215,8 +215,8 @@
 
     <string name="contrib_feature_split_transaction_label" tools:ignore="UnusedResources">@string/split_transaction</string>
 
-    <string name="drive_backend_upgrade" tools:ignore="UnusedResources">Since 2.8.0, My Expenses supports synchronization with Drive folders from multiple Google accounts. Please select the Google account from which your existing Drive backends were created.</string>
-    <string name="licence_validation_upgrade_needed" tools:ignore="UnusedResources">Please upgrade My Expenses Contrib to version 1.5.</string>
+    <string name="drive_backend_upgrade" tools:ignore="UnusedResources">Since 2.8.0, Booty Keeper supports synchronization with Drive folders from multiple Google accounts. Please select the Google account from which your existing Drive backends were created.</string>
+    <string name="licence_validation_upgrade_needed" tools:ignore="UnusedResources">Please upgrade Booty Keeper Contrib to version 1.5.</string>
 
     <string name="menu_vote" tools:ignore="UnusedResources">\?/10</string>
     <string name="menu_refresh">Refresh</string>
@@ -260,7 +260,7 @@
     <string name="pref_running_balance_key">running_balance</string>
     <string name="html">HTML</string>
     <string name="txt">TXT</string>
-    <string name="support_email">support@myexpenses.mobi</string>
+    <string name="support_email">foo@bar.not</string>
     <string name="pref_optimize_picture_key">optimize_picture</string>
     <string name="pref_optimize_picture_max_size_key">optimize_picture_max_size</string>
     <string name="pref_optimize_picture_format_key">optimize_picture_format</string>

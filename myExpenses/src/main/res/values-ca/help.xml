@@ -91,7 +91,7 @@
     <string name="form_comment_help_text">Introduïu qualsevol nota sobre l\'objecte.</string>
     <string name="menu_templates_help_text">Obriu un menú que llista totes les plantilles que permeten carregar-les ràpidament al formulari.</string>
     <string name="form_AccountEdit_type_help_text_reconciliation">La funció de conciliació està disponible per a tots els comptes excepte en efectiu: permet establir l\'estat de les operacions a liquidar, una vegada confirmat, i reconciliar tot el compte amb el vostre compte bancari a través de l\'ordre \"Compte de saldo\".</string>
-    <string name="help_ExportDialog_date_format">El text es pot citar utilitzant cometes simples (\') per evitar la interpretació. «» (dues cometes simples) representa una cometa única. Consulteu l\'especificació completa &lt;a href=%s&gt;&lt;/a&gt; per a més detalls, o contacteu amb support@myexpenses.mobi per obtenir ajuda.</string>
+    <string name="help_ExportDialog_date_format">El text es pot citar utilitzant cometes simples (\') per evitar la interpretació. «» (dues cometes simples) representa una cometa única. Consulteu l\'especificació completa &lt;a href=%s&gt;&lt;/a&gt; per a més detalls, o contacteu amb foo@bar.not per obtenir ajuda.</string>
     <string name="help_ManageSyncBackends_drive">Trieu qualsevol carpeta que tingueu o que es comparteixi amb vós.</string>
     <string name="cab_sync_now_help_text">Activa la sincronització immediata amb el servei seleccionat.</string>
     <string name="help_BudgetEdit_info">Utilitzeu aquest formulari per crear un pressupost nou o per editar-ne un d\'existent.</string>

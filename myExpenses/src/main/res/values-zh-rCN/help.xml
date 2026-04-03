@@ -71,8 +71,8 @@
     <string name="menu_distribution_help_text">按类别显示您的开支分布。您还可以长按某一组别表头来查看特定期间的开支分布。</string>
     <string name="help_ManageBudgets_info">该界面汇总了您所创建的所有预算。可使用悬浮按钮创建新预算。点击列表条目显示单个预算。</string>
     <string name="help_ManageBudgets_title">列明所有预算的清单</string>
-    <string name="help_ManageSyncBackends_webdav">如果您的云存储提供商支持此项协议，则My Expenses能够与之进行数据同步。sync data with it. Simply provide the URL to a folder with your username and password. If you use https and your webserver uses a self-signed certificate, you will be able to trust it explicitly.</string>
-    <string name="help_ManageSyncBackends_intro">My Expenses允许为每个账户配置不同的同步后台。例如，您可以将某一账户与共享文件夹同步，同时可以将另一账户与私人文件夹同步。在该界面上，您可以添加或移除同步后台，开始或停止与远程账户进行同步。同步会定期自动进行，您可在此处手动触发与某一后台进行同步。请注意，My Expenses需要对远程文件夹获得全权控制。您不得使用其他工具或接口更改该文件夹内容，因为该操作可能会导致同步失败。</string>
+    <string name="help_ManageSyncBackends_webdav">如果您的云存储提供商支持此项协议，则Booty Keeper能够与之进行数据同步。sync data with it. Simply provide the URL to a folder with your username and password. If you use https and your webserver uses a self-signed certificate, you will be able to trust it explicitly.</string>
+    <string name="help_ManageSyncBackends_intro">Booty Keeper允许为每个账户配置不同的同步后台。例如，您可以将某一账户与共享文件夹同步，同时可以将另一账户与私人文件夹同步。在该界面上，您可以添加或移除同步后台，开始或停止与远程账户进行同步。同步会定期自动进行，您可在此处手动触发与某一后台进行同步。请注意，Booty Keeper需要对远程文件夹获得全权控制。您不得使用其他工具或接口更改该文件夹内容，因为该操作可能会导致同步失败。</string>
     <string name="cab_NavigationDrawer_close_reopen_help_text">通过关闭账户，您可以阻止对该账户的数据做出任何更改（增加、删除、编辑），但仍然可在统计计算时将其纳入其中。</string>
     <string name="form_category_help_text">该按钮可打开类别列表，您可以选择某一类别来映射该交易。</string>
     <string name="form_transfer_from_account_transfer_to_account_help_text">指定该项目转出或转入的账户。</string>
@@ -100,7 +100,7 @@
     <string name="help_ManageTemplates_plans_intro">每个高亮日期代表计划的一个实例。</string>
     <string name="help_ManageTemplates_planner_intro">长按open instance可进行多选。点按开始日期或结束日期可以将时间范围向后或向前延展。</string>
     <string name="menu_balance_help_text">通过此项命令可打开对话框，显示上一次已对账的余额和已清算的余额。您可以将后者与您的银行接单进行比较，然后将所有已清算的交易标记为已对账。您也可以选择删除已对账的交易。</string>
-    <string name="menu_reset_help_text">通过此项命令，可将当前账户内的所有交易以QIF或CSV格式导出，放入SD卡内的文件。您可以决定删除已导出的交易，届时期初余额会自动调整。或者，如果交易未删除，则标注为已导出。My Expenses 可以通过FTP、电子邮件或任何其他文件共享应用共享已导出的文件，前提是您已在设置中做好相应配置。如果启用搜索筛选设定，则仅包含该符合该筛选设定的交易。</string>
+    <string name="menu_reset_help_text">通过此项命令，可将当前账户内的所有交易以QIF或CSV格式导出，放入SD卡内的文件。您可以决定删除已导出的交易，届时期初余额会自动调整。或者，如果交易未删除，则标注为已导出。Booty Keeper 可以通过FTP、电子邮件或任何其他文件共享应用共享已导出的文件，前提是您已在设置中做好相应配置。如果启用搜索筛选设定，则仅包含该符合该筛选设定的交易。</string>
     <string name="form_BudgetEdit_title_help_text">预算标题有助于在预算列表中识别它。</string>
     <string name="help_BudgetEdit_info">使用此表单新建预算或编辑已有预算。</string>
     <string name="help_BudgetEdit_title">预算表单</string>
@@ -163,8 +163,8 @@
     <string name="help_ManageCategories_manage_context">点击条目显示其上下文菜单，长按进行多选</string>
     <string name="form_split_parts_heading_help_text_1">使用 + 图标可根据需要输入任意数量的拆分部分</string>
     <string name="form_split_parts_heading_help_text_2">除非手动输入金额，否则金额字段将自动更新为各部分总和。手动输入情况下，将显示各部分总和与金额（未拆分金额）之间的差额</string>
-    <string name="help_CsvImportActivity_info">选择要导入的文件后，需要配置其编码方式（UTF-8 或 ISO-8859-1）、字段分隔符（逗号、分号或制表符）以及日期格式。数据可导入现有账户或新账户，你可以在其中配置币种和账户类型。&lt;br&gt;&lt;br&gt;点击操作栏中的“解析”按钮后，数据将呈现在表格中。正式导入之前，你可以选择要丢弃的行，并且必须将列映射到相应的数据字段。&lt;br&gt;&lt;br&gt;丢弃第一行时，系统会提示你是否希望将其视为标题行，在这种情况下，&lt;i&gt;My Expenses&lt;/i&gt; 将尝试根据标题单元格的内容自动映射列。它还会根据标题行记住你的映射，并在下次导入具有相同标题格式的文件时恢复它。</string>
-    <string name="help_ExportDialog_date_format">可以使用单引号 (\') 引用文本避免诠释。\'\'（两个单引号）代表一个单引号。详情请参阅完整的&lt;a href=%s&gt;规范&lt;/a&gt;，或联系 support@myexpenses.mobi 寻求帮助。</string>
+    <string name="help_CsvImportActivity_info">选择要导入的文件后，需要配置其编码方式（UTF-8 或 ISO-8859-1）、字段分隔符（逗号、分号或制表符）以及日期格式。数据可导入现有账户或新账户，你可以在其中配置币种和账户类型。&lt;br&gt;&lt;br&gt;点击操作栏中的“解析”按钮后，数据将呈现在表格中。正式导入之前，你可以选择要丢弃的行，并且必须将列映射到相应的数据字段。&lt;br&gt;&lt;br&gt;丢弃第一行时，系统会提示你是否希望将其视为标题行，在这种情况下，&lt;i&gt;Booty Keeper&lt;/i&gt; 将尝试根据标题单元格的内容自动映射列。它还会根据标题行记住你的映射，并在下次导入具有相同标题格式的文件时恢复它。</string>
+    <string name="help_ExportDialog_date_format">可以使用单引号 (\') 引用文本避免诠释。\'\'（两个单引号）代表一个单引号。详情请参阅完整的&lt;a href=%s&gt;规范&lt;/a&gt;，或联系 foo@bar.not 寻求帮助。</string>
     <string name="help_ManageSyncBackends_encryption">你可以为每个后端设置不同的密码来加密同步数据。不可将现有后端从未加密切换到加密，遇到这种情况，你需要重新新建一个后端。若使用在同步后端存储自动备份的功能，这些文件不会使用后端特定密码进行加密；相反，你可以在“设置”页面的“安全”部分设置适用于所有备份文件的密码。</string>
     <string name="cab_sync_download_help_text">下载一个在后端可用的账户，将在本地创建一个账户并配置为与后端同步</string>
     <string name="help_HistoryActivity_info">此屏幕显示你的现金流，以及支出和收入按年、月、周或天的变化情况</string>

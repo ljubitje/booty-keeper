@@ -50,7 +50,7 @@
     <string name="help_MyExpenses_fab_long_press">長按浮動動作按鈕會開啟選單，讓您準備轉帳、分割交易或收入的表單。</string>
     <string name="popup_MyExpenses_toolbar_copy_text">將目前餘額複製到剪貼簿。</string>
     <string name="popup_MyExpenses_toolbar_new_balance">計算目前餘額與新數值之間的差額。</string>
-    <string name="menu_reset_help_text">此指令會將目前帳戶的所有交易匯出成 QIF 或 CSV 格式的檔案，儲存到 SD 卡上。您可以選擇刪除已匯出的交易，在這種情況下，期初餘額會自動調整。或者，如果不刪除交易，它們會被標記為已匯出。如果您在設定中設定完成，My Expenses 可以在匯出後立即透過 FTP、電子郵件或任何其他檔案分享應用程式分享檔案。如果搜尋篩選器已啟用，則只會考量符合此篩選條件的交易。</string>
+    <string name="menu_reset_help_text">此指令會將目前帳戶的所有交易匯出成 QIF 或 CSV 格式的檔案，儲存到 SD 卡上。您可以選擇刪除已匯出的交易，在這種情況下，期初餘額會自動調整。或者，如果不刪除交易，它們會被標記為已匯出。如果您在設定中設定完成，Booty Keeper 可以在匯出後立即透過 FTP、電子郵件或任何其他檔案分享應用程式分享檔案。如果搜尋篩選器已啟用，則只會考量符合此篩選條件的交易。</string>
     <string name="menu_sort_direction_help_text">交易可以按升冪（最舊的在上方）或降冪（最新的在上方）排序。</string>
     <string name="menu_distribution_help_text">顯示您依類別的支出分佈。您也可以長按群組標題來檢視特定期間的分佈情況。</string>
     <string name="menu_budget_help_text">管理目前顯示帳戶的每日、每週、每月或每年預算。</string>
@@ -116,10 +116,10 @@
     <string name="menu_exclude_from_totals_help_text">如果您勾選此選項，則此帳戶將不會包含在每種貨幣的總計中。</string>
     <string name="help_MethodEdit_title">付款方式表單</string>
     <string name="help_ManageStaleImages_info">此畫面可讓您處理已刪除交易遺留下來的影像檔。長按項目即可刪除它們，或將它們從（可能是內部）儲存資料夾移至外部儲存空間上的備份資料夾 (%s)。</string>
-    <string name="help_CsvImportActivity_info">選擇要匯入的檔案後，您需要設定檔案的編碼方式（UTF-8 或 ISO-8859-1）、哪個字元分隔欄位（逗號、分號或定位鍵），以及日期的格式。資料可以匯入到現有帳戶或新帳戶中，您可以在新帳戶中設定貨幣和帳戶類型。&lt;br&gt;&lt;br&gt;按下動作列中的「剖析」按鈕後，資料將以表格形式呈現給您。在透過動作列中的按鈕觸發匯入之前，您可以選擇要捨棄的列，並且必須將欄位對應到相應的資料欄位。&lt;br&gt;&lt;br&gt;當您捨棄第一列時，系統會提示您是否要將其視為標題列。如果是，則 *My Expenses* 會嘗試根據標題儲存格的內容自動對應欄位。它還會記住您根據標題列所做的對應，並在下次匯入具有相同標題格式的檔案時還原該對應。</string>
-    <string name="help_ExportDialog_date_format">可以使用單引號 (\') 引用文字，以避免解讀。\'\'（兩個單引號）代表一個單引號。有關更多詳細資訊，請參閱完整的 &lt;a href=%s&gt;規格&lt;/a&gt;，或聯絡 support@myexpenses.mobi 尋求協助。</string>
+    <string name="help_CsvImportActivity_info">選擇要匯入的檔案後，您需要設定檔案的編碼方式（UTF-8 或 ISO-8859-1）、哪個字元分隔欄位（逗號、分號或定位鍵），以及日期的格式。資料可以匯入到現有帳戶或新帳戶中，您可以在新帳戶中設定貨幣和帳戶類型。&lt;br&gt;&lt;br&gt;按下動作列中的「剖析」按鈕後，資料將以表格形式呈現給您。在透過動作列中的按鈕觸發匯入之前，您可以選擇要捨棄的列，並且必須將欄位對應到相應的資料欄位。&lt;br&gt;&lt;br&gt;當您捨棄第一列時，系統會提示您是否要將其視為標題列。如果是，則 *Booty Keeper* 會嘗試根據標題儲存格的內容自動對應欄位。它還會記住您根據標題列所做的對應，並在下次匯入具有相同標題格式的檔案時還原該對應。</string>
+    <string name="help_ExportDialog_date_format">可以使用單引號 (\') 引用文字，以避免解讀。\'\'（兩個單引號）代表一個單引號。有關更多詳細資訊，請參閱完整的 &lt;a href=%s&gt;規格&lt;/a&gt;，或聯絡 foo@bar.not 尋求協助。</string>
     <string name="cab_NavigationDrawer_close_reopen_help_text">透過關閉帳戶，您可以防止對其資料進行任何變更（新增、刪除、編輯），但仍允許將其納入所有統計計算中。</string>
-    <string name="help_ManageSyncBackends_intro">My Expenses 允許為每個帳戶設定不同的同步後端。例如，您可以將一個帳戶與共用資料夾同步，同時將另一個帳戶與私人資料夾同步。在此畫面上，您可以新增或移除同步後端，開始或停止與遠端可用的帳戶同步。雖然同步會定期自動進行，但您也可以在這裡手動觸發與後端的同步。請注意，My Expenses 需要完全控制遠端資料夾。您不應該使用其他工具或介面來變更其內容，因為這很可能會導致同步失敗。</string>
+    <string name="help_ManageSyncBackends_intro">Booty Keeper 允許為每個帳戶設定不同的同步後端。例如，您可以將一個帳戶與共用資料夾同步，同時將另一個帳戶與私人資料夾同步。在此畫面上，您可以新增或移除同步後端，開始或停止與遠端可用的帳戶同步。雖然同步會定期自動進行，但您也可以在這裡手動觸發與後端的同步。請注意，Booty Keeper 需要完全控制遠端資料夾。您不應該使用其他工具或介面來變更其內容，因為這很可能會導致同步失敗。</string>
     <string name="help_ManageSyncBackends_saf">此選項允許透過 Android 的檔案選擇器對話框選擇資料夾。如果您安裝了支援選擇資料夾來儲存內容的雲端儲存應用程式（例如 NextCloud），則此選項主要很有用。</string>
     <string name="cab_sync_link_help_text">開始同步本機和遠端都存在的帳戶。您需要決定第一次同步時要保留本機資料還是遠端資料。</string>
     <string name="menu_BudgetActivity_edit_help_text">變更預算的定義。</string>
@@ -196,7 +196,7 @@
     <string name="help_ExpenseEdit_splitPartTransfer_title">轉帳分割部分表單</string>
     <string name="help_ExpenseEdit_templateCategory_title">交易範本表單</string>
     <string name="form_split_parts_heading_help_text_2">金額欄位將會自動以各部分的總和更新，除非您手動輸入金額，在這種情況下，將會顯示各部分總和與金額之間的差額（未分割金額）。</string>
-    <string name="help_ManageSyncBackends_webdav">如果您的雲端儲存空間供應商支援此協定，My Expenses 將能夠與其同步資料。只需提供資料夾的 URL 以及您的使用者名稱和密碼即可。如果您使用 https 且您的網路伺服器使用自簽憑證，您將能夠明確信任它。</string>
+    <string name="help_ManageSyncBackends_webdav">如果您的雲端儲存空間供應商支援此協定，Booty Keeper 將能夠與其同步資料。只需提供資料夾的 URL 以及您的使用者名稱和密碼即可。如果您使用 https 且您的網路伺服器使用自簽憑證，您將能夠明確信任它。</string>
     <string name="help_ManageSyncBackends_drive">選擇您擁有或與您共用的任何資料夾。</string>
     <string name="cab_sync_now_help_text">觸發與所選後端的立即同步。</string>
     <string name="cab_sync_unlink_help_text">所選帳戶將不再與後端同步</string>

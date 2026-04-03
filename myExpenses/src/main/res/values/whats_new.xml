@@ -31,7 +31,7 @@
 
     <!-- Migration V2 Strings -->
     <string name="migration_v2_title">Welcome to V2!</string>
-    <string name="migration_v2_intro">We\'ve redesigned My Expenses to be easier to use and to offer more features:</string>
+    <string name="migration_v2_intro">We\'ve redesigned Booty Keeper to be easier to use and to offer more features:</string>
     <string name="migration_v2_feature_1">Modern Material Design Navigation</string>
     <string name="migration_v2_feature_2">Grouping and totals for flags</string>
     <string name="migration_v2_feature_3">Improved balance sheet integration</string>
