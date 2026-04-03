@@ -39,11 +39,11 @@ import org.totschnig.myexpenses.provider.KEY_PAYEE_NAME
 import org.totschnig.myexpenses.provider.KEY_PAYEE_NAME_NORMALIZED
 import org.totschnig.myexpenses.provider.KEY_ROWID
 import org.totschnig.myexpenses.provider.KEY_SEALED
-import org.totschnig.myexpenses.provider.TABLE_BUDGETS
+
 import org.totschnig.myexpenses.provider.TABLE_PAYEES
 import org.totschnig.myexpenses.provider.TransactionProvider.ACCOUNTS_URI
 import org.totschnig.myexpenses.provider.TransactionProvider.AUTHORITY
-import org.totschnig.myexpenses.provider.TransactionProvider.BUDGETS_URI
+
 import org.totschnig.myexpenses.provider.TransactionProvider.CHANGES_URI
 import org.totschnig.myexpenses.provider.TransactionProvider.DEBTS_URI
 import org.totschnig.myexpenses.provider.TransactionProvider.PAYEES_URI
@@ -216,15 +216,6 @@ class PartyListViewModel(
 
 
     private suspend fun updatePartyBudgets(old: Set<Long>, new: Long) {
-        contentResolver.query(
-            BUDGETS_URI,
-            arrayOf("$TABLE_BUDGETS.$KEY_ROWID"),
-            null,
-            null,
-            null
-        )?.use { cursor ->
-            updateFilterHelper(old, new, cursor, BudgetViewModel::prefNameForCriteria)
-        }
     }
 
     private fun updateCriterion(

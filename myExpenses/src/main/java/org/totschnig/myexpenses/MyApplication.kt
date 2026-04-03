@@ -57,7 +57,7 @@ import org.totschnig.myexpenses.provider.INVALID_CALENDAR_ID
 import org.totschnig.myexpenses.provider.PlannerUtils
 import org.totschnig.myexpenses.provider.TransactionProvider
 import org.totschnig.myexpenses.service.AutoBackupWorker.Companion.enqueueOrCancel
-import org.totschnig.myexpenses.service.BudgetWidgetUpdateWorker
+
 import org.totschnig.myexpenses.service.PlanExecutor
 import org.totschnig.myexpenses.sync.SyncAdapter
 import org.totschnig.myexpenses.ui.ContextHelper
@@ -394,7 +394,6 @@ open class MyApplication : Application(), SharedPreferences.OnSharedPreferenceCh
     }
 
     private fun onGroupingStartChanged(grouping: Grouping) {
-        BudgetWidgetUpdateWorker.enqueueSelf(this, grouping, true)
     }
 
     val memoryClass: Int

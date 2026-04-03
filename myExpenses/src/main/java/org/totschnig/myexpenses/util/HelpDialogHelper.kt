@@ -46,16 +46,6 @@ class HelpDialogHelper(val context: Context, val extra: CharSequence? = null) : 
             .bold { append(getString(resId)) }
             .append(": ")
         return when (resString) {
-            "menu_BudgetActivity_rollover_help_text" -> TextUtils.concat(*buildList {
-                add(getString(R.string.menu_BudgetActivity_rollover_help_text))
-                add(toTitle(R.string.menu_aggregates))
-                add(getString(R.string.menu_BudgetActivity_rollover_total))
-                add(toTitle(R.string.pref_manage_categories_title))
-                add(getString(R.string.menu_BudgetActivity_rollover_categories))
-                add(toTitle(R.string.menu_edit))
-                add(getString(R.string.menu_BudgetActivity_rollover_edit))
-            }.toTypedArray())
-
             "help_ManageStaleImages_info" -> getString(
                 R.string.help_ManageStaleImages_info,
                 "Documents/MyExpenses.Attachments.Archive"

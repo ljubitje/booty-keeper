@@ -12,7 +12,7 @@ class WidgetObserver(private val context: Context, private val mProvider: Class<
         fun register(context: Context) {
             register(context, TemplateWidget::class.java, TemplateWidget.OBSERVED_URIS)
             register(context, AccountWidget::class.java, AccountWidget.OBSERVED_URIS)
-            register(context, BudgetWidget::class.java, BudgetWidget.OBSERVED_URIS)
+
         }
         private fun register(context: Context, mProvider: Class<out BaseWidget>, observedUris: Array<Uri>) {
             WidgetObserver(context, mProvider).apply {

@@ -3,7 +3,6 @@
     <string-array name="MyExpenses_menuitems">
         <item>search</item>
         <item>manage_plans</item>
-        <item>budget</item>
         <item>distribution</item>
         <item>history</item>
         <item>parties.debts</item>
@@ -160,18 +159,6 @@
     <string-array name="DistributionActivity_cabitems">
         <item>show_transactions</item>
         <item>color</item>
-    </string-array>
-
-    <string-array name="BudgetActivity_menuitems">
-        <item>back.forward</item>
-        <item>edit</item>
-        <item>rollover</item>
-        <item>chart</item>
-        <item>manage_categories</item>
-        <item>budget_allocated_only</item>
-        <item>delete</item>
-        <item>aggregate_neutral_categories</item>
-        <item>budget_synchronization</item>
     </string-array>
 
     <string-array name="ExpenseEdit_transaction_menuitems">
@@ -497,22 +484,6 @@
         <item>history_transfers</item>
     </string-array>
 
-    <string-array name="help_BudgetActivity_info">
-        <item>help_BudgetActivity_info</item>
-        <item>help_Budget_amount_click</item>
-        <item tools:ignore="Typos">help_Budget_amount_click_1</item>
-        <item>help_Budget_spent_click</item>
-    </string-array>
-
-    <string-array name="help_ManageBudgets_info">
-        <item>help_ManageBudgets_info</item>
-    </string-array>
-
-    <string-array name="ManageBudgets_menuitems">
-        <item>grouping</item>
-        <item>budget_synchronization</item>
-    </string-array>
-
     <string-array name="help_ManageTags_select_filter_info">
         <item>help_ManageTags_select_filter_info</item>
         <item>help_fab_confirm_selection</item>
@@ -553,15 +524,6 @@
     <string-array name="menu_parties_debts_help_text">
         <item>pref_manage_parties_summary</item>
         <item>help_debt_managment</item>
-    </string-array>
-
-    <string-array name="BudgetEdit_formfields">
-        <item>title</item>
-        <item>description</item>
-        <item>amount</item>
-        <item>accounts</item>
-        <item>filter</item>
-        <item>type</item>
     </string-array>
 
     <string-array name="DebtEdit_formfields">

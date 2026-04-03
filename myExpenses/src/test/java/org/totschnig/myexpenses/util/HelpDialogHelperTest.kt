@@ -6,8 +6,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.ParameterizedRobolectricTestRunner
 import org.totschnig.myexpenses.activity.AccountEdit
-import org.totschnig.myexpenses.activity.BudgetActivity
-import org.totschnig.myexpenses.activity.BudgetEdit
+
 import org.totschnig.myexpenses.activity.DebtEdit
 import org.totschnig.myexpenses.activity.DistributionActivity
 import org.totschnig.myexpenses.activity.ExpenseEdit
@@ -27,7 +26,7 @@ import org.totschnig.myexpenses.activity.HELP_VARIANT_TEMPLATE_TRANSFER
 import org.totschnig.myexpenses.activity.HELP_VARIANT_TRANSACTION
 import org.totschnig.myexpenses.activity.HELP_VARIANT_TRANSFER
 import org.totschnig.myexpenses.activity.HistoryActivity
-import org.totschnig.myexpenses.activity.ManageBudgets
+
 import org.totschnig.myexpenses.activity.ManageCategories
 import org.totschnig.myexpenses.activity.ManageCurrencies
 import org.totschnig.myexpenses.activity.ManageMethods
@@ -49,13 +48,10 @@ class HelpDialogHelperTest(private val activity: Class<out ProtectedFragmentActi
         @ParameterizedRobolectricTestRunner.Parameters(name = "{0}")
         fun params() = listOf(
             arrayOf(AccountEdit::class.java),
-            arrayOf(BudgetActivity::class.java),
-            arrayOf(BudgetEdit::class.java),
             arrayOf(DebtEdit::class.java),
             arrayOf(DistributionActivity::class.java),
             arrayOf(ExpenseEdit::class.java),
             arrayOf(HistoryActivity::class.java),
-            arrayOf(ManageBudgets::class.java),
             arrayOf(ManageCategories::class.java),
             arrayOf(ManageCurrencies::class.java),
             arrayOf(ManageMethods::class.java),

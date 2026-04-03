@@ -95,7 +95,7 @@ import org.totschnig.myexpenses.util.ICurrencyFormatter
 import org.totschnig.myexpenses.util.crashreporting.CrashHandler.Companion.report
 import org.totschnig.myexpenses.util.formatMoney
 import org.totschnig.myexpenses.util.toEpoch
-import org.totschnig.myexpenses.viewmodel.data.BudgetData
+
 import org.totschnig.myexpenses.viewmodel.data.DateInfo
 import org.totschnig.myexpenses.viewmodel.data.HeaderData
 import org.totschnig.myexpenses.viewmodel.data.HeaderDataEmpty
@@ -198,14 +198,12 @@ fun TransactionList(
     modifier: Modifier = Modifier,
     lazyPagingItems: LazyPagingItems<Transaction2>,
     headerData: HeaderDataResult,
-    budgetData: State<BudgetData?>,
     selectionHandler: SelectionHandler?,
     selectAllState: MutableState<Boolean>,
     onSelectAllListTooLarge: () -> Unit,
     onEvent: TransactionEventHandler,
     futureCriterion: FutureCriterion,
     expansionHandler: org.totschnig.myexpenses.compose.ExpansionHandler?,
-    onBudgetClick: (Long, Int) -> Unit,
     showSumDetails: Boolean,
     scrollToCurrentDate: MutableState<Boolean>,
     renderer: ItemRenderer,
@@ -332,18 +330,6 @@ fun TransactionList(
                         when (headerData) {
                             is HeaderData -> {
                                 headerData.groups[headerId]?.let { headerRow ->
-                                    val budget = budgetData.value?.let { data ->
-                                        val amount =
-                                            (data.data.find { it.headerId == headerId && it.amount != null }
-                                                ?: data.data.lastOrNull {
-                                                    !it.oneTime && it.headerId < headerId && it.amount != null
-                                                })?.amount ?: 0L
-                                        val rollOverPrevious =
-                                            data.data.find { it.headerId == headerId }
-                                                ?.rollOverPrevious
-                                                ?: 0L
-                                        data.budgetId to amount + rollOverPrevious
-                                    }
                                     stickyHeader(
                                         key = headerId,
                                         contentType = STICKY_HEADER_CONTENT_TYPE
@@ -353,12 +339,12 @@ fun TransactionList(
                                             headerId = headerId,
                                             headerRow = headerRow,
                                             dateInfo = headerData.dateInfo,
-                                            budget = budget,
+                                            budget = null,
                                             isExpanded = !isGroupHidden,
                                             toggle = expansionHandler?.let {
                                                 { expansionHandler.toggle(headerId.toString()) }
                                             },
-                                            onBudgetClick = onBudgetClick,
+                                            onBudgetClick = { _, _ -> },
                                             showSumDetails = headersWithSumDetails.getValue(
                                                 headerId
                                             ),

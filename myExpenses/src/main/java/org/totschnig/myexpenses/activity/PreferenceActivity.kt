@@ -52,7 +52,7 @@ import org.totschnig.myexpenses.viewmodel.ModalProgressViewModel
 import org.totschnig.myexpenses.viewmodel.PriceCalculationViewModel
 import org.totschnig.myexpenses.viewmodel.SettingsViewModel
 import org.totschnig.myexpenses.widget.AccountWidget
-import org.totschnig.myexpenses.widget.BudgetWidget
+
 import org.totschnig.myexpenses.widget.TemplateWidget
 import org.totschnig.myexpenses.widget.WIDGET_CONTEXT_CHANGED
 import org.totschnig.myexpenses.widget.updateWidgets
@@ -291,9 +291,6 @@ class PreferenceActivity : RestoreActivity(), ContribIFace, SortUtilityDialogFra
 
             getKey(PrefKey.PROTECTION_ENABLE_TEMPLATE_WIDGET) ->
                 updateWidgetsForClass(TemplateWidget::class.java)
-
-            getKey(PrefKey.PROTECTION_ENABLE_BUDGET_WIDGET) ->
-                updateWidgetsForClass(BudgetWidget::class.java)
 
             getKey(PrefKey.PLANNER_EXECUTION_TIME) -> enqueuePlanner(false)
 

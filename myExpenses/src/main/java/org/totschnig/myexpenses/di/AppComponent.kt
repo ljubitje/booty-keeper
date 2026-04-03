@@ -65,9 +65,7 @@ import org.totschnig.myexpenses.util.licence.LicenceHandler
 import org.totschnig.myexpenses.util.tracking.Tracker
 import org.totschnig.myexpenses.viewmodel.BaseFunctionalityViewModel
 import org.totschnig.myexpenses.viewmodel.BaseViewModel
-import org.totschnig.myexpenses.viewmodel.BudgetListViewModel
-import org.totschnig.myexpenses.viewmodel.BudgetViewModel
-import org.totschnig.myexpenses.viewmodel.BudgetViewModel2
+
 import org.totschnig.myexpenses.viewmodel.ContentResolvingAndroidViewModel
 import org.totschnig.myexpenses.viewmodel.CurrencyViewModel
 import org.totschnig.myexpenses.viewmodel.DebtViewModel
@@ -88,7 +86,7 @@ import org.totschnig.myexpenses.viewmodel.TransactionEditViewModel
 import org.totschnig.myexpenses.viewmodel.UpgradeHandlerViewModel
 import org.totschnig.myexpenses.widget.AbstractListWidget
 import org.totschnig.myexpenses.widget.AccountRemoteViewsFactory
-import org.totschnig.myexpenses.widget.BudgetWidget
+
 import org.totschnig.myexpenses.widget.TemplateRemoteViewsFactory
 import javax.inject.Named
 import javax.inject.Singleton
@@ -205,8 +203,6 @@ interface AppComponent {
 
     fun inject(editCurrencyViewModel: EditCurrencyViewModel)
 
-    fun inject(budgetViewModel: BudgetViewModel)
-
     fun inject(baseViewModel: BaseViewModel)
 
     fun inject(contentResolvingAndroidViewModel: ContentResolvingAndroidViewModel)
@@ -232,8 +228,6 @@ interface AppComponent {
     fun inject(accountRemoteViewsFactory: AccountRemoteViewsFactory)
 
     fun inject(abstractListWidget: AbstractListWidget)
-
-    fun inject(budgetWidget: BudgetWidget)
 
     fun inject(onboardingUiFragment: OnboardingUiFragment)
 
@@ -273,8 +267,6 @@ interface AppComponent {
 
     fun inject(distributionViewModel: DistributionViewModel)
 
-    fun inject(distributionViewModel: BudgetViewModel2)
-
     fun inject(grisbiImportTask: GrisbiImportTask)
 
     fun inject(licenceValidationViewModel: LicenceValidationViewModel)
@@ -293,8 +285,6 @@ interface AppComponent {
     fun inject(preferencesContribFragment: PreferencesContribFragment)
 
     fun inject(archiveDialogFragment: ArchiveDialogFragment)
-
-    fun inject(budgetListViewModel: BudgetListViewModel)
 
     fun inject(dailyExchangeRateService: DailyExchangeRateDownloadService)
 

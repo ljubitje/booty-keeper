@@ -73,9 +73,9 @@ import org.totschnig.myexpenses.provider.KEY_ROWID
 import org.totschnig.myexpenses.provider.KEY_SUM
 import org.totschnig.myexpenses.provider.KEY_TYPE
 import org.totschnig.myexpenses.provider.KEY_UUID
-import org.totschnig.myexpenses.provider.TABLE_BUDGETS
+
 import org.totschnig.myexpenses.provider.TransactionProvider
-import org.totschnig.myexpenses.provider.TransactionProvider.BUDGETS_URI
+
 import org.totschnig.myexpenses.provider.TransactionProvider.CATEGORIES_URI
 import org.totschnig.myexpenses.provider.filter.AndCriterion
 import org.totschnig.myexpenses.provider.filter.CategoryCriterion
@@ -331,15 +331,6 @@ open class CategoryViewModel(
 
 
     private suspend fun updateCategoryBudgets(old: Set<Long>, new: Long) {
-        contentResolver.query(
-            BUDGETS_URI,
-            arrayOf("$TABLE_BUDGETS.$KEY_ROWID"),
-            null,
-            null,
-            null
-        )?.use { cursor ->
-            updateFilterHelper(old, new, cursor, BudgetViewModel::prefNameForCriteria)
-        }
     }
 
     private fun updateCriterion(

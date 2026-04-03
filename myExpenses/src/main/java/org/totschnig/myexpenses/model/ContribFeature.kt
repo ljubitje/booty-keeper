@@ -38,7 +38,7 @@ enum class ContribFeature(
     PRINT,
     SPLIT_TEMPLATE(TrialMode.NONE, LicenceStatus.PROFESSIONAL),
     HISTORY(licenceStatus = LicenceStatus.PROFESSIONAL),
-    BUDGET(licenceStatus = LicenceStatus.PROFESSIONAL),
+
     CATEGORY_TREE(TrialMode.UNLIMITED, LicenceStatus.PROFESSIONAL),
     AUTOMATIC_FX_DOWNLOAD(licenceStatus = LicenceStatus.PROFESSIONAL)
     ;
@@ -66,7 +66,7 @@ enum class ContribFeature(
             PRINT -> R.string.contrib_feature_print_label
             SPLIT_TEMPLATE -> R.string.contrib_feature_split_template_label
             HISTORY -> R.string.contrib_feature_history_label
-            BUDGET -> R.string.contrib_feature_budget_label
+
             CATEGORY_TREE -> R.string.contrib_feature_category_tree_label
             AUTOMATIC_FX_DOWNLOAD -> R.string.enable_automatic_daily_exchange_rate_download
         }

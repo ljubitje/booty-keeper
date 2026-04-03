@@ -59,7 +59,7 @@
     <string name="pref_template_click_default_key">template_click_default</string>
     <string name="pref_protection_enable_account_widget_key">enable_account_widget</string>
     <string name="pref_protection_enable_template_widget_key">enable_template_widget</string>
-    <string name="pref_protection_enable_budget_widget_key">enable_budget_widget</string>
+
     <string name="pref_protection_enable_data_entry_from_widget_key">enable_data_entry_from_widget</string>
     <string name="pref_account_grouping_key">account_grouping</string>
     <string name="pref_manage_stale_images_key">manage_stale_images</string>
@@ -214,7 +214,7 @@
     <string name="calculator_operator_divide">÷</string>
 
     <string name="contrib_feature_split_transaction_label" tools:ignore="UnusedResources">@string/split_transaction</string>
-    <string name="contrib_feature_budget_label" tools:ignore="UnusedResources">@string/menu_budget</string>
+
     <string name="drive_backend_upgrade" tools:ignore="UnusedResources">Since 2.8.0, My Expenses supports synchronization with Drive folders from multiple Google accounts. Please select the Google account from which your existing Drive backends were created.</string>
     <string name="licence_validation_upgrade_needed" tools:ignore="UnusedResources">Please upgrade My Expenses Contrib to version 1.5.</string>
 
@@ -226,7 +226,7 @@
     <string name="menu_clear">Clear</string>
     <string name="menu_color" tools:ignore="UnusedResources">@string/color</string>
     <string name="menu_status_handle" tools:ignore="UnusedResources">@string/status</string>
-    <string name="menu_rollover" tools:ignore="UnusedResources">@string/budget_table_header_rollover</string>
+
     <string name="menu_sort" tools:ignore="UnusedResources">@string/display_options_sort_list_by</string>
     <string name="menu_archive">@string/action_archive</string>
     <string name="db_error_cursor_null">Cursor is null</string>

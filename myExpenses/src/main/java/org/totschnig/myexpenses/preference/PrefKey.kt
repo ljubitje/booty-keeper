@@ -12,7 +12,7 @@ enum class PrefKey(internal val resId: Int, internal val _key: String?) {
     SORT_ORDER_TEMPLATES("sort_order_templates"),
     SORT_ORDER_CATEGORIES("sort_order_categories"),
     SORT_ORDER_ACCOUNTS("sort_order_accounts"),
-    SORT_ORDER_BUDGET_CATEGORIES("sort_order_budget_categories"),
+
     PERFORM_SHARE(R.string.pref_perform_share_key),
     HELP(R.string.pref_help_key),
     SHARE_TARGET(R.string.pref_share_target_key),
@@ -33,7 +33,7 @@ enum class PrefKey(internal val resId: Int, internal val _key: String?) {
     PROTECTION_DELAY_SECONDS(R.string.pref_protection_delay_seconds_key),
     PROTECTION_ENABLE_ACCOUNT_WIDGET(R.string.pref_protection_enable_account_widget_key),
     PROTECTION_ENABLE_TEMPLATE_WIDGET(R.string.pref_protection_enable_template_widget_key),
-    PROTECTION_ENABLE_BUDGET_WIDGET(R.string.pref_protection_enable_budget_widget_key),
+
     PROTECTION_ENABLE_DATA_ENTRY_FROM_WIDGET(R.string.pref_protection_enable_data_entry_from_widget_key),
     EXPORT_FORMAT(R.string.pref_export_format_key),
     SEND_FEEDBACK(R.string.pref_send_feedback_key),
@@ -75,7 +75,7 @@ enum class PrefKey(internal val resId: Int, internal val _key: String?) {
     TEMPLATE_CLICK_DEFAULT(R.string.pref_template_click_default_key),
     NEXT_REMINDER_RATE("nextReminderRate"),
     DISTRIBUTION_SHOW_CHART("distributionShowChart"),
-    BUDGEt_SHOW_CHART("budgethowChart"),
+
     DISTRIBUTION_AGGREGATE_TYPES("distributionAggregateTypes"),
     MANAGE_STALE_IMAGES(R.string.pref_manage_stale_images_key),
     CUSTOM_DECIMAL_FORMAT(R.string.pref_custom_decimal_format_key),

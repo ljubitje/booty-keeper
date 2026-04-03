@@ -181,9 +181,7 @@
         <activity
             android:name=".activity.MethodEdit"
             android:theme="@style/EditDialog" />
-        <activity
-            android:name=".activity.BudgetEdit"
-            android:theme="@style/EditDialog" />
+
         <activity
             android:name=".activity.ManageCategories"
             android:exported="false"
@@ -244,9 +242,6 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name=".activity.ManageBudgets"
-            android:theme="@style/EditDialog" />
-        <activity
             android:name=".activity.ManageStaleImages"
             android:exported="false"
             android:theme="@style/EditDialog" />
@@ -300,15 +295,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.BudgetWidgetConfigure"
-            android:exported="true"
-            android:label="@string/budget_widget_configuration"
-            android:theme="@style/Configuration">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".activity.TemplateShortcutSelect"
             android:exported="true"
             android:icon="@drawable/ic_menu_template_shortcut"
@@ -352,9 +338,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.SimpleImageActivity" />
-        <activity
-            android:name=".activity.BudgetActivity"
-            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activity.ManageTags"
             android:theme="@style/EditDialog" />
@@ -450,18 +433,6 @@
                 android:resource="@xml/template_widget_info" />
         </receiver>
 
-        <receiver
-            android:name=".widget.BudgetWidget"
-            android:exported="false"
-            android:label="@string/widget_title_budget">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/budget_widget_info" />
-        </receiver>
 
         <service
             android:name=".widget.AccountWidgetService"

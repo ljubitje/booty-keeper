@@ -11,7 +11,7 @@ import org.totschnig.myexpenses.model.Grouping
 import org.totschnig.myexpenses.model.PREDEFINED_NAME_CASH
 import org.totschnig.myexpenses.model2.Account
 import org.totschnig.myexpenses.model2.Category
-import org.totschnig.myexpenses.provider.BudgetInfo
+
 import org.totschnig.myexpenses.provider.TemplateInfo
 import org.totschnig.myexpenses.provider.TransactionProvider
 
@@ -62,22 +62,6 @@ abstract class BaseTestWithRepository {
                 title = title,
                 catId = categoryId,
                 payeeId = payeeId
-            ).contentValues
-        )!!
-    )
-
-    protected fun insertBudget(
-        accountId: Long,
-        title: String,
-        amount: Long,
-        grouping: Grouping = Grouping.MONTH
-    ) = ContentUris.parseId(
-        contentResolver.insert(
-            TransactionProvider.BUDGETS_URI, BudgetInfo(
-                accountId = accountId,
-                title = title,
-                amount = amount,
-                grouping = grouping
             ).contentValues
         )!!
     )

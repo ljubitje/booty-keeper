@@ -144,12 +144,12 @@
     <item name="GDPR_NO_CONSENT_COMMAND" type="id" />
     <item name="GDPR_CONSENT_COMMAND" type="id" />
     <item name="COLOR_COMMAND" type="id" />
-    <item name="BUDGET_COMMAND" type="id" />
+
     <item name="MANAGE_CATEGORIES_COMMAND" type="id" />
     <item name="BACK_COMMAND" type="id" />
     <item name="FORWARD_COMMAND" type="id" />
     <item name="ACCOUNT_FLAGS_COMMAND" type="id" />
-    <item name="BUDGET_ALLOCATED_ONLY" type="id" />
+
     <item name="REMAP_CATEGORY_COMMAND" type="id" />
     <item name="REMAP_PAYEE_COMMAND" type="id" />
     <item name="REMAP_METHOD_COMMAND" type="id" />
@@ -204,8 +204,7 @@
     <item name="ARCHIVE_COMMAND" type="id" />
     <item name="UNARCHIVE_COMMAND" type="id" />
     <item name="SORT_PAYEE_NAME_COMMAND" type="id" />
-    <item name="GROUPING_BUDGETS_GROUPING_COMMAND" type="id" />
-    <item name="GROUPING_BUDGETS_ACCOUNT_COMMAND" type="id" />
+
     <item name="SORT_DEBT_SUM_COMMAND" type="id" />
     <item name="DYNAMIC_EXCHANGE_RATE_COMMAND" type="id" />
     <item name="SELECT_SOURCE_MENU_ID" type="id" />

@@ -5,7 +5,7 @@
     <string name="help_ManageCategories_manage_title">@string/pref_manage_categories_title</string>
     <string name="help_ManageParties_manage_title">@string/pref_manage_parties_title</string>
     <string name="help_DistributionActivity_title">@string/menu_distribution</string>
-    <string name="help_BudgetActivity_title">@string/menu_budget</string>
+
     <string name="help_ManageCategories_select_mapping_title">@string/select_category</string>
     <string name="help_ManageParties_select_mapping_title">@string/select_payee</string>
     <string name="help_ManageCategories_select_filter_title">@string/search_category</string>
@@ -41,10 +41,7 @@
     <string name="cab_ManageTemplates_planner_cancel_plan_instance_help_text">@string/cab_ManageTemplates_plans_cancel_plan_instance_help_text</string>
     <string name="cab_ManageTemplates_planner_reset_plan_instance_help_text">@string/cab_ManageTemplates_plans_reset_plan_instance_help_text</string>
     <string name="cab_ManageTemplates_planner_edit_plan_instance_help_text">@string/cab_ManageTemplates_plans_edit_plan_instance_help_text</string>
-    <string name="help_ManageSyncBackends_webdav_title">@string/title_webdav</string>
-    <string name="help_ManageSyncBackends_drive_title">@string/title_drive</string>
-    <string name="help_ManageSyncBackends_saf_title">SAF</string>
-    <string name="help_ManageSyncBackends_encryption_title">@string/encryption</string>
+
     <string name="help_DebtOverview_title">@string/title_activity_debt_overview</string>
     <string name="menu_show_all">@string/show_all</string>
     <string name="menu_type_filter">@string/type</string>
@@ -54,8 +51,7 @@
     <string name="menu_filter">@string/filter</string>
     <string name="menu_remove">@string/remove</string>
     <string name="menu_hide">@string/hide</string>
-    <string name="menu_budget_synchronization_help_text"><![CDATA[FAQ: <a href="https://faq.myexpenses.mobi/sync-budget">Synchronization of budgets</a>]]></string>
-    <string name="menu_budget_synchronization">@string/synchronization</string>
+
     <string name="help_PriceHistory_title">@string/price_history</string>
     <string name="menu_download">@string/action_download</string>
     <string name="menu_dynamic_exchange_rate">@string/dynamic_exchange_rate</string>

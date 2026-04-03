@@ -89,27 +89,24 @@ import org.totschnig.myexpenses.preference.Mapper
 import org.totschnig.myexpenses.preference.PrefKey
 import org.totschnig.myexpenses.preference.PreferenceAccessor
 import org.totschnig.myexpenses.preference.enumValueOrDefault
-import org.totschnig.myexpenses.provider.BaseTransactionProvider
 import org.totschnig.myexpenses.provider.BaseTransactionProvider.Companion.balanceUri
 import org.totschnig.myexpenses.provider.DataBaseAccount
 import org.totschnig.myexpenses.provider.DataBaseAccount.Companion.GROUPING_AGGREGATE
 import org.totschnig.myexpenses.provider.DataBaseAccount.Companion.SORT_BY_AGGREGATE
 import org.totschnig.myexpenses.provider.DataBaseAccount.Companion.SORT_DIRECTION_AGGREGATE
 import org.totschnig.myexpenses.provider.KEY_ACCOUNTID
-import org.totschnig.myexpenses.provider.KEY_BUDGET
-import org.totschnig.myexpenses.provider.KEY_BUDGETID
-import org.totschnig.myexpenses.provider.KEY_BUDGET_ROLLOVER_PREVIOUS
+
 import org.totschnig.myexpenses.provider.KEY_CATID
 import org.totschnig.myexpenses.provider.KEY_CR_STATUS
 import org.totschnig.myexpenses.provider.KEY_DATE
 import org.totschnig.myexpenses.provider.KEY_DYNAMIC
 import org.totschnig.myexpenses.provider.KEY_EXCLUDE_FROM_TOTALS
 import org.totschnig.myexpenses.provider.KEY_FLAG
-import org.totschnig.myexpenses.provider.KEY_ONE_TIME
+
 import org.totschnig.myexpenses.provider.KEY_PARENTID
 import org.totschnig.myexpenses.provider.KEY_ROWID
 import org.totschnig.myexpenses.provider.KEY_SEALED
-import org.totschnig.myexpenses.provider.KEY_SECOND_GROUP
+
 import org.totschnig.myexpenses.provider.KEY_TAGLIST
 import org.totschnig.myexpenses.provider.KEY_TRANSACTIONID
 import org.totschnig.myexpenses.provider.KEY_TRANSFER_PEER
@@ -148,8 +145,7 @@ import org.totschnig.myexpenses.util.enumValueOrDefault
 import org.totschnig.myexpenses.viewmodel.ExportViewModel.Companion.EXPORT_HANDLE_DELETED_UPDATE_BALANCE
 import org.totschnig.myexpenses.viewmodel.data.BalanceAccount
 import org.totschnig.myexpenses.viewmodel.data.BalanceAccount.Companion.partitionByAccountType
-import org.totschnig.myexpenses.viewmodel.data.BudgetData
-import org.totschnig.myexpenses.viewmodel.data.BudgetRow
+
 import org.totschnig.myexpenses.viewmodel.data.FullAccount
 import org.totschnig.myexpenses.viewmodel.data.FullAccount.Companion.fromCursor
 import org.totschnig.myexpenses.viewmodel.data.HeaderData
@@ -504,34 +500,6 @@ open class MyExpensesViewModel(
         headerDataV2.getValue(account)
     else
         headerData.getValue(account)
-
-    fun budgetData(account: PageAccount): Flow<BudgetData?> =
-        if (licenceHandler.hasTrialAccessTo(ContribFeature.BUDGET)) {
-            contentResolver.observeQuery(
-                uri = BaseTransactionProvider.defaultBudgetAllocationUri(
-                    account.id,
-                    account.grouping
-                ),
-                projection = arrayOf(
-                    KEY_YEAR,
-                    KEY_SECOND_GROUP,
-                    KEY_BUDGET,
-                    KEY_BUDGET_ROLLOVER_PREVIOUS,
-                    KEY_ONE_TIME
-                ),
-                sortOrder = "$KEY_YEAR, $KEY_SECOND_GROUP"
-            ).map { it }
-                .mapToListWithExtra {
-                    BudgetRow(
-                        headerId = Grouping.groupId(it.getInt(0), it.getInt(1)),
-                        amount = it.getLongOrNull(2),
-                        rollOverPrevious = it.getLongOrNull(3),
-                        oneTime = it.getInt(4) == 1
-                    )
-                }.map {
-                    BudgetData(it.first.getLong(KEY_BUDGETID), it.second)
-                }
-        } else emptyFlow()
 
     fun sumInfo(account: PageAccount) = sums.getValue(account)
 

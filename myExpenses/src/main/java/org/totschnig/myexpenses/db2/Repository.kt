@@ -41,7 +41,7 @@ import org.totschnig.myexpenses.provider.getInt
 import org.totschnig.myexpenses.provider.getLong
 import org.totschnig.myexpenses.provider.getString
 import org.totschnig.myexpenses.provider.getStringOrNull
-import org.totschnig.myexpenses.viewmodel.data.Budget
+
 import org.totschnig.myexpenses.viewmodel.data.Debt
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -134,26 +134,6 @@ open class Repository @Inject constructor(
         if (it.moveToFirst()) it.getLong(0) else null
     } ?: 0L
 
-    val budgetCreatorFunction: (Cursor) -> Budget = { cursor ->
-        with(cursor) {
-            val grouping = getEnum(KEY_GROUPING, Grouping.NONE)
-            Budget(
-                id = getLong(KEY_ROWID),
-                accountId = getLong(KEY_ACCOUNTID),
-                title = getString(KEY_TITLE),
-                description = getString(KEY_DESCRIPTION),
-                currency = getString(KEY_CURRENCY),
-                grouping = grouping,
-                color = getInt(KEY_COLOR),
-                start = if (grouping == Grouping.NONE) getString(KEY_START) else null,
-                end = if (grouping == Grouping.NONE) getString(KEY_END) else null,
-                accountName = getStringOrNull(KEY_ACCOUNT_LABEL),
-                default = getBoolean(KEY_IS_DEFAULT),
-                uuid = getString(KEY_UUID),
-                syncAccountName = getStringOrNull(KEY_SYNC_ACCOUNT_NAME)
-            )
-        }
-    }
 }
 
 @JvmInline

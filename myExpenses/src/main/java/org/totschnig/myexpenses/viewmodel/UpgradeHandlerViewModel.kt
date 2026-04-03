@@ -25,10 +25,10 @@ import kotlinx.coroutines.withContext
 import org.totschnig.myexpenses.MyApplication
 import org.totschnig.myexpenses.R
 import org.totschnig.myexpenses.activity.BaseActivity
-import org.totschnig.myexpenses.activity.BudgetWidgetConfigure
+
 import org.totschnig.myexpenses.compose.transactions.FutureCriterion
 import org.totschnig.myexpenses.db2.entities.Template
-import org.totschnig.myexpenses.db2.getGrouping
+
 import org.totschnig.myexpenses.db2.preDefinedName
 import org.totschnig.myexpenses.db2.updatePlan
 import org.totschnig.myexpenses.dialog.MenuItem
@@ -72,7 +72,7 @@ import org.totschnig.myexpenses.provider.filter.SimpleCriterion
 import org.totschnig.myexpenses.provider.getEnumOrNull
 import org.totschnig.myexpenses.provider.getLong
 import org.totschnig.myexpenses.provider.useAndMapToList
-import org.totschnig.myexpenses.service.BudgetWidgetUpdateWorker
+
 import org.totschnig.myexpenses.service.PlanExecutor
 import org.totschnig.myexpenses.sync.GenericAccountService
 import org.totschnig.myexpenses.ui.IDiscoveryHelper
@@ -82,7 +82,7 @@ import org.totschnig.myexpenses.util.safeMessage
 import org.totschnig.myexpenses.util.tracking.Tracker
 import org.totschnig.myexpenses.util.validateDateFormat
 import org.totschnig.myexpenses.viewmodel.data.mapper.TransactionMapper
-import org.totschnig.myexpenses.widget.BudgetWidget
+
 import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
@@ -258,7 +258,6 @@ class UpgradeHandlerViewModel(application: Application) :
                     arrayOf(
                         PrefKey.SORT_ORDER_ACCOUNTS,
                         PrefKey.SORT_ORDER_CATEGORIES,
-                        PrefKey.SORT_ORDER_BUDGET_CATEGORIES
                     ).forEach {
                         if (Sort.TITLE.name == prefHandler.getString(it, null)) {
                             prefHandler.putString(it, Sort.LABEL.name)
@@ -568,27 +567,6 @@ class UpgradeHandlerViewModel(application: Application) :
                     }
                 }
 
-                if (fromVersion < 705) {
-                    val context = getApplication<MyApplication>()
-                    AppWidgetManager.getInstance(context)
-                        .getAppWidgetIds(ComponentName(context, BudgetWidget::class.java))
-                        .map { widgetId ->
-                            repository.getGrouping(
-                                BudgetWidgetConfigure.loadBudgetId(
-                                    context,
-                                    widgetId
-                                )
-                            )?.let { widgetId to it }
-                        }.filterNotNull()
-                        .groupBy({ it.second }, { it.first }).forEach { (grouping, list) ->
-                            Timber.i("got %d widgets with grouping %s", list.size, grouping)
-                            list.forEach {
-                                BudgetWidgetConfigure.saveGrouping(context, it, grouping)
-                            }
-                            BudgetWidgetUpdateWorker.enqueueSelf(context, grouping)
-                        }
-                }
-
                 if (fromVersion < 738) {
                     if (prefHandler.getString(PrefKey.PRINT_FOOTER_RIGHT, null) == "{@page}") {
                         prefHandler.putString(PrefKey.PRINT_FOOTER_RIGHT, "{page}")
@@ -621,15 +599,6 @@ class UpgradeHandlerViewModel(application: Application) :
                         ?.use { cursor ->
                             migrateFilterHelper(cursor,MyExpensesViewModel::prefNameForCriteriaLegacy, MyExpensesViewModel::prefNameForCriteria)
                         }
-                    contentResolver.query(
-                        BUDGETS_URI,
-                        arrayOf("$TABLE_BUDGETS.$KEY_ROWID"),
-                        null,
-                        null,
-                        null
-                    )?.use { cursor ->
-                        migrateFilterHelper(cursor, BudgetViewModel::prefNameForCriteriaLegacy, BudgetViewModel::prefNameForCriteria)
-                    }
                 }
                 if (fromVersion < 797) {
                     prefHandler.putString(PrefKey.SCROLL_TO_CURRENT_DATE,

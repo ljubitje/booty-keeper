@@ -45,12 +45,6 @@ sealed class MenuItem(
         R.drawable.ic_menu_template
     )
 
-    data object Budget : MenuItem(
-        R.id.BUDGET_COMMAND,
-        R.string.menu_budget,
-        R.drawable.ic_budget
-    )
-
     data object Distribution : MenuItem(
         R.id.DISTRIBUTION_COMMAND,
         R.string.menu_distribution,
@@ -181,13 +175,10 @@ sealed class MenuItem(
             MenuContext.V1 -> listOf(
                 Search,
                 Templates,
-                Budget,
                 Distribution,
                 History,
                 Parties,
                 Reset,
-                Sync,
-                FinTsSync,
                 ShowStatusHandle,
                 Balance,
                 Sort,
@@ -202,7 +193,6 @@ sealed class MenuItem(
 
             MenuContext.V2Navigation -> listOf(
                 Templates,
-                Budget,
                 Parties,
                 Settings,
                 Backup,
@@ -213,8 +203,6 @@ sealed class MenuItem(
                 Search,
                 Distribution,
                 History,
-                Sync,
-                FinTsSync,
                 Balance,
                 Reset,
                 Print,

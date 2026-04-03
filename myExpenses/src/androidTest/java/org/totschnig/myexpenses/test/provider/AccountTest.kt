@@ -12,7 +12,7 @@ import org.junit.Test
 import org.totschnig.myexpenses.model.Grouping
 import org.totschnig.myexpenses.model.sort.SortDirection
 import org.totschnig.myexpenses.provider.AccountInfo
-import org.totschnig.myexpenses.provider.BudgetInfo
+
 import org.totschnig.myexpenses.provider.KEY_AMOUNT
 import org.totschnig.myexpenses.provider.KEY_CURRENCY
 import org.totschnig.myexpenses.provider.KEY_DATE
@@ -85,16 +85,7 @@ class AccountTest {
                     .appendPath(grouping.name).build(),
                 null, null, null
             )
-            val budgets = arrayOf(
-                BudgetInfo(it, "budget 1", 400, grouping, "description"),
-                BudgetInfo(it, "budget 2", 5000, grouping, "description")
-            )
-            for (budgetInfo in budgets) {
-                resolver.insert(
-                    TransactionProvider.BUDGETS_URI,
-                    budgetInfo.contentValues
-                )
-            }
+
         }
     }
 

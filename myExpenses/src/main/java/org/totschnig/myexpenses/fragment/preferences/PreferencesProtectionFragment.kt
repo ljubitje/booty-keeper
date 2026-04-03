@@ -77,7 +77,7 @@ class PreferencesProtectionFragment : BasePreferenceFragment() {
         setEnabled(PrefKey.PROTECTION_ENABLE_ACCOUNT_WIDGET, isProtected)
         setEnabled(PrefKey.PROTECTION_ENABLE_TEMPLATE_WIDGET, isProtected)
         setEnabled(PrefKey.PROTECTION_ENABLE_DATA_ENTRY_FROM_WIDGET, isProtected)
-        setEnabled(PrefKey.PROTECTION_ENABLE_BUDGET_WIDGET, isProtected)
+
 
         with(requirePreference<PreferenceCategory>(PrefKey.CATEGORY_PROTECTION)) {
             initialExpandedChildrenCount = preferenceCount - (if (isLegacy) 1 else 2)

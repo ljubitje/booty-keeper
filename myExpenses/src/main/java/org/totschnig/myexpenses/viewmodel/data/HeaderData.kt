@@ -105,11 +105,3 @@ data class HeaderRow(
     }
 }
 
-data class BudgetData(val budgetId: Long, val data: List<BudgetRow>)
-
-data class BudgetRow(
-    val headerId: Int,
-    val amount: Long?,
-    val rollOverPrevious: Long?,
-    val oneTime: Boolean
-)

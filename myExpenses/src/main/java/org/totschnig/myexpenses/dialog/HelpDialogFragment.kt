@@ -93,7 +93,7 @@ class HelpDialogFragment : DialogViewBinding<HelpDialogBinding>() {
             "equivalent_amount" to null,
             "color" to R.drawable.ic_color,
             "history" to R.drawable.ic_history,
-            "budget" to R.drawable.ic_budget,
+
             "manage_categories" to null,
             "show_transactions" to null,
             "back.forward" to null,
@@ -109,7 +109,7 @@ class HelpDialogFragment : DialogViewBinding<HelpDialogBinding>() {
             "rollover" to null,
             "type_filter" to R.drawable.ic_filter,
             "archive" to R.drawable.ic_archive,
-            "budget_synchronization" to R.drawable.ic_sync,
+
             "download" to R.drawable.ic_menu_download,
             "add" to R.drawable.ic_menu_add,
             "account_types" to R.drawable.category,

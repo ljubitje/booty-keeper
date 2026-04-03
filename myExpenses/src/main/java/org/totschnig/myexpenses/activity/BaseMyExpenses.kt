@@ -521,8 +521,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
 
             R.id.DISTRIBUTION_COMMAND -> contribFeatureRequested(ContribFeature.DISTRIBUTION)
 
-            R.id.BUDGET_COMMAND -> contribFeatureRequested(ContribFeature.BUDGET, null)
-
             R.id.MANAGE_TEMPLATES_COMMAND -> startActivity(
                 Intent(this, ManageTemplates::class.java)
             )
@@ -859,20 +857,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
                     } else if (tag == ExportViewModel.PRINT_BALANCE_SHEET) {
                         viewModel.printBalanceSheet()
                     }
-                }
-            }
-
-            ContribFeature.BUDGET -> {
-                if (tag != null) {
-                    val (budgetId, headerId) = tag as Pair<Long, Int>
-                    startActivity(Intent(this, BudgetActivity::class.java).apply {
-                        putExtra(KEY_ROWID, budgetId)
-                        fillIntentForGroupingFromTag(headerId)
-                    })
-                } else {
-                    recordUsage(feature)
-                    val i = Intent(this, ManageBudgets::class.java)
-                    startActivity(i)
                 }
             }
 
@@ -1420,8 +1404,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
                     modifier = Modifier.weight(1f),
                     lazyPagingItems = lazyPagingItems,
                     headerData = headerData,
-                    budgetData = remember(account.grouping) { viewModel.budgetData(account) }
-                        .collectAsState(null),
                     selectionHandler = if (modificationAllowed) viewModel.selectionHandler else null,
                     selectAllState = viewModel.selectAllState,
                     onSelectAllListTooLarge = { selectAllListTooLarge() },
@@ -1505,9 +1487,6 @@ abstract class BaseMyExpenses<T : MyExpensesViewModel> : LaunchActivity(),
                     },
                     futureCriterion = viewModel.futureCriterion.collectAsState(initial = FutureCriterion.EndOfDay).value,
                     expansionHandler = viewModel.expansionHandlerForTransactionGroups(account),
-                    onBudgetClick = { budgetId, headerId ->
-                        contribFeatureRequested(ContribFeature.BUDGET, budgetId to headerId)
-                    },
                     showSumDetails = viewModel.showSumDetails.collectAsState(initial = true).value,
                     scrollToCurrentDate = viewModel.scrollToCurrentDate.getValue(account.id),
                     renderer = renderer.value,
