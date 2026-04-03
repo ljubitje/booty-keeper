@@ -48,7 +48,7 @@ class HelpDialogHelper(val context: Context, val extra: CharSequence? = null) : 
         return when (resString) {
             "help_ManageStaleImages_info" -> getString(
                 R.string.help_ManageStaleImages_info,
-                "Documents/MyExpenses.Attachments.Archive"
+                "Documents/BootyKeeper.Attachments.Archive"
             )
 
             "help_PriceHistory_info" -> TextUtils.concat(

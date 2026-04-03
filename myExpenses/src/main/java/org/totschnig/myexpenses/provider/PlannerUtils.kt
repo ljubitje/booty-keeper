@@ -27,7 +27,7 @@ import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 
-const val PLANNER_CALENDAR_NAME = "MyExpensesPlanner"
+const val PLANNER_CALENDAR_NAME = "BootyKeeperPlanner"
 const val PLANNER_ACCOUNT_NAME = "Local Calendar"
 const val INVALID_CALENDAR_ID = "-1"
 

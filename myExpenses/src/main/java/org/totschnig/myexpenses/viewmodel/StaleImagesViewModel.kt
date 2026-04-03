@@ -32,7 +32,7 @@ class StaleImagesViewModel(application: Application) :
         return if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
                 .takeIf { it.exists() || it.mkdir() }
-                ?.let { File(it, "MyExpenses.Attachments.Archive") }
+                ?.let { File(it, "BootyKeeper.Attachments.Archive") }
                 ?.takeIf { it.exists() || it.mkdir() }
                 ?.let { Uri.fromFile(File(it, fileName)) }
         } else {
@@ -41,7 +41,7 @@ class StaleImagesViewModel(application: Application) :
                 put(MediaStore.MediaColumns.MIME_TYPE, mimeType)
                 put(
                     MediaStore.MediaColumns.RELATIVE_PATH,
-                    "Documents/MyExpenses.Attachments.Archive"
+                    "Documents/BootyKeeper.Attachments.Archive"
                 )
             }
             contentResolver.insert(MediaStore.Files.getContentUri("external"), contentValues)

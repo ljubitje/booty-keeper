@@ -125,29 +125,7 @@
             android:excludeFromRecents="true"
             android:exported="true"
             android:theme="@style/Translucent">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="www.myexpenses.mobi"
-                    android:path="/callback2.html"
-                    android:scheme="kle.ljubitje.bootykeeper" />
-            </intent-filter>
-            <intent-filter
-                android:autoVerify="true"
-                tools:ignore="UnusedAttribute">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="https" />
-                <data android:host="www.myexpenses.mobi" />
-                <data android:path="/callback2.html" />
-            </intent-filter>
+            <!-- Deep link intent filters removed: was handling www.myexpenses.mobi URLs -->
         </activity>
         <activity
             android:name=".activity.ExpenseEdit"
