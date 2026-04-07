@@ -17,10 +17,7 @@ warn() { echo "⚠  $*" >&2; }
 # ── Resolve Codeberg token ───────────────────────────────────
 
 CODEBERG_TOKEN="${CODEBERG_TOKEN:-}"
-if [[ -z "$CODEBERG_TOKEN" ]]; then
-    CODEBERG_TOKEN=$(git remote get-url origin | grep -oP '://[^:]+:\K[^@]+' || true)
-fi
-[[ -n "$CODEBERG_TOKEN" ]] || die "No Codeberg token found. Set CODEBERG_TOKEN or embed in git remote URL."
+[[ -n "$CODEBERG_TOKEN" ]] || die "No Codeberg token found. Set CODEBERG_TOKEN env var."
 PUSH_URL="https://${REPO_OWNER}:${CODEBERG_TOKEN}@codeberg.org/${REPO_OWNER}/${REPO_NAME}.git"
 
 # ── Load signing properties ──────────────────────────────────
@@ -35,7 +32,17 @@ if [[ -f "$PROPS_FILE" ]]; then
     RELEASE_STORE_FILE="${RELEASE_STORE_FILE/#\~/$HOME}"
 
     if [[ -n "${RELEASE_STORE_FILE:-}" ]]; then
-        GRADLE_SIGN_FLAGS="-PRELEASE_STORE_FILE=$RELEASE_STORE_FILE -PRELEASE_STORE_PASSWORD=$RELEASE_STORE_PASSWORD -PRELEASE_KEY_ALIAS=$RELEASE_KEY_ALIAS -PRELEASE_KEY_PASSWORD=$RELEASE_KEY_PASSWORD"
+        # Pass signing config via properties file to avoid exposing passwords in ps output
+        GRADLE_SIGN_PROPS=$(mktemp)
+        trap 'rm -f "$GRADLE_SIGN_PROPS"' EXIT
+        cat > "$GRADLE_SIGN_PROPS" << SIGNEOF
+RELEASE_STORE_FILE=$RELEASE_STORE_FILE
+RELEASE_STORE_PASSWORD=$RELEASE_STORE_PASSWORD
+RELEASE_KEY_ALIAS=$RELEASE_KEY_ALIAS
+RELEASE_KEY_PASSWORD=$RELEASE_KEY_PASSWORD
+SIGNEOF
+        chmod 600 "$GRADLE_SIGN_PROPS"
+        GRADLE_SIGN_FLAGS="-Dsigning.properties=$GRADLE_SIGN_PROPS"
     fi
 else
     warn "No local.properties found — signing will use defaults"
